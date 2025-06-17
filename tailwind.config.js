@@ -22,7 +22,7 @@ module.exports = {
       },
       fontFamily: {
         sans: ["Inter", "system-ui", "sans-serif"],
-        serif: ["Playfair Display", "Georgia", "serif"],
+        serif: ["Source Serif Pro", "Georgia", "serif"],
       },
       animation: {
         "fade-in": "fadeIn 0.8s ease-out forwards",
