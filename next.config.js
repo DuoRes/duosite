@@ -5,8 +5,6 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: process.env.NODE_ENV === "production" ? "/mingduo_website" : "",
-  assetPrefix: process.env.NODE_ENV === "production" ? "/mingduo_website/" : "",
 };
 
 module.exports = nextConfig;
