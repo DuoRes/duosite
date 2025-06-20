@@ -8,18 +8,59 @@
   html {
     scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
+    /* Better text rendering on mobile */
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
   }
   
   body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    /* Prevent horizontal scroll on mobile */
+    overflow-x: hidden;
   }
   
   /* Enhanced scroll snap behavior */
   section {
     scroll-snap-align: start;
     scroll-snap-stop: always;
+  }
+
+  /* Better touch targets for mobile */
+  button, 
+  a, 
+  input, 
+  textarea, 
+  select {
+    /* Ensure minimum touch target size of 44px */
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Remove tap highlight on mobile while maintaining accessibility */
+  button, 
+  a {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+  }
+
+  /* Better input handling on mobile */
+  input, 
+  textarea {
+    /* Prevent zoom on iOS when focusing inputs */
+    font-size: 16px;
+  }
+
+  @media (max-width: 768px) {
+    /* Mobile-specific font adjustments */
+    h1 { font-size: 2rem; line-height: 1.1; }
+    h2 { font-size: 1.75rem; line-height: 1.2; }
+    h3 { font-size: 1.5rem; line-height: 1.3; }
+    h4 { font-size: 1.25rem; line-height: 1.4; }
+    
+    /* Better line height for mobile reading */
+    p { line-height: 1.6; }
   }
 }
 
@@ -36,6 +77,33 @@
 
   .animate-fade-in {
     animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  /* Touch-friendly interactions */
+  .touch-manipulation {
+    touch-action: manipulation;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  /* Mobile-optimized card hover effects */
+  @media (hover: hover) and (pointer: fine) {
+    .hover-lift:hover {
+      transform: translateY(-4px);
+    }
+  }
+
+  @media (hover: none) and (pointer: coarse) {
+    .hover-lift:active {
+      transform: translateY(-2px);
+    }
+  }
+
+  /* Safe area handling for mobile devices with notches */
+  .safe-area-padding {
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
   }
 }
 
