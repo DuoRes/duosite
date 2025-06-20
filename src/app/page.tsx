@@ -209,20 +209,25 @@ export default function Home() {
                         <div className="max-w-none lg:max-w-4xl text-center lg:text-left px-2 sm:px-0 -mt-2 sm:-mt-4 lg:mt-0">
                           <div className="w-4 sm:w-6 lg:w-12 h-px bg-gray-300 mb-2 sm:mb-3 lg:mb-6 mx-auto lg:mx-0"></div>
                           <p className="text-xs sm:text-sm lg:text-lg leading-relaxed text-gray-700 font-light">
-                            My research examines the intersection of{" "}
+                            My research explores the intersection of{" "}
                             <em className="text-gray-800 font-medium">
-                              quantitative marketing
+                              marketing
                             </em>
                             ,{" "}
                             <em className="text-gray-800 font-medium">
-                              digital platforms
+                              economics
+                            </em>
+                            ,{" "}
+                            <em className="text-gray-800 font-medium">
+                              computer science
                             </em>
                             , and{" "}
                             <em className="text-gray-800 font-medium">
-                              consumer behavior
-                            </em>{" "}
-                            through rigorous empirical analysis and causal
-                            inference methodologies.
+                              statistics
+                            </em>
+                            , with a focus on how technological advancements
+                            profoundly transform society, both economically and
+                            politically.
                           </p>
                         </div>
                       </div>
