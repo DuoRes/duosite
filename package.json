@@ -10,7 +10,10 @@
     "export": "next build"
   },
   "keywords": [],
-  "author": "",
+  "author": {
+    "name": "nociza",
+    "url": "https://www.nociza.com"
+  },
   "license": "ISC",
   "description": "",
   "dependencies": {
