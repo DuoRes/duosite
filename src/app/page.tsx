@@ -164,10 +164,10 @@ export default function Home() {
                       {/* Profile section - mobile optimized */}
                       <div className="lg:col-span-7 flex flex-col justify-center space-y-4 sm:space-y-6 lg:space-y-8">
                         <div className="flex flex-col items-center lg:flex-row lg:items-start space-y-6 sm:space-y-8 lg:space-y-0 lg:space-x-8 xl:space-x-12">
-                          {/* Profile image - responsive sizing */}
-                          <div className="flex-shrink-0">
+                          {/* Profile image - responsive sizing with mobile positioning fix */}
+                          <div className="flex-shrink-0 mt-8 sm:mt-12 md:mt-16 lg:mt-0">
                             <div className="relative">
-                              <div className="w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 xl:w-72 xl:h-72 rounded-2xl overflow-hidden shadow-xl ring-1 ring-white/30 transform hover:scale-105 transition-transform duration-500">
+                              <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-64 lg:h-64 xl:w-72 xl:h-72 rounded-2xl overflow-hidden shadow-xl ring-1 ring-white/30 transform hover:scale-105 transition-transform duration-500">
                                 <img
                                   src="/picture/WechatIMG5527.jpg"
                                   alt="Mingduo Zhao"
@@ -175,7 +175,7 @@ export default function Home() {
                                 />
                               </div>
                               {/* Decorative accent - responsive */}
-                              <div className="absolute -bottom-2 -right-2 sm:-bottom-4 sm:-right-4 w-8 h-8 sm:w-16 sm:h-16 bg-gray-800 rounded-lg opacity-60 -z-10"></div>
+                              <div className="absolute -bottom-1 -right-1 sm:-bottom-2 sm:-right-2 md:-bottom-3 md:-right-3 lg:-bottom-2 lg:-right-2 w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-16 lg:h-16 bg-gray-800 rounded-lg opacity-60 -z-10"></div>
                             </div>
                           </div>
 
@@ -183,19 +183,19 @@ export default function Home() {
                           <div className="flex-1 text-center lg:text-left lg:pt-4">
                             <div className="space-y-3 sm:space-y-4 lg:space-y-6">
                               <div>
-                                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-serif font-light text-gray-900 leading-tight tracking-tight mb-2">
+                                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-serif font-light text-gray-900 leading-tight tracking-tight mb-2">
                                   Mingduo Zhao
                                 </h1>
-                                <div className="text-base sm:text-lg lg:text-xl text-gray-600 tracking-wide mb-1">
+                                <div className="text-sm sm:text-base lg:text-xl text-gray-600 tracking-wide mb-1">
                                   赵鸣铎
                                 </div>
                               </div>
 
                               <div className="space-y-2 lg:space-y-3">
-                                <div className="text-base sm:text-lg lg:text-xl text-gray-800 font-light">
+                                <div className="text-sm sm:text-base lg:text-xl text-gray-800 font-light">
                                   PhD Candidate in Economics
                                 </div>
-                                <div className="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed">
+                                <div className="text-xs sm:text-sm lg:text-lg text-gray-600 leading-relaxed">
                                   University of California, Berkeley
                                   <br />
                                   Haas School of Business
@@ -206,9 +206,9 @@ export default function Home() {
                         </div>
 
                         {/* Research description - mobile optimized */}
-                        <div className="max-w-none lg:max-w-4xl text-center lg:text-left px-2 sm:px-0">
-                          <div className="w-6 sm:w-8 lg:w-12 h-px bg-gray-300 mb-3 sm:mb-4 lg:mb-6 mx-auto lg:mx-0"></div>
-                          <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-700 font-light">
+                        <div className="max-w-none lg:max-w-4xl text-center lg:text-left px-2 sm:px-0 -mt-2 sm:-mt-4 lg:mt-0">
+                          <div className="w-4 sm:w-6 lg:w-12 h-px bg-gray-300 mb-2 sm:mb-3 lg:mb-6 mx-auto lg:mx-0"></div>
+                          <p className="text-xs sm:text-sm lg:text-lg leading-relaxed text-gray-700 font-light">
                             My research examines the intersection of{" "}
                             <em className="text-gray-800 font-medium">
                               quantitative marketing
@@ -227,16 +227,16 @@ export default function Home() {
                         </div>
                       </div>
 
-                      {/* Navigation panel - mobile optimized */}
-                      <div className="lg:col-span-5 flex flex-col justify-center mt-4 sm:mt-8 lg:mt-0">
-                        <div className="bg-white/50 lg:bg-white/60 backdrop-blur-lg border border-white/30 lg:border-white/40 rounded-xl sm:rounded-2xl lg:rounded-3xl p-4 sm:p-6 lg:p-8 xl:p-10 shadow-xl lg:shadow-2xl">
+                      {/* Navigation panel - mobile optimized positioning */}
+                      <div className="lg:col-span-5 flex flex-col justify-center mt-2 sm:mt-4 lg:mt-0">
+                        <div className="bg-white/50 lg:bg-white/60 backdrop-blur-lg border border-white/30 lg:border-white/40 rounded-xl sm:rounded-2xl lg:rounded-3xl p-3 sm:p-4 lg:p-8 xl:p-10 shadow-xl lg:shadow-2xl">
                           {/* Navigation menu - mobile optimized */}
-                          <nav className="space-y-2 sm:space-y-3 lg:space-y-4 mb-4 sm:mb-6 lg:mb-8">
+                          <nav className="space-y-1.5 sm:space-y-2 lg:space-y-4 mb-3 sm:mb-4 lg:mb-8">
                             {navItems.map((item) => (
                               <button
                                 key={item.href}
                                 onClick={() => scrollToSection(item.id)}
-                                className="group flex items-center justify-between py-2 sm:py-2 lg:py-3 px-2 sm:px-3 lg:px-4 -mx-2 sm:-mx-3 lg:-mx-4 rounded-lg lg:rounded-xl hover:bg-white/40 lg:hover:bg-white/50 transition-all duration-300 touch-manipulation w-full text-left"
+                                className="group flex items-center justify-between py-1.5 sm:py-2 lg:py-3 px-2 sm:px-3 lg:px-4 -mx-2 sm:-mx-3 lg:-mx-4 rounded-lg lg:rounded-xl hover:bg-white/40 lg:hover:bg-white/50 transition-all duration-300 touch-manipulation w-full text-left"
                               >
                                 <div className="flex items-center space-x-2 sm:space-x-3 lg:space-x-4">
                                   <span className="text-xs sm:text-xs lg:text-sm font-mono text-gray-400 group-hover:text-gray-600 transition-colors">
@@ -246,7 +246,7 @@ export default function Home() {
                                     {item.label}
                                   </span>
                                 </div>
-                                <div className="w-3 sm:w-4 lg:w-6 h-px bg-gray-300 group-hover:bg-gray-600 group-hover:w-4 sm:group-hover:w-6 lg:group-hover:w-8 transition-all duration-300"></div>
+                                <div className="w-2 sm:w-3 lg:w-6 h-px bg-gray-300 group-hover:bg-gray-600 group-hover:w-3 sm:group-hover:w-4 lg:group-hover:w-8 transition-all duration-300"></div>
                               </button>
                             ))}
                           </nav>
@@ -254,12 +254,12 @@ export default function Home() {
                       </div>
                     </div>
 
-                    {/* Scroll indicator - mobile optimized */}
-                    <div className="absolute bottom-4 sm:bottom-6 lg:bottom-12 left-1/2 transform -translate-x-1/2">
+                    {/* Scroll indicator - mobile optimized positioning */}
+                    <div className="absolute bottom-2 sm:bottom-4 lg:bottom-12 left-1/2 transform -translate-x-1/2">
                       <div className="flex flex-col items-center space-y-1 sm:space-y-2 lg:space-y-3">
-                        <div className="w-px h-6 sm:h-8 lg:h-12 bg-gradient-to-b from-transparent via-gray-300 to-transparent"></div>
+                        <div className="w-px h-4 sm:h-6 lg:h-12 bg-gradient-to-b from-transparent via-gray-300 to-transparent"></div>
                         <svg
-                          className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-gray-400 animate-smooth-bounce"
+                          className="w-3 h-3 sm:w-4 sm:h-4 lg:w-6 lg:h-6 text-gray-400 animate-smooth-bounce"
                           fill="none"
                           stroke="currentColor"
                           viewBox="0 0 24 24"
@@ -271,7 +271,7 @@ export default function Home() {
                             d="M19 14l-7 7m0 0l-7-7m7 7V3"
                           />
                         </svg>
-                        <span className="text-xs text-gray-400 font-medium tracking-wider uppercase hidden sm:block lg:block">
+                        <span className="text-xs text-gray-400 font-medium tracking-wider uppercase hidden sm:block">
                           Explore
                         </span>
                       </div>

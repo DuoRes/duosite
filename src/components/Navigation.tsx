@@ -105,6 +105,8 @@ const Navigation = () => {
           shouldShowNav
             ? scrolled
               ? "py-2 sm:py-4 translate-y-0 opacity-100"
+              : isMobile
+              ? "py-2 translate-y-0 opacity-100"
               : "py-4 sm:py-6 translate-y-0 opacity-100"
             : "py-2 sm:py-4 -translate-y-full opacity-0 pointer-events-none"
         }`}
@@ -121,7 +123,11 @@ const Navigation = () => {
             <div className="flex items-center">
               <button
                 onClick={() => scrollToSection("home")}
-                className="text-xl sm:text-2xl font-bold text-gray-900 hover:text-primary-600 transition-colors"
+                className={`text-xl sm:text-2xl font-bold text-gray-900 hover:text-primary-600 transition-colors ${
+                  isMobile && !scrolled
+                    ? "opacity-0 pointer-events-none"
+                    : "opacity-100"
+                }`}
               >
                 Mingduo <span className="text-primary-600">Zhao</span>
               </button>
@@ -177,7 +183,9 @@ const Navigation = () => {
             <div className="md:hidden mobile-menu-container">
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="p-2 text-gray-600 hover:text-primary-600 hover:bg-gray-100 rounded-lg transition-colors"
+                className={`p-2 text-gray-600 hover:text-primary-600 hover:bg-gray-100 rounded-lg transition-colors ${
+                  isMobile && !scrolled ? "ml-auto" : ""
+                }`}
                 aria-label="Toggle mobile menu"
               >
                 <svg
