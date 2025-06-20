@@ -14,47 +14,55 @@ export default function Home() {
       setIsMobile(window.innerWidth < 768);
     };
 
+    let scrollTimeout: NodeJS.Timeout;
+
     const handleScroll = () => {
-      const scrollTop = window.scrollY;
-      setIsScrolled(scrollTop > 50);
+      // Clear existing timeout to throttle scroll events
+      clearTimeout(scrollTimeout);
 
-      // Enhanced active section detection
-      const sections = [
-        "home",
-        "about",
-        "job-market-paper",
-        "research",
-        "teaching",
-        "contact",
-      ];
-      let currentSection = "home";
+      scrollTimeout = setTimeout(() => {
+        const scrollTop = window.scrollY;
+        // Smoother transition trigger with slight delay
+        setIsScrolled(scrollTop > 80);
 
-      // Find the section that's most visible in the viewport
-      sections.forEach((sectionId) => {
-        const element = document.getElementById(sectionId);
-        if (element) {
-          const rect = element.getBoundingClientRect();
-          const sectionHeight = rect.height;
-          const viewportHeight = window.innerHeight;
+        // Enhanced active section detection
+        const sections = [
+          "home",
+          "about",
+          "job-market-paper",
+          "research",
+          "teaching",
+          "contact",
+        ];
+        let currentSection = "home";
 
-          // Calculate how much of the section is visible
-          const visibleTop = Math.max(0, -rect.top);
-          const visibleBottom = Math.min(
-            sectionHeight,
-            viewportHeight - rect.top
-          );
-          const visibleHeight = Math.max(0, visibleBottom - visibleTop);
-          const visibilityRatio =
-            visibleHeight / Math.min(sectionHeight, viewportHeight);
+        // Find the section that's most visible in the viewport
+        sections.forEach((sectionId) => {
+          const element = document.getElementById(sectionId);
+          if (element) {
+            const rect = element.getBoundingClientRect();
+            const sectionHeight = rect.height;
+            const viewportHeight = window.innerHeight;
 
-          // Section is active if it's at least 30% visible and in the upper half of viewport
-          if (visibilityRatio > 0.3 && rect.top <= viewportHeight * 0.6) {
-            currentSection = sectionId;
+            // Calculate how much of the section is visible
+            const visibleTop = Math.max(0, -rect.top);
+            const visibleBottom = Math.min(
+              sectionHeight,
+              viewportHeight - rect.top
+            );
+            const visibleHeight = Math.max(0, visibleBottom - visibleTop);
+            const visibilityRatio =
+              visibleHeight / Math.min(sectionHeight, viewportHeight);
+
+            // Section is active if it's at least 30% visible and in the upper half of viewport
+            if (visibilityRatio > 0.3 && rect.top <= viewportHeight * 0.6) {
+              currentSection = sectionId;
+            }
           }
-        }
-      });
+        });
 
-      setActiveSection(currentSection);
+        setActiveSection(currentSection);
+      }, 10); // Small throttle to smooth out rapid scroll events
     };
 
     const handleResize = () => {
@@ -62,10 +70,11 @@ export default function Home() {
     };
 
     checkMobile();
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     window.addEventListener("resize", handleResize);
 
     return () => {
+      clearTimeout(scrollTimeout);
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("resize", handleResize);
     };
@@ -100,7 +109,7 @@ export default function Home() {
       >
         {/* Dynamic About Section - Full Screen to Sidebar */}
         <section
-          className={`fixed inset-0 transition-all duration-1000 ease-in-out z-10 ${
+          className={`fixed inset-0 transition-all duration-1000 ease-out z-10 ${
             isScrolled && !isMobile
               ? "w-64 sm:w-72 lg:w-80 xl:w-96 border-r border-gray-200"
               : isMobile && isScrolled
@@ -112,21 +121,32 @@ export default function Home() {
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
+            transition:
+              "all 1200ms cubic-bezier(0.4, 0, 0.2, 1), transform 1200ms cubic-bezier(0.4, 0, 0.2, 1)",
+            willChange: "width, height, transform, background-image",
           }}
         >
           <div
-            className={`h-full flex items-center justify-center transition-all duration-1000 ${
+            className={`h-full flex items-center justify-center transition-all duration-1000 ease-out ${
               isScrolled ? "bg-gray-50" : "bg-white/95 backdrop-blur-sm"
             }`}
+            style={{
+              transition:
+                "background-color 1200ms cubic-bezier(0.4, 0, 0.2, 1)",
+            }}
           >
             <div
-              className={`w-full mx-auto transition-all duration-1000 ${
+              className={`w-full mx-auto transition-all duration-1000 ease-out ${
                 isScrolled
                   ? isMobile
                     ? "px-4 py-2"
                     : "max-w-none px-2 sm:px-3 lg:px-4"
                   : "text-center px-4 sm:px-6 lg:px-8"
               }`}
+              style={{
+                transition:
+                  "padding 1200ms cubic-bezier(0.4, 0, 0.2, 1), max-width 1200ms cubic-bezier(0.4, 0, 0.2, 1)",
+              }}
             >
               {!isScrolled ? (
                 // Hero layout - optimized for mobile
@@ -403,13 +423,17 @@ export default function Home() {
 
         {/* Main Content - Responsive margin handling */}
         <div
-          className={`transition-all duration-1000 ${
+          className={`transition-all duration-1000 ease-out ${
             isScrolled && !isMobile
               ? "ml-64 sm:ml-72 lg:ml-80 xl:ml-96"
               : isMobile && isScrolled
               ? "mt-20"
               : "ml-0"
           }`}
+          style={{
+            transition: "margin 1200ms cubic-bezier(0.4, 0, 0.2, 1)",
+            willChange: "margin-left, margin-top",
+          }}
         >
           {/* Spacer for initial scroll trigger */}
           <div className="h-screen" style={{ scrollSnapAlign: "start" }}></div>
@@ -826,9 +850,22 @@ export default function Home() {
                       href="/CV.pdf"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-4 sm:px-6 py-2.5 sm:py-3 bg-gray-100 hover:bg-gray-200 text-gray-800 text-xs sm:text-sm font-medium tracking-wide transition-colors rounded-lg"
+                      className="px-4 sm:px-6 py-2.5 sm:py-3 bg-gray-100 hover:bg-gray-200 text-gray-800 text-xs sm:text-sm font-medium tracking-wide transition-colors rounded-lg inline-flex items-center"
                     >
-                      Download CV
+                      <svg
+                        className="mr-2 w-4 h-4"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                        />
+                      </svg>
+                      CV
                     </a>
                     <a
                       href="https://linkedin.com/in/mingduo-zhao"

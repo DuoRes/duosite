@@ -278,7 +278,7 @@ const Contact = () => {
               </a>
               <div className="hidden sm:block w-px h-6 bg-white/20"></div>
               <a
-                href="/CV (4).pdf"
+                href="/CV.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center space-x-2 text-purple-400 hover:text-purple-300 transition-colors touch-manipulation"
@@ -293,10 +293,10 @@ const Contact = () => {
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth={2}
-                    d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                    d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
                   />
                 </svg>
-                <span className="text-sm sm:text-base">Download CV</span>
+                <span className="text-sm sm:text-base">CV</span>
               </a>
               <div className="hidden sm:block w-px h-6 bg-white/20"></div>
               <span className="text-gray-400 text-sm sm:text-base">
