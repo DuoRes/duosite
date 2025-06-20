@@ -807,93 +807,102 @@ export default function Home() {
           {/* Contact Section */}
           <section
             id="contact"
-            className="h-screen flex items-center justify-center bg-white overflow-hidden"
+            className="min-h-screen flex items-center justify-center bg-white overflow-hidden"
             style={{ scrollSnapAlign: "start" }}
           >
-            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-12 h-full flex flex-col justify-center text-center">
-              <div className="mb-6 sm:mb-8">
-                <div className="flex items-center justify-center space-x-3 mb-4">
-                  <div className="w-1.5 h-1.5 bg-gray-800 rounded-full"></div>
-                  <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif font-light text-gray-900 tracking-tight">
-                    Contact
-                  </h2>
-                </div>
-                <div className="w-12 h-px bg-gray-300 mx-auto mb-4 sm:mb-6"></div>
-              </div>
-
-              <div className="bg-white/60 backdrop-blur-lg border border-white/40 rounded-2xl p-6 sm:p-8 lg:p-10 shadow-lg max-w-2xl mx-auto flex-1 flex flex-col justify-center min-h-0">
-                <div className="space-y-6 sm:space-y-8">
-                  <div>
-                    <h3 className="text-lg sm:text-xl font-serif font-light text-gray-900 mb-3">
-                      Email
-                    </h3>
-                    <div className="w-6 h-px bg-gray-300 mx-auto mb-3"></div>
-                    <a
-                      href="mailto:mingduo@berkeley.edu"
-                      className="text-base sm:text-lg text-gray-600 hover:text-gray-900 transition-colors font-light"
-                    >
-                      mingduo@berkeley.edu
-                    </a>
+            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-12 h-full flex flex-col justify-between text-center">
+              <div></div> {/* Spacer for centering */}
+              <div className="flex-1 flex flex-col justify-center">
+                <div className="mb-6 sm:mb-8">
+                  <div className="flex items-center justify-center space-x-3 mb-4">
+                    <div className="w-1.5 h-1.5 bg-gray-800 rounded-full"></div>
+                    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif font-light text-gray-900 tracking-tight">
+                      Contact
+                    </h2>
                   </div>
+                  <div className="w-12 h-px bg-gray-300 mx-auto mb-4 sm:mb-6"></div>
+                </div>
 
-                  <div>
-                    <h3 className="text-lg sm:text-xl font-serif font-light text-gray-900 mb-3">
-                      Office
-                    </h3>
-                    <div className="w-6 h-px bg-gray-300 mx-auto mb-3"></div>
-                    <div className="text-base sm:text-lg text-gray-600 leading-relaxed font-light">
-                      Haas School of Business
-                      <br />
-                      University of California, Berkeley
-                      <br />
-                      Berkeley, CA 94720
+                <div className="bg-white/60 backdrop-blur-lg border border-white/40 rounded-2xl p-6 sm:p-8 lg:p-10 shadow-lg max-w-2xl mx-auto">
+                  <div className="space-y-6 sm:space-y-8">
+                    <div>
+                      <h3 className="text-lg sm:text-xl font-serif font-light text-gray-900 mb-3">
+                        Email
+                      </h3>
+                      <div className="w-6 h-px bg-gray-300 mx-auto mb-3"></div>
+                      <a
+                        href="mailto:mingduo@berkeley.edu"
+                        className="text-base sm:text-lg text-gray-600 hover:text-gray-900 transition-colors font-light"
+                      >
+                        mingduo@berkeley.edu
+                      </a>
+                    </div>
+
+                    <div>
+                      <h3 className="text-lg sm:text-xl font-serif font-light text-gray-900 mb-3">
+                        Office
+                      </h3>
+                      <div className="w-6 h-px bg-gray-300 mx-auto mb-3"></div>
+                      <div className="text-base sm:text-lg text-gray-600 leading-relaxed font-light">
+                        Haas School of Business
+                        <br />
+                        University of California, Berkeley
+                        <br />
+                        Berkeley, CA 94720
+                      </div>
+                    </div>
+
+                    <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 pt-4 sm:pt-6">
+                      <a
+                        href="/CV.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-4 sm:px-6 py-2.5 sm:py-3 bg-gray-100 hover:bg-gray-200 text-gray-800 text-xs sm:text-sm font-medium tracking-wide transition-colors rounded-lg inline-flex items-center"
+                      >
+                        <svg
+                          className="mr-2 w-4 h-4"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                          />
+                        </svg>
+                        CV
+                      </a>
+                      <a
+                        href="https://linkedin.com/in/mingduo-zhao"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-4 sm:px-6 py-2.5 sm:py-3 border border-gray-300 hover:border-gray-400 text-gray-700 text-xs sm:text-sm font-medium tracking-wide hover:bg-gray-50 transition-colors rounded-lg"
+                      >
+                        LinkedIn
+                      </a>
                     </div>
                   </div>
-
-                  <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 pt-4 sm:pt-6">
-                    <a
-                      href="/CV.pdf"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="px-4 sm:px-6 py-2.5 sm:py-3 bg-gray-100 hover:bg-gray-200 text-gray-800 text-xs sm:text-sm font-medium tracking-wide transition-colors rounded-lg inline-flex items-center"
-                    >
-                      <svg
-                        className="mr-2 w-4 h-4"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                        />
-                      </svg>
-                      CV
-                    </a>
-                    <a
-                      href="https://linkedin.com/in/mingduo-zhao"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="px-4 sm:px-6 py-2.5 sm:py-3 border border-gray-300 hover:border-gray-400 text-gray-700 text-xs sm:text-sm font-medium tracking-wide hover:bg-gray-50 transition-colors rounded-lg"
-                    >
-                      LinkedIn
-                    </a>
-                  </div>
                 </div>
+              </div>
+              {/* Footer integrated into contact section */}
+              <div className="mt-7 sm:mt-5 pt-2 border-t border-gray-200">
+                <p className="text-sm text-gray-400">
+                  © 2025 Mingduo Zhao. Fulfilled by{" "}
+                  <a
+                    href="https://www.nociza.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-500 hover:text-gray-700 underline transition-colors"
+                  >
+                    @nociza
+                  </a>
+                  . All rights reserved.
+                </p>
               </div>
             </div>
           </section>
-
-          {/* Footer */}
-          <footer className="py-12 bg-gray-50 border-t border-gray-100">
-            <div className="max-w-6xl mx-auto px-12 text-center">
-              <p className="text-base text-gray-500">
-                © 2025 Mingduo Zhao. Fulfilled by @nociza. All rights reserved.
-              </p>
-            </div>
-          </footer>
         </div>
       </div>
     </PasswordProtection>
