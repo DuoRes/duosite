@@ -17,11 +17,16 @@ export default function Home() {
 
   return (
     <PasswordProtection>
-      <div className="min-h-screen bg-white">
+      <div
+        className="min-h-screen bg-white scroll-smooth"
+        style={{ scrollSnapType: "y mandatory" }}
+      >
         {/* Dynamic About Section - Full Screen to Sidebar */}
         <section
           className={`fixed inset-0 transition-all duration-1000 ease-in-out z-10 ${
-            isScrolled ? "w-[32rem] border-r border-gray-200" : "w-full"
+            isScrolled
+              ? "w-80 sm:w-96 lg:w-[28rem] xl:w-[32rem] border-r border-gray-200"
+              : "w-full"
           }`}
           style={{
             backgroundImage: !isScrolled ? "url(/picture/bg252.png)" : "none",
@@ -36,66 +41,190 @@ export default function Home() {
             }`}
           >
             <div
-              className={`max-w-6xl mx-auto px-8 text-center transition-all duration-1000 ${
-                isScrolled ? "max-w-md px-6" : ""
+              className={`w-full mx-auto px-4 sm:px-6 lg:px-8 transition-all duration-1000 ${
+                isScrolled ? "max-w-none px-3 sm:px-4 lg:px-6" : "text-center"
               }`}
             >
               {!isScrolled ? (
-                // Full screen about content
-                <>
-                  <div className="mb-8">
-                    <div className="w-64 h-64 mx-auto rounded-full overflow-hidden shadow-2xl mb-8 ring-4 ring-white/50 animate-float">
-                      <img
-                        src="/picture/WechatIMG5527.jpg"
-                        alt="Mingduo Zhao"
-                        className="w-full h-full object-cover"
-                      />
+                // Minimalistic artistic hero layout
+                <div className="relative w-full h-full overflow-hidden">
+                  {/* Subtle decorative background elements */}
+                  <div className="absolute inset-0 opacity-40">
+                    <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-gradient-to-br from-blue-50 to-gray-50 rounded-full blur-3xl"></div>
+                    <div className="absolute bottom-1/3 right-1/4 w-48 h-48 bg-gradient-to-br from-gray-50 to-blue-50 rounded-full blur-3xl"></div>
+                  </div>
+
+                  {/* Responsive grid layout with full width utilization */}
+                  <div className="relative z-10 h-full grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 xl:gap-16 2xl:gap-24 px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 py-8 lg:py-12 xl:py-16 w-full max-w-none">
+                    {/* Left section - Profile and intro */}
+                    <div className="lg:col-span-7 flex flex-col justify-center space-y-6 lg:space-y-8">
+                      <div className="flex flex-col lg:flex-row items-center lg:items-start space-y-8 lg:space-y-0 lg:space-x-8 xl:space-x-12">
+                        {/* Profile image */}
+                        <div className="flex-shrink-0">
+                          <div className="relative">
+                            <div className="w-56 h-56 lg:w-64 lg:h-64 xl:w-72 xl:h-72 rounded-2xl overflow-hidden shadow-xl ring-1 ring-white/30 transform hover:scale-105 transition-transform duration-500">
+                              <img
+                                src="/picture/WechatIMG5527.jpg"
+                                alt="Mingduo Zhao"
+                                className="w-full h-full object-cover"
+                              />
+                            </div>
+                            {/* Minimal decorative accent */}
+                            <div className="absolute -bottom-4 -right-4 w-16 h-16 bg-gray-800 rounded-lg opacity-60 -z-10"></div>
+                          </div>
+                        </div>
+
+                        {/* Name and title */}
+                        <div className="flex-1 text-center lg:text-left lg:pt-4">
+                          <div className="space-y-4 lg:space-y-6">
+                            <div>
+                              <h1 className="text-4xl sm:text-5xl lg:text-5xl xl:text-6xl font-serif font-light text-gray-900 leading-tight tracking-tight mb-2">
+                                Mingduo Zhao
+                              </h1>
+                              <div className="text-lg lg:text-xl text-gray-600 tracking-wide mb-1">
+                                赵鸣铎
+                              </div>
+                            </div>
+
+                            <div className="space-y-2 lg:space-y-3">
+                              <div className="text-lg lg:text-xl text-gray-800 font-light">
+                                PhD Candidate in Marketing
+                              </div>
+                              <div className="text-base lg:text-lg text-gray-600 leading-relaxed">
+                                University of California, Berkeley
+                                <br />
+                                Haas School of Business
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Research description */}
+                      <div className="max-w-none lg:max-w-4xl text-center lg:text-left">
+                        <div className="w-8 lg:w-12 h-px bg-gray-300 mb-4 lg:mb-6 mx-auto lg:mx-0"></div>
+                        <p className="text-base lg:text-lg leading-relaxed text-gray-700 font-light">
+                          My research examines the intersection of{" "}
+                          <em className="text-gray-800 font-medium">
+                            quantitative marketing
+                          </em>
+                          ,{" "}
+                          <em className="text-gray-800 font-medium">
+                            digital platforms
+                          </em>
+                          , and{" "}
+                          <em className="text-gray-800 font-medium">
+                            consumer behavior
+                          </em>{" "}
+                          through rigorous empirical analysis and causal
+                          inference methodologies.
+                        </p>
+                      </div>
                     </div>
-                    <h1 className="text-6xl font-serif font-light text-gray-900 mb-4 tracking-tight drop-shadow-sm">
-                      Mingduo Zhao
-                    </h1>
-                    <div className="text-xl text-gray-700 mb-3 font-light tracking-wide">
-                      赵鸣铎
-                    </div>
-                    <div className="text-xl text-gray-800 mb-8 font-light">
-                      PhD Candidate in Marketing
-                    </div>
-                    <div className="text-lg text-gray-700 mb-12 max-w-2xl mx-auto leading-relaxed">
-                      University of California, Berkeley • Haas School of
-                      Business
+
+                    {/* Right section - Navigation and info */}
+                    <div className="lg:col-span-5 flex flex-col justify-center mt-8 lg:mt-0">
+                      <div className="bg-white/50 lg:bg-white/60 backdrop-blur-lg border border-white/30 lg:border-white/40 rounded-2xl lg:rounded-3xl p-6 lg:p-8 xl:p-10 shadow-xl lg:shadow-2xl">
+                        {/* Navigation header */}
+                        <div className="mb-6 lg:mb-8">
+                          <div className="flex items-center justify-center lg:justify-start space-x-3 mb-4">
+                            <div className="w-1.5 h-1.5 bg-gray-800 rounded-full"></div>
+                            <h3 className="text-xl lg:text-2xl font-serif text-gray-900 tracking-tight">
+                              Contents
+                            </h3>
+                          </div>
+                          <div className="w-full h-px bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 lg:from-gray-300 lg:via-gray-200 lg:to-transparent"></div>
+                        </div>
+
+                        {/* Navigation menu */}
+                        <nav className="space-y-3 lg:space-y-4 mb-8 lg:mb-10">
+                          {[
+                            { href: "#about", label: "About", number: "01" },
+                            {
+                              href: "#job-market-paper",
+                              label: "Job Market Paper",
+                              number: "02",
+                            },
+                            {
+                              href: "#research",
+                              label: "Research",
+                              number: "03",
+                            },
+                            {
+                              href: "#teaching",
+                              label: "Teaching",
+                              number: "04",
+                            },
+                            {
+                              href: "#contact",
+                              label: "Contact",
+                              number: "05",
+                            },
+                          ].map((item) => (
+                            <a
+                              key={item.href}
+                              href={item.href}
+                              className="group flex items-center justify-between py-2 lg:py-3 px-3 lg:px-4 -mx-3 lg:-mx-4 rounded-lg lg:rounded-xl hover:bg-white/40 lg:hover:bg-white/50 transition-all duration-300"
+                            >
+                              <div className="flex items-center space-x-3 lg:space-x-4">
+                                <span className="text-xs lg:text-sm font-mono text-gray-400 group-hover:text-gray-600 transition-colors">
+                                  {item.number}
+                                </span>
+                                <span className="text-sm lg:text-base font-medium text-gray-700 group-hover:text-gray-900 transition-colors tracking-wide">
+                                  {item.label}
+                                </span>
+                              </div>
+                              <div className="w-4 lg:w-6 h-px bg-gray-300 group-hover:bg-gray-600 group-hover:w-6 lg:group-hover:w-8 transition-all duration-300"></div>
+                            </a>
+                          ))}
+                        </nav>
+
+                        {/* Contact info and actions */}
+                        <div className="border-t border-gray-200/50 pt-6 lg:pt-8">
+                          <div className="space-y-3 lg:space-y-4 mb-6 lg:mb-8">
+                            <div className="text-xs lg:text-sm font-medium text-gray-800 mb-2 text-center lg:text-left">
+                              Contact
+                            </div>
+                            <div className="space-y-1 lg:space-y-2 text-xs lg:text-sm text-gray-600 text-center lg:text-left">
+                              <div className="flex items-center justify-center lg:justify-start space-x-2">
+                                <div className="w-1 h-1 bg-gray-400 rounded-full"></div>
+                                <span>mingduo@berkeley.edu</span>
+                              </div>
+                              <div className="flex items-center justify-center lg:justify-start space-x-2">
+                                <div className="w-1 h-1 bg-gray-400 rounded-full"></div>
+                                <span>Berkeley, California</span>
+                              </div>
+                            </div>
+                          </div>
+
+                          {/* Action buttons */}
+                          <div className="space-y-2 lg:space-y-3">
+                            <a
+                              href="mailto:mingduo@berkeley.edu"
+                              className="block w-full px-4 lg:px-6 py-2.5 lg:py-3 bg-gray-100 hover:bg-gray-200 text-gray-800 text-xs lg:text-sm font-medium text-center tracking-wide transition-colors duration-200 rounded-lg"
+                            >
+                              Send Email
+                            </a>
+                            <a
+                              href="/CV (4).pdf"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="block w-full px-4 lg:px-6 py-2.5 lg:py-3 border border-gray-300 hover:border-gray-400 text-gray-700 text-xs lg:text-sm font-medium text-center tracking-wide transition-colors duration-200 rounded-lg"
+                            >
+                              Download CV
+                            </a>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
 
-                  <div className="prose prose-lg prose-gray max-w-4xl mx-auto mb-12">
-                    <p className="text-lg leading-relaxed text-gray-800">
-                      My research examines the intersection of quantitative
-                      marketing, digital platforms, and consumer behavior
-                      through rigorous empirical analysis and causal inference
-                      methodologies.
-                    </p>
-                  </div>
-
-                  <div className="flex gap-6 justify-center mb-20">
-                    <a
-                      href="mailto:mingduo@berkeley.edu"
-                      className="px-10 py-3 bg-gray-900/90 text-white text-base font-medium tracking-wide hover:bg-gray-800 transition-all duration-300 backdrop-blur-sm shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
-                    >
-                      CONTACT
-                    </a>
-                    <a
-                      href="/CV (4).pdf"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="px-10 py-3 border-2 border-gray-800/70 text-gray-900 text-base font-medium tracking-wide hover:bg-gray-900 hover:text-white transition-all duration-300 backdrop-blur-sm shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
-                    >
-                      CURRICULUM VITAE
-                    </a>
-                  </div>
-
-                  <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2">
-                    <div className="flex flex-col items-center">
+                  {/* Minimalist scroll indicator */}
+                  <div className="absolute bottom-6 lg:bottom-12 left-1/2 transform -translate-x-1/2">
+                    <div className="flex flex-col items-center space-y-2 lg:space-y-3">
+                      <div className="w-px h-8 lg:h-12 bg-gradient-to-b from-transparent via-gray-300 to-transparent"></div>
                       <svg
-                        className="w-8 h-8 text-gray-700 animate-smooth-bounce"
+                        className="w-5 h-5 lg:w-6 lg:h-6 text-gray-400 animate-smooth-bounce"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -103,94 +232,77 @@ export default function Home() {
                         <path
                           strokeLinecap="round"
                           strokeLinejoin="round"
-                          strokeWidth={2}
+                          strokeWidth={1.5}
                           d="M19 14l-7 7m0 0l-7-7m7 7V3"
                         />
                       </svg>
-                      <p className="text-sm text-gray-700 mt-2 font-medium animate-pulse">
-                        Scroll to explore
-                      </p>
+                      <span className="text-xs text-gray-400 font-medium tracking-wider uppercase hidden lg:block">
+                        Explore
+                      </span>
                     </div>
                   </div>
-                </>
+                </div>
               ) : (
                 // Sidebar profile content
-                <div className="flex flex-col h-full justify-between py-8">
-                  <div className="flex-1">
-                    <div className="text-center mb-12">
-                      <div className="w-40 h-40 mx-auto rounded-full overflow-hidden shadow-lg mb-8">
+                <div className="flex flex-col h-full justify-between py-4 sm:py-6 lg:py-8 overflow-y-auto max-h-screen">
+                  <div className="flex-1 flex flex-col justify-center min-h-0">
+                    <div className="text-center mb-6 sm:mb-8 lg:mb-10">
+                      <div className="w-32 h-32 sm:w-36 sm:h-36 lg:w-40 lg:h-40 mx-auto rounded-2xl overflow-hidden shadow-lg mb-6 sm:mb-7 lg:mb-8">
                         <img
                           src="/picture/WechatIMG5527.jpg"
                           alt="Mingduo Zhao"
                           className="w-full h-full object-cover"
                         />
                       </div>
-                      <h1 className="text-3xl font-serif font-light text-gray-900 mb-3 tracking-tight">
+                      <h1 className="text-2xl sm:text-3xl lg:text-3xl font-serif font-light text-gray-900 mb-2 sm:mb-3 tracking-tight">
                         Mingduo Zhao
                       </h1>
-                      <div className="text-lg text-gray-600 mb-2 font-light">
+                      <div className="text-base sm:text-lg text-gray-600 mb-1 sm:mb-2 font-light">
                         赵鸣铎
                       </div>
-                      <div className="text-lg text-gray-700 mb-6 font-light">
+                      <div className="text-base sm:text-lg text-gray-700 mb-4 sm:mb-5 lg:mb-6 font-light">
                         PhD Candidate in Marketing
                       </div>
-                      <div className="text-sm text-gray-600 leading-relaxed mb-8">
+                      <div className="text-xs sm:text-sm text-gray-600 leading-relaxed mb-4 sm:mb-6 lg:mb-8">
                         UC Berkeley • Haas School of Business
                       </div>
-                      <div className="text-sm text-gray-700 leading-relaxed px-4">
+                      <div className="text-xs sm:text-sm text-gray-700 leading-relaxed px-2 sm:px-3 lg:px-4">
                         Research at the intersection of quantitative marketing,
                         digital platforms, and consumer behavior.
                       </div>
                     </div>
-
-                    <div className="space-y-4 mb-12 px-4">
-                      <a
-                        href="mailto:mingduo@berkeley.edu"
-                        className="block w-full px-8 py-4 bg-gray-900 text-white text-sm font-medium tracking-wide hover:bg-gray-800 transition-colors text-center"
-                      >
-                        CONTACT
-                      </a>
-                      <a
-                        href="/CV (4).pdf"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="block w-full px-8 py-4 border border-gray-300 text-gray-900 text-sm font-medium tracking-wide hover:bg-gray-50 transition-colors text-center"
-                      >
-                        CURRICULUM VITAE
-                      </a>
-                    </div>
                   </div>
 
                   {/* Navigation */}
-                  <nav className="px-8 py-4 border-t border-gray-200">
-                    <div className="space-y-6">
+                  <nav className="px-4 sm:px-6 lg:px-8 py-2 sm:py-3 lg:py-4 border-t border-gray-200 flex-shrink-0">
+                    <div className="space-y-2 sm:space-y-3 lg:space-y-4">
                       <a
                         href="#about"
-                        className="block text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors tracking-wide"
+                        className="block text-xs sm:text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors tracking-wide"
                       >
                         ABOUT
                       </a>
                       <a
                         href="#job-market-paper"
-                        className="block text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors tracking-wide"
+                        className="block text-xs sm:text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors tracking-wide"
                       >
                         JOB MARKET PAPER
                       </a>
                       <a
                         href="#research"
-                        className="block text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors tracking-wide"
+                        className="block text-xs sm:text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors tracking-wide"
                       >
                         RESEARCH
                       </a>
                       <a
                         href="#teaching"
-                        className="block text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors tracking-wide"
+                        className="block text-xs sm:text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors tracking-wide"
                       >
                         TEACHING
                       </a>
                       <a
                         href="#contact"
-                        className="block text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors tracking-wide"
+                        className="block text-xs sm:text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors tracking-wide"
                       >
                         CONTACT
                       </a>
@@ -205,63 +317,80 @@ export default function Home() {
         {/* Main Content - Only visible when scrolled */}
         <div
           className={`transition-all duration-1000 ${
-            isScrolled ? "ml-[32rem]" : "ml-0"
+            isScrolled ? "ml-80 sm:ml-96 lg:ml-[28rem] xl:ml-[32rem]" : "ml-0"
           }`}
         >
           {/* Spacer for initial scroll trigger */}
-          <div className="h-screen"></div>
+          <div className="h-screen" style={{ scrollSnapAlign: "start" }}></div>
 
-          {/* About Section - Detailed */}
+          {/* About Section - Responsive */}
           <section
             id="about"
-            className="min-h-screen flex items-center justify-center bg-white"
+            className="h-screen flex items-center justify-center bg-white overflow-hidden"
+            style={{ scrollSnapAlign: "start" }}
           >
-            <div className="max-w-5xl mx-auto px-12 py-16">
-              <div className="mb-20">
-                <h2 className="text-5xl font-serif font-semibold text-gray-900 mb-12 tracking-tight">
-                  About
-                </h2>
-                <div className="w-20 h-px bg-gray-400 mb-16"></div>
+            <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-12 h-full flex flex-col justify-center">
+              <div className="mb-6 sm:mb-8 lg:mb-10">
+                <div className="flex items-center space-x-3 mb-4">
+                  <div className="w-1.5 h-1.5 bg-gray-800 rounded-full"></div>
+                  <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif font-light text-gray-900 tracking-tight">
+                    About
+                  </h2>
+                </div>
+                <div className="w-12 h-px bg-gray-300 mb-4 sm:mb-6"></div>
               </div>
 
-              <div className="prose prose-xl prose-gray max-w-none">
-                <p className="text-2xl leading-relaxed text-gray-700 mb-12">
+              <div className="flex-1 flex flex-col justify-center min-h-0">
+                <p className="text-base sm:text-lg leading-relaxed text-gray-700 font-light mb-6 sm:mb-8 lg:mb-10">
                   I am a PhD Candidate in Marketing at the Haas School of
                   Business, University of California, Berkeley. My research
-                  interests lie at the intersection of quantitative marketing,
-                  digital platforms, and consumer behavior.
+                  interests lie at the intersection of{" "}
+                  <em className="text-gray-800 font-medium">
+                    quantitative marketing
+                  </em>
+                  ,{" "}
+                  <em className="text-gray-800 font-medium">
+                    digital platforms
+                  </em>
+                  , and{" "}
+                  <em className="text-gray-800 font-medium">
+                    consumer behavior
+                  </em>
+                  .
                 </p>
 
-                <div className="grid md:grid-cols-2 gap-16 mt-20">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
                   <div>
-                    <h3 className="text-3xl font-serif font-medium text-gray-900 mb-8">
+                    <h3 className="text-lg sm:text-xl lg:text-2xl font-serif font-light text-gray-900 mb-4 sm:mb-6">
                       Research Interests
                     </h3>
-                    <ul className="space-y-4 text-lg text-gray-700">
+                    <div className="w-8 h-px bg-gray-300 mb-4 sm:mb-6"></div>
+                    <ul className="space-y-3 sm:space-y-4 text-sm sm:text-base text-gray-700 font-light">
                       <li className="flex items-start">
-                        <span className="w-3 h-3 bg-gray-400 rounded-full mt-2 mr-4 flex-shrink-0"></span>
+                        <div className="w-1 h-1 bg-gray-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
                         Platform Economics and Competition
                       </li>
                       <li className="flex items-start">
-                        <span className="w-3 h-3 bg-gray-400 rounded-full mt-2 mr-4 flex-shrink-0"></span>
+                        <div className="w-1 h-1 bg-gray-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
                         Consumer Learning and Decision-Making
                       </li>
                       <li className="flex items-start">
-                        <span className="w-3 h-3 bg-gray-400 rounded-full mt-2 mr-4 flex-shrink-0"></span>
+                        <div className="w-1 h-1 bg-gray-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
                         Digital Marketing and Algorithms
                       </li>
                       <li className="flex items-start">
-                        <span className="w-3 h-3 bg-gray-400 rounded-full mt-2 mr-4 flex-shrink-0"></span>
+                        <div className="w-1 h-1 bg-gray-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
                         Empirical Methods and Causal Inference
                       </li>
                     </ul>
                   </div>
 
                   <div>
-                    <h3 className="text-3xl font-serif font-medium text-gray-900 mb-8">
+                    <h3 className="text-lg sm:text-xl lg:text-2xl font-serif font-light text-gray-900 mb-4 sm:mb-6">
                       Methodological Expertise
                     </h3>
-                    <div className="grid grid-cols-2 gap-4">
+                    <div className="w-8 h-px bg-gray-300 mb-4 sm:mb-6"></div>
+                    <div className="grid grid-cols-2 gap-2 sm:gap-3">
                       {[
                         "R",
                         "Python",
@@ -274,7 +403,7 @@ export default function Home() {
                       ].map((skill) => (
                         <div
                           key={skill}
-                          className="text-base text-gray-600 border border-gray-200 px-4 py-3 text-center hover:bg-gray-50 transition-colors"
+                          className="text-xs sm:text-sm text-gray-600 border border-gray-200 px-2 sm:px-3 py-2 text-center hover:bg-gray-50 hover:border-gray-300 transition-all duration-200 rounded-lg font-light"
                         >
                           {skill}
                         </div>
@@ -286,224 +415,270 @@ export default function Home() {
             </div>
           </section>
 
-          {/* Job Market Paper Section */}
+          {/* Job Market Paper Section - Responsive */}
           <section
             id="job-market-paper"
-            className="min-h-screen flex items-center justify-center bg-gray-50"
+            className="h-screen flex items-center justify-center bg-gray-50 overflow-hidden"
+            style={{ scrollSnapAlign: "start" }}
           >
-            <div className="max-w-5xl mx-auto px-12 py-16">
-              <div className="mb-20">
-                <h2 className="text-5xl font-serif font-semibold text-gray-900 mb-12 tracking-tight">
-                  Job Market Paper
-                </h2>
-                <div className="w-20 h-px bg-gray-400 mb-16"></div>
+            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-12 h-full flex flex-col justify-center">
+              <div className="mb-6 sm:mb-8">
+                <div className="flex items-center space-x-3 mb-4">
+                  <div className="w-1.5 h-1.5 bg-gray-800 rounded-full"></div>
+                  <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif font-light text-gray-900 tracking-tight">
+                    Job Market Paper
+                  </h2>
+                </div>
+                <div className="w-12 h-px bg-gray-300 mb-4 sm:mb-6"></div>
               </div>
 
-              <div className="bg-white border border-gray-200 p-16 shadow-lg">
-                <div className="mb-12">
-                  <span className="inline-block px-6 py-3 bg-gray-900 text-white text-sm font-medium tracking-wide mb-8">
-                    JOB MARKET PAPER
-                  </span>
-                  <h3 className="text-4xl font-serif font-medium text-gray-900 leading-tight mb-8">
+              <div className="bg-white/60 backdrop-blur-lg border border-white/40 rounded-2xl p-6 sm:p-8 lg:p-10 shadow-xl flex-1 flex flex-col justify-center min-h-0">
+                <div className="mb-4 sm:mb-3">
+                  <div className="inline-flex items-center space-x-2 px-3 py-1.5 bg-blue-100 text-blue-800 text-xs font-medium tracking-wide mb-4 sm:mb-6 rounded-lg">
+                    <div className="w-1 h-1 bg-blue-600 rounded-full"></div>
+                    <span>JOB MARKET PAPER</span>
+                  </div>
+                  <h3 className="text-xl sm:text-2xl lg:text-3xl font-serif font-light text-gray-900 leading-tight mb-3 sm:mb-4">
                     News Consumption, Recommender Systems, and Polarization
                   </h3>
-                  <div className="text-xl text-gray-600 mb-12">
+                  <div className="text-sm sm:text-base text-gray-600 font-light mb-4 sm:mb-6">
                     Mingduo Zhao • 2024
                   </div>
                 </div>
 
-                <div className="prose prose-xl max-w-none mb-12">
-                  <p className="text-xl leading-relaxed text-gray-700 mb-8">
-                    Recommender systems shape how people consume news, possibly
-                    reinforcing political polarization. We run two field
-                    experiments to identify how user preferences and algorithms
-                    interact to amplify partisan news consumption. In the first
-                    study, 2,065 U.S. participants use blank Google accounts and
-                    a browser extension to track users' activities on Google
-                    News.
+                <div className="mb-8 sm:mb-3">
+                  <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-700 font-light mb-4 sm:mb-6">
+                    Field experiments with 2,065 participants reveal how
+                    recommendation algorithms and user preferences interact to
+                    create feedback loops that amplify partisan news consumption
+                    and increase political polarization.
                   </p>
-                  <p className="text-xl leading-relaxed text-gray-700 mb-8">
-                    The first-round recommendations are exogenous, allowing us
-                    to show that aligned content draws more clicks. A second
-                    experiment uses bots to randomly click on articles,
-                    revealing that each click leads to more ideologically
-                    aligned content. These two pieces of causal evidence
-                    establish a feedback loop between user preference and
-                    algorithmic recommendations.
-                  </p>
-                  <p className="text-xl leading-relaxed text-gray-700">
-                    We also find in the field study that, after interacting with
-                    the recommender system, people's level of polarization
-                    increases. A structural model combining a discrete choice
-                    model (demand side) with a multi-armed bandit algorithm
-                    (supply side) confirms this positive-feedback mechanism.
+                  <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-700 font-light">
+                    Using structural modeling that combines discrete choice
+                    models with multi-armed bandit algorithms, we provide causal
+                    evidence for this positive-feedback mechanism and its impact
+                    on democratic discourse.
                   </p>
                 </div>
 
-                <div className="flex flex-wrap gap-4 mb-12">
-                  {[
-                    "Field Experiments",
-                    "Structural Modeling",
-                    "Causal Inference",
-                    "Digital Platforms",
-                    "Political Economy",
-                  ].map((method) => (
-                    <span
-                      key={method}
-                      className="text-base text-gray-600 border border-gray-200 px-6 py-3 bg-gray-50"
-                    >
-                      {method}
-                    </span>
-                  ))}
-                </div>
-
-                <div className="flex gap-6">
-                  <button className="px-10 py-4 bg-gray-900 text-white text-base font-medium tracking-wide hover:bg-gray-800 transition-colors">
-                    DOWNLOAD PAPER
-                  </button>
-                  <button className="px-10 py-4 border border-gray-300 text-gray-900 text-base font-medium tracking-wide hover:bg-gray-50 transition-colors">
-                    VIEW ABSTRACT
-                  </button>
-                  <button className="px-10 py-4 border border-gray-300 text-gray-900 text-base font-medium tracking-wide hover:bg-gray-50 transition-colors">
-                    SLIDES
-                  </button>
+                <div className="border-t border-gray-100">
+                  <div className="flex flex-wrap gap-7">
+                    <button className="px-4 py-2 text-xs font-medium text-white bg-blue-600 hover:bg-blue-700 transition-colors rounded-lg shadow-sm">
+                      Download Paper
+                    </button>
+                    <button className="px-4 py-2 text-xs font-medium text-gray-700 bg-gray-100 hover:bg-gray-200 transition-colors rounded-lg">
+                      Abstract
+                    </button>
+                    <button className="px-4 py-2 text-xs font-medium text-gray-700 bg-gray-100 hover:bg-gray-200 transition-colors rounded-lg">
+                      Slides
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
           </section>
 
-          {/* Research Section */}
+          {/* Research Section - Summarized */}
           <section
             id="research"
-            className="min-h-screen flex items-center justify-center bg-white"
+            className="h-screen flex items-center justify-center bg-white overflow-hidden"
+            style={{ scrollSnapAlign: "start" }}
           >
-            <div className="max-w-6xl mx-auto px-12 py-16">
-              <div className="mb-20">
-                <h2 className="text-5xl font-serif font-semibold text-gray-900 mb-12 tracking-tight">
-                  Research
-                </h2>
-                <div className="w-20 h-px bg-gray-400 mb-16"></div>
+            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-12 h-full flex flex-col justify-center">
+              <div className="mb-6 sm:mb-8">
+                <div className="flex items-center space-x-3 mb-4">
+                  <div className="w-1.5 h-1.5 bg-gray-800 rounded-full"></div>
+                  <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif font-light text-gray-900 tracking-tight">
+                    Research
+                  </h2>
+                </div>
+                <div className="w-12 h-px bg-gray-300 mb-4 sm:mb-6"></div>
               </div>
 
-              <div>
-                <h3 className="text-3xl font-serif font-medium text-gray-900 mb-12">
-                  Working Papers
-                </h3>
+              <div className="flex-1 flex flex-col justify-center min-h-0">
+                <p className="text-base sm:text-lg leading-relaxed text-gray-700 font-light mb-6 sm:mb-8">
+                  My research examines the intersection of quantitative
+                  marketing, digital platforms, and consumer behavior through
+                  rigorous empirical analysis and causal inference
+                  methodologies.
+                </p>
 
-                <div className="space-y-12">
-                  <div className="bg-white border-l-4 border-gray-200 pl-12 py-8">
-                    <h4 className="text-2xl font-serif font-medium text-gray-900 mb-3">
-                      Algorithmic Recommendations and Consumer Search Behavior
-                    </h4>
-                    <div className="text-base text-gray-500 mb-6">
-                      2024 • Under Review
-                    </div>
-                    <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                      This study examines the causal effects of recommendation
-                      algorithms on consumer behavior using data from e-commerce
-                      platforms.
+                <div className="space-y-4 sm:space-y-6 mb-6 sm:mb-8">
+                  {/* Working Papers Overview */}
+                  <div className="bg-white/60 backdrop-blur-lg border border-white/40 rounded-2xl p-4 sm:p-6 shadow-lg">
+                    <h3 className="text-lg sm:text-xl lg:text-2xl font-serif font-light text-gray-900 mb-3 sm:mb-4">
+                      Working Papers
+                    </h3>
+                    <p className="text-sm sm:text-base text-gray-700 leading-relaxed font-light mb-4">
+                      Research on algorithmic recommendations in e-commerce,
+                      dynamic pricing effects, and consumer learning in digital
+                      markets. Combines field experiments, structural modeling,
+                      and causal inference techniques.
                     </p>
-                    <div className="flex gap-4">
-                      <button className="text-base text-gray-600 hover:text-gray-900 transition-colors font-medium">
-                        Paper
-                      </button>
-                      <span className="text-gray-400">•</span>
-                      <button className="text-base text-gray-600 hover:text-gray-900 transition-colors font-medium">
-                        Abstract
-                      </button>
+                    <div className="flex flex-wrap gap-1.5 sm:gap-2">
+                      <span className="px-2 sm:px-3 py-1 bg-gray-100 text-gray-700 text-xs sm:text-sm rounded-full">
+                        E-commerce
+                      </span>
+                      <span className="px-2 sm:px-3 py-1 bg-gray-100 text-gray-700 text-xs sm:text-sm rounded-full">
+                        Dynamic Pricing
+                      </span>
+                      <span className="px-2 sm:px-3 py-1 bg-gray-100 text-gray-700 text-xs sm:text-sm rounded-full">
+                        Consumer Learning
+                      </span>
                     </div>
                   </div>
 
-                  <div className="bg-white border-l-4 border-gray-200 pl-12 py-8">
-                    <h4 className="text-2xl font-serif font-medium text-gray-900 mb-3">
-                      Dynamic Pricing and Consumer Learning in Digital Markets
-                    </h4>
-                    <div className="text-base text-gray-500 mb-6">
-                      2023 • Working Paper
-                    </div>
-                    <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                      Using field experiments and observational data, we
-                      identify the welfare effects of personalized pricing in
-                      digital marketplaces.
+                  {/* Research Interests */}
+                  <div className="bg-white/60 backdrop-blur-lg border border-white/40 rounded-2xl p-4 sm:p-6 shadow-lg">
+                    <h3 className="text-lg sm:text-xl lg:text-2xl font-serif font-light text-gray-900 mb-3 sm:mb-4">
+                      Research Focus
+                    </h3>
+                    <p className="text-sm sm:text-base text-gray-700 leading-relaxed font-light">
+                      Platform economics, digital marketing algorithms, consumer
+                      behavior analysis, and empirical methods for causal
+                      inference in marketing contexts.
                     </p>
-                    <div className="flex gap-4">
-                      <button className="text-base text-gray-600 hover:text-gray-900 transition-colors font-medium">
-                        Paper
-                      </button>
-                      <span className="text-gray-400">•</span>
-                      <button className="text-base text-gray-600 hover:text-gray-900 transition-colors font-medium">
-                        Abstract
-                      </button>
-                    </div>
                   </div>
+                </div>
+
+                {/* Read More Button */}
+                <div className="text-center">
+                  <a
+                    href="/research"
+                    className="inline-flex items-center px-3 sm:px-4 py-2 sm:py-2.5 bg-white hover:bg-gray-200 text-gray-800 text-xs sm:text-sm font-medium tracking-wide transition-colors rounded-lg whitespace-nowrap"
+                  >
+                    <span className="hidden sm:inline">View All Research</span>
+                    <span className="sm:hidden">Research</span>
+                    <svg
+                      className="w-3 h-3 ml-1.5 sm:ml-2"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 5l7 7-7 7"
+                      />
+                    </svg>
+                  </a>
                 </div>
               </div>
             </div>
           </section>
 
-          {/* Teaching Section */}
+          {/* Teaching Section - Summarized */}
           <section
             id="teaching"
-            className="min-h-screen flex items-center justify-center bg-gray-50"
+            className="h-screen flex items-center justify-center bg-gray-50 overflow-hidden"
+            style={{ scrollSnapAlign: "start" }}
           >
-            <div className="max-w-6xl mx-auto px-12 py-16">
-              <div className="mb-20">
-                <h2 className="text-5xl font-serif font-semibold text-gray-900 mb-12 tracking-tight">
-                  Teaching
-                </h2>
-                <div className="w-20 h-px bg-gray-400 mb-16"></div>
+            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-12 h-full flex flex-col justify-center">
+              <div className="mb-6 sm:mb-8">
+                <div className="flex items-center space-x-3 mb-4">
+                  <div className="w-1.5 h-1.5 bg-gray-800 rounded-full"></div>
+                  <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif font-light text-gray-900 tracking-tight">
+                    Teaching
+                  </h2>
+                </div>
+                <div className="w-12 h-px bg-gray-300 mb-4 sm:mb-6"></div>
               </div>
 
-              <div className="space-y-16">
-                <div className="border border-gray-200 p-12 bg-white">
-                  <div className="flex items-start justify-between mb-6">
-                    <div>
-                      <h3 className="text-2xl font-serif font-medium text-gray-900 mb-3">
-                        Marketing Analytics
-                      </h3>
-                      <div className="text-base text-gray-600">
-                        UGBA 142 • Graduate Student Instructor
+              <div className="flex-1 flex flex-col justify-center min-h-0">
+                <div className="space-y-4 sm:space-y-6 mb-6 sm:mb-8">
+                  <div className="bg-white/60 backdrop-blur-lg border border-white/40 rounded-2xl p-4 sm:p-6 shadow-lg">
+                    <div className="mb-4">
+                      <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-2">
+                        <h3 className="text-lg sm:text-xl lg:text-2xl font-serif font-light text-gray-900 mb-1 sm:mb-0 sm:mr-4">
+                          Marketing Analytics (MBA)
+                        </h3>
+                        <span className="text-xs sm:text-sm text-gray-500 font-light flex-shrink-0">
+                          2023-2024
+                        </span>
                       </div>
                     </div>
-                    <div className="text-base text-gray-500">
-                      Fall 2023, Spring 2024
+                    <p className="text-sm sm:text-base text-gray-700 leading-relaxed font-light mb-3 sm:mb-4">
+                      Advanced course covering statistical methods, causal
+                      inference, and predictive modeling. Conducted lab sessions
+                      for 40+ MBA students with focus on R/Python programming.
+                    </p>
+                    <div className="flex flex-wrap gap-1.5 sm:gap-2">
+                      <span className="px-2 sm:px-3 py-1 bg-blue-50 text-blue-700 text-xs sm:text-sm rounded-full">
+                        Causal Inference
+                      </span>
+                      <span className="px-2 sm:px-3 py-1 bg-blue-50 text-blue-700 text-xs sm:text-sm rounded-full">
+                        A/B Testing
+                      </span>
+                      <span className="px-2 sm:px-3 py-1 bg-blue-50 text-blue-700 text-xs sm:text-sm rounded-full">
+                        R/Python
+                      </span>
                     </div>
                   </div>
-                  <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                    Advanced course covering statistical methods, data analysis,
-                    and predictive modeling in marketing contexts.
-                    Responsibilities include conducting lab sessions, grading
-                    assignments, and providing Python/R programming instruction.
-                  </p>
-                  <div className="text-base text-gray-600">
-                    <strong>Topics:</strong> Statistical Analysis, Predictive
-                    Modeling, Data Visualization, Programming
+
+                  <div className="bg-white/60 backdrop-blur-lg border border-white/40 rounded-2xl p-4 sm:p-6 shadow-lg">
+                    <div className="mb-4">
+                      <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-2">
+                        <h3 className="text-lg sm:text-xl lg:text-2xl font-serif font-light text-gray-900 mb-1 sm:mb-0 sm:mr-4">
+                          Digital Marketing Strategy (MBA)
+                        </h3>
+                        <span className="text-xs sm:text-sm text-gray-500 font-light flex-shrink-0">
+                          2022-2023
+                        </span>
+                      </div>
+                    </div>
+                    <p className="text-sm sm:text-base text-gray-700 leading-relaxed font-light mb-3 sm:mb-4">
+                      MBA course on digital marketing strategies and platform
+                      economics. Led case discussions for 60+ students and
+                      delivered guest lectures.
+                    </p>
+                    <div className="flex flex-wrap gap-1.5 sm:gap-2">
+                      <span className="px-2 sm:px-3 py-1 bg-green-50 text-green-700 text-xs sm:text-sm rounded-full">
+                        Digital Strategy
+                      </span>
+                      <span className="px-2 sm:px-3 py-1 bg-green-50 text-green-700 text-xs sm:text-sm rounded-full">
+                        Platform Economics
+                      </span>
+                      <span className="px-2 sm:px-3 py-1 bg-green-50 text-green-700 text-xs sm:text-sm rounded-full">
+                        Case Analysis
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="bg-white/60 backdrop-blur-lg border border-white/40 rounded-2xl p-4 sm:p-2 shadow-lg">
+                    <div className="border-l-4 border-blue-500 pl-4 sm:pl-6">
+                      <h4 className="text-base sm:text-lg font-serif font-light text-gray-900 mb-2">
+                        Teaching Recognition
+                      </h4>
+                      <p className="text-sm sm:text-base text-gray-700 font-light">
+                        Outstanding GSI Award (Spring 2024) • Teaching
+                        Excellence Recognition (Fall 2023)
+                      </p>
+                    </div>
                   </div>
                 </div>
 
-                <div className="border border-gray-200 p-12 bg-white">
-                  <div className="flex items-start justify-between mb-6">
-                    <div>
-                      <h3 className="text-2xl font-serif font-medium text-gray-900 mb-3">
-                        Digital Marketing Strategy
-                      </h3>
-                      <div className="text-base text-gray-600">
-                        MBA 239 • Teaching Assistant
-                      </div>
-                    </div>
-                    <div className="text-base text-gray-500">
-                      Fall 2022, Fall 2023
-                    </div>
-                  </div>
-                  <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                    MBA-level course focusing on digital marketing strategies,
-                    platform economics, and consumer behavior in digital
-                    environments. Led case study discussions and guest lectures.
-                  </p>
-                  <div className="text-base text-gray-600">
-                    <strong>Topics:</strong> Digital Strategy, Platform
-                    Economics, Consumer Behavior, Case Analysis
-                  </div>
+                {/* Read More Button */}
+                <div className="text-center">
+                  <a
+                    href="/teaching"
+                    className="inline-flex items-center px-4 sm:px-6 py-2.5 sm:py-2 bg-none hover:bg-gray-200 text-gray-800 text-xs sm:text-sm font-medium tracking-wide transition-colors rounded-lg"
+                  >
+                    View Teaching Details
+                    <svg
+                      className="w-3 h-3 sm:w-4 sm:h-4 ml-2"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 5l7 7-7 7"
+                      />
+                    </svg>
+                  </a>
                 </div>
               </div>
             </div>
@@ -512,57 +687,67 @@ export default function Home() {
           {/* Contact Section */}
           <section
             id="contact"
-            className="min-h-screen flex items-center justify-center bg-white"
+            className="h-screen flex items-center justify-center bg-white overflow-hidden"
+            style={{ scrollSnapAlign: "start" }}
           >
-            <div className="max-w-4xl mx-auto px-12 py-16 text-center">
-              <h2 className="text-5xl font-serif font-semibold text-gray-900 mb-12 tracking-tight">
-                Contact
-              </h2>
-              <div className="w-20 h-px bg-gray-400 mx-auto mb-16"></div>
-
-              <div className="space-y-12">
-                <div>
-                  <h3 className="text-2xl font-medium text-gray-900 mb-4">
-                    Email
-                  </h3>
-                  <a
-                    href="mailto:mingduo@berkeley.edu"
-                    className="text-xl text-gray-600 hover:text-gray-900 transition-colors"
-                  >
-                    mingduo@berkeley.edu
-                  </a>
+            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-12 h-full flex flex-col justify-center text-center">
+              <div className="mb-6 sm:mb-8">
+                <div className="flex items-center justify-center space-x-3 mb-4">
+                  <div className="w-1.5 h-1.5 bg-gray-800 rounded-full"></div>
+                  <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif font-light text-gray-900 tracking-tight">
+                    Contact
+                  </h2>
                 </div>
+                <div className="w-12 h-px bg-gray-300 mx-auto mb-4 sm:mb-6"></div>
+              </div>
 
-                <div>
-                  <h3 className="text-2xl font-medium text-gray-900 mb-4">
-                    Office
-                  </h3>
-                  <div className="text-xl text-gray-600 leading-relaxed">
-                    Haas School of Business
-                    <br />
-                    University of California, Berkeley
-                    <br />
-                    Berkeley, CA 94720
+              <div className="bg-white/60 backdrop-blur-lg border border-white/40 rounded-2xl p-6 sm:p-8 lg:p-10 shadow-lg max-w-2xl mx-auto flex-1 flex flex-col justify-center min-h-0">
+                <div className="space-y-6 sm:space-y-8">
+                  <div>
+                    <h3 className="text-lg sm:text-xl font-serif font-light text-gray-900 mb-3">
+                      Email
+                    </h3>
+                    <div className="w-6 h-px bg-gray-300 mx-auto mb-3"></div>
+                    <a
+                      href="mailto:mingduo@berkeley.edu"
+                      className="text-base sm:text-lg text-gray-600 hover:text-gray-900 transition-colors font-light"
+                    >
+                      mingduo@berkeley.edu
+                    </a>
                   </div>
-                </div>
 
-                <div className="flex justify-center gap-12 pt-12">
-                  <a
-                    href="/CV (4).pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-base text-gray-600 hover:text-gray-900 transition-colors tracking-wide font-medium"
-                  >
-                    CURRICULUM VITAE
-                  </a>
-                  <a
-                    href="https://linkedin.com/in/mingduo-zhao"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-base text-gray-600 hover:text-gray-900 transition-colors tracking-wide font-medium"
-                  >
-                    LINKEDIN
-                  </a>
+                  <div>
+                    <h3 className="text-lg sm:text-xl font-serif font-light text-gray-900 mb-3">
+                      Office
+                    </h3>
+                    <div className="w-6 h-px bg-gray-300 mx-auto mb-3"></div>
+                    <div className="text-base sm:text-lg text-gray-600 leading-relaxed font-light">
+                      Haas School of Business
+                      <br />
+                      University of California, Berkeley
+                      <br />
+                      Berkeley, CA 94720
+                    </div>
+                  </div>
+
+                  <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 pt-4 sm:pt-6">
+                    <a
+                      href="/CV (4).pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-4 sm:px-6 py-2.5 sm:py-3 bg-gray-100 hover:bg-gray-200 text-gray-800 text-xs sm:text-sm font-medium tracking-wide transition-colors rounded-lg"
+                    >
+                      Download CV
+                    </a>
+                    <a
+                      href="https://linkedin.com/in/mingduo-zhao"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-4 sm:px-6 py-2.5 sm:py-3 border border-gray-300 hover:border-gray-400 text-gray-700 text-xs sm:text-sm font-medium tracking-wide hover:bg-gray-50 transition-colors rounded-lg"
+                    >
+                      LinkedIn
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>

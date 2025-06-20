@@ -14,7 +14,7 @@ export default function PasswordProtection({
   const [error, setError] = useState("");
 
   // Hardcoded password - change this to your desired password
-  const CORRECT_PASSWORD = "mingduo2024";
+  const CORRECT_PASSWORD = "mingduo2025";
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
