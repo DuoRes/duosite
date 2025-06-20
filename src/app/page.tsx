@@ -102,7 +102,7 @@ export default function Home() {
         <section
           className={`fixed inset-0 transition-all duration-1000 ease-in-out z-10 ${
             isScrolled && !isMobile
-              ? "w-80 sm:w-96 lg:w-[28rem] xl:w-[32rem] border-r border-gray-200"
+              ? "w-64 sm:w-72 lg:w-80 xl:w-96 border-r border-gray-200"
               : isMobile && isScrolled
               ? "w-full h-20 top-0 border-b border-gray-200"
               : "w-full"
@@ -124,7 +124,7 @@ export default function Home() {
                 isScrolled
                   ? isMobile
                     ? "px-4 py-2"
-                    : "max-w-none px-3 sm:px-4 lg:px-6"
+                    : "max-w-none px-2 sm:px-3 lg:px-4"
                   : "text-center px-4 sm:px-6 lg:px-8"
               }`}
             >
@@ -343,13 +343,13 @@ export default function Home() {
                           <h1 className="text-2xl sm:text-3xl lg:text-3xl font-serif font-light text-gray-900 mb-1 sm:mb-2 tracking-tight">
                             Mingduo Zhao
                           </h1>
-                          <div className="text-base sm:text-lg text-gray-600 mb-1 font-light">
+                          <div className="text-base sm:text-lg text-gray-600 mb-1 sm:mb-2 font-light">
                             赵鸣铎
                           </div>
-                          <div className="text-base sm:text-lg text-gray-700 mb-3 sm:mb-4 lg:mb-5 font-light">
+                          <div className="text-base sm:text-lg text-gray-700 mb-4 sm:mb-5 lg:mb-6 font-light">
                             PhD Candidate in Economics
                           </div>
-                          <div className="text-xs sm:text-sm text-gray-600 leading-relaxed mb-3 sm:mb-4 lg:mb-6">
+                          <div className="text-xs sm:text-sm text-gray-600 leading-relaxed mb-4 sm:mb-6 lg:mb-8">
                             UC Berkeley • Haas School of Business
                           </div>
                         </div>
@@ -405,7 +405,7 @@ export default function Home() {
         <div
           className={`transition-all duration-1000 ${
             isScrolled && !isMobile
-              ? "ml-80 sm:ml-96 lg:ml-[28rem] xl:ml-[32rem]"
+              ? "ml-64 sm:ml-72 lg:ml-80 xl:ml-96"
               : isMobile && isScrolled
               ? "mt-20"
               : "ml-0"
