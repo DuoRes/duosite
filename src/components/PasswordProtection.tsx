@@ -104,7 +104,7 @@ export default function PasswordProtection({
 
         <div className="text-center mt-6">
           <p className="text-sm text-gray-400">
-            © 2024 Mingduo Zhao. All rights reserved.
+            © 2025 Mingduo Zhao. All rights reserved.
           </p>
         </div>
       </div>

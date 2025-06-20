@@ -256,8 +256,7 @@ const Contact = () => {
         {/* Footer */}
         <div className="mt-20 pt-8 border-t border-white/20 text-center">
           <p className="text-gray-400">
-            © 2024 Mingduo Zhao. Built with Next.js, TypeScript, and Tailwind
-            CSS.
+            © 2025 Mingduo Zhao. Fulfilled by @nociza.
           </p>
         </div>
       </div>

@@ -757,7 +757,7 @@ export default function Home() {
           <footer className="py-12 bg-gray-50 border-t border-gray-100">
             <div className="max-w-6xl mx-auto px-12 text-center">
               <p className="text-base text-gray-500">
-                © 2024 Mingduo Zhao. All rights reserved.
+                © 2025 Mingduo Zhao. Fulfilled by @nociza. All rights reserved.
               </p>
             </div>
           </footer>
