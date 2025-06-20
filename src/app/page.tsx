@@ -22,8 +22,14 @@ export default function Home() {
 
       scrollTimeout = setTimeout(() => {
         const scrollTop = window.scrollY;
-        // Smoother transition trigger with slight delay
-        setIsScrolled(scrollTop > 80);
+        // Only enable scroll transformation on desktop
+        if (!isMobile) {
+          // Smoother transition trigger with slight delay
+          setIsScrolled(scrollTop > 80);
+        } else {
+          // On mobile, keep it simple - no complex transformations
+          setIsScrolled(scrollTop > 50);
+        }
 
         // Enhanced active section detection
         const sections = [
@@ -78,12 +84,16 @@ export default function Home() {
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("resize", handleResize);
     };
-  }, []);
+  }, [isMobile]);
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      // On mobile, account for the simple header height
+      const offset = isMobile ? 80 : 0;
+      const elementPosition =
+        element.getBoundingClientRect().top + window.pageYOffset - offset;
+      window.scrollTo({ top: elementPosition, behavior: "smooth" });
     }
   };
 
@@ -105,343 +115,439 @@ export default function Home() {
       <Navigation />
       <div
         className="min-h-screen bg-white scroll-smooth"
-        style={{ scrollSnapType: "y mandatory" }}
+        style={{ scrollSnapType: isMobile ? "none" : "y mandatory" }}
       >
-        {/* Dynamic About Section - Full Screen to Sidebar */}
-        <section
-          className={`fixed inset-0 transition-all duration-1000 ease-out z-10 ${
-            isScrolled && !isMobile
-              ? "w-64 sm:w-72 lg:w-80 xl:w-96 border-r border-gray-200"
-              : isMobile && isScrolled
-              ? "w-full h-20 top-0 border-b border-gray-200"
-              : "w-full"
-          }`}
-          style={{
-            backgroundImage: !isScrolled ? "url(/picture/bg252.png)" : "none",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
-            transition:
-              "all 1200ms cubic-bezier(0.4, 0, 0.2, 1), transform 1200ms cubic-bezier(0.4, 0, 0.2, 1)",
-            willChange: "width, height, transform, background-image",
-          }}
-        >
-          <div
-            className={`h-full flex items-center justify-center transition-all duration-1000 ease-out ${
-              isScrolled ? "bg-gray-50" : "bg-white/95 backdrop-blur-sm"
+        {/* Mobile: Simple header layout, Desktop: Complex transformation */}
+        {isMobile ? (
+          // MOBILE: Simple fixed header that appears on scroll
+          <header
+            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+              isScrolled
+                ? "bg-white/95 backdrop-blur-sm border-b border-gray-200 shadow-sm"
+                : "bg-transparent"
+            }`}
+          >
+            {isScrolled && (
+              <div className="flex items-center justify-between px-4 py-3">
+                <div className="flex items-center space-x-3">
+                  <div className="w-10 h-10 rounded-lg overflow-hidden shadow-sm">
+                    <img
+                      src="/picture/WechatIMG5527.jpg"
+                      alt="Mingduo Zhao"
+                      className="w-full h-full object-cover scale-140"
+                    />
+                  </div>
+                  <div>
+                    <h1 className="text-sm font-serif font-light text-gray-900 tracking-tight">
+                      Mingduo Zhao
+                    </h1>
+                    <div className="text-xs text-gray-600">PhD Candidate</div>
+                  </div>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <a
+                    href="mailto:mingduo@berkeley.edu"
+                    className="p-2 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors touch-manipulation"
+                  >
+                    <svg
+                      className="w-4 h-4 text-gray-600"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                      />
+                    </svg>
+                  </a>
+                  <a
+                    href="/CV.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-2 bg-primary-600 hover:bg-primary-700 text-white rounded-lg transition-colors touch-manipulation"
+                  >
+                    <svg
+                      className="w-4 h-4"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            )}
+          </header>
+        ) : (
+          // DESKTOP: Keep the original complex transformation
+          <section
+            className={`fixed inset-0 transition-all duration-1000 ease-out z-10 ${
+              isScrolled
+                ? "w-64 sm:w-72 lg:w-80 xl:w-96 border-r border-gray-200"
+                : "w-full"
             }`}
             style={{
+              backgroundImage: !isScrolled ? "url(/picture/bg252.png)" : "none",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
               transition:
-                "background-color 1200ms cubic-bezier(0.4, 0, 0.2, 1)",
+                "all 1200ms cubic-bezier(0.4, 0, 0.2, 1), transform 1200ms cubic-bezier(0.4, 0, 0.2, 1)",
+              willChange: "width, height, transform, background-image",
             }}
           >
             <div
-              className={`w-full mx-auto transition-all duration-1000 ease-out ${
-                isScrolled
-                  ? isMobile
-                    ? "px-4 py-2"
-                    : "max-w-none px-2 sm:px-3 lg:px-4"
-                  : "text-center px-4 sm:px-6 lg:px-8"
+              className={`h-full flex items-center justify-center transition-all duration-1000 ease-out ${
+                isScrolled ? "bg-gray-50" : "bg-white/95 backdrop-blur-sm"
               }`}
               style={{
                 transition:
-                  "padding 1200ms cubic-bezier(0.4, 0, 0.2, 1), max-width 1200ms cubic-bezier(0.4, 0, 0.2, 1)",
+                  "background-color 1200ms cubic-bezier(0.4, 0, 0.2, 1)",
               }}
             >
-              {!isScrolled ? (
-                // Hero layout - optimized for mobile
-                <div className="relative w-full h-full overflow-hidden">
-                  {/* Subtle decorative background elements */}
-                  <div className="absolute inset-0 opacity-30 md:opacity-40">
-                    <div className="absolute top-1/4 left-1/4 w-32 h-32 md:w-64 md:h-64 bg-gradient-to-br from-blue-50 to-gray-50 rounded-full blur-3xl"></div>
-                    <div className="absolute bottom-1/3 right-1/4 w-24 h-24 md:w-48 md:h-48 bg-gradient-to-br from-gray-50 to-blue-50 rounded-full blur-3xl"></div>
-                  </div>
+              <div
+                className={`w-full mx-auto transition-all duration-1000 ease-out ${
+                  isScrolled
+                    ? "max-w-none px-2 sm:px-3 lg:px-4"
+                    : "text-center px-4 sm:px-6 lg:px-8"
+                }`}
+                style={{
+                  transition:
+                    "padding 1200ms cubic-bezier(0.4, 0, 0.2, 1), max-width 1200ms cubic-bezier(0.4, 0, 0.2, 1)",
+                }}
+              >
+                {!isScrolled ? (
+                  // Hero layout - desktop only
+                  <div className="relative w-full h-full overflow-hidden">
+                    {/* Subtle decorative background elements */}
+                    <div className="absolute inset-0 opacity-30 md:opacity-40">
+                      <div className="absolute top-1/4 left-1/4 w-32 h-32 md:w-64 md:h-64 bg-gradient-to-br from-blue-50 to-gray-50 rounded-full blur-3xl"></div>
+                      <div className="absolute bottom-1/3 right-1/4 w-24 h-24 md:w-48 md:h-48 bg-gradient-to-br from-gray-50 to-blue-50 rounded-full blur-3xl"></div>
+                    </div>
 
-                  {/* Mobile-optimized layout */}
-                  <div className="relative z-10 h-full flex flex-col justify-center px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 py-8 lg:py-12 xl:py-16 w-full max-w-none">
-                    {/* Mobile: Stack vertically, Desktop: Grid layout */}
-                    <div className="flex flex-col lg:grid lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-12 xl:gap-16 2xl:gap-24 h-full">
-                      {/* Profile section - mobile optimized */}
-                      <div className="lg:col-span-7 flex flex-col justify-center space-y-4 sm:space-y-6 lg:space-y-8">
-                        <div className="flex flex-col items-center lg:flex-row lg:items-start space-y-6 sm:space-y-8 lg:space-y-0 lg:space-x-8 xl:space-x-12">
-                          {/* Profile image - responsive sizing with mobile positioning fix */}
-                          <div className="flex-shrink-0 mt-8 sm:mt-12 md:mt-16 lg:mt-0">
-                            <div className="relative">
-                              <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-64 lg:h-64 xl:w-72 xl:h-72 rounded-2xl overflow-hidden shadow-xl ring-1 ring-white/30 transform hover:scale-105 transition-transform duration-500">
-                                <img
-                                  src="/picture/WechatIMG5527.jpg"
-                                  alt="Mingduo Zhao"
-                                  className="w-full h-full object-cover scale-110 hover:scale-115 transition-transform duration-500"
-                                />
+                    {/* Desktop hero layout */}
+                    <div className="relative z-10 h-full flex flex-col justify-center px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 py-8 lg:py-12 xl:py-16 w-full max-w-none">
+                      {/* Desktop Grid layout */}
+                      <div className="grid lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-12 xl:gap-16 2xl:gap-24 h-full">
+                        {/* Profile section */}
+                        <div className="lg:col-span-7 flex flex-col justify-center space-y-4 sm:space-y-6 lg:space-y-8">
+                          <div className="flex flex-col items-center lg:flex-row lg:items-start space-y-6 sm:space-y-8 lg:space-y-0 lg:space-x-8 xl:space-x-12">
+                            {/* Profile image */}
+                            <div className="flex-shrink-0">
+                              <div className="relative">
+                                <div className="w-64 h-64 lg:w-64 lg:h-64 xl:w-72 xl:h-72 rounded-2xl overflow-hidden shadow-xl ring-1 ring-white/30 transform hover:scale-105 transition-transform duration-500">
+                                  <img
+                                    src="/picture/WechatIMG5527.jpg"
+                                    alt="Mingduo Zhao"
+                                    className="w-full h-full object-cover scale-110 hover:scale-115 transition-transform duration-500"
+                                  />
+                                </div>
+                                {/* Decorative accent */}
+                                <div className="absolute -bottom-2 -right-2 lg:-bottom-2 lg:-right-2 w-16 h-16 bg-gray-800 rounded-lg opacity-60 -z-10"></div>
                               </div>
-                              {/* Decorative accent - responsive */}
-                              <div className="absolute -bottom-1 -right-1 sm:-bottom-2 sm:-right-2 md:-bottom-3 md:-right-3 lg:-bottom-2 lg:-right-2 w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-16 lg:h-16 bg-gray-800 rounded-lg opacity-60 -z-10"></div>
+                            </div>
+
+                            {/* Name and title */}
+                            <div className="flex-1 text-center lg:text-left lg:pt-4">
+                              <div className="space-y-6">
+                                <div>
+                                  <h1 className="text-5xl xl:text-6xl font-serif font-light text-gray-900 leading-tight tracking-tight mb-2">
+                                    Mingduo Zhao
+                                  </h1>
+                                  <div className="text-xl text-gray-600 tracking-wide mb-1">
+                                    赵鸣铎
+                                  </div>
+                                </div>
+
+                                <div className="space-y-3">
+                                  <div className="text-xl text-gray-800 font-light">
+                                    PhD Candidate in Economics
+                                  </div>
+                                  <div className="text-lg text-gray-600 leading-relaxed">
+                                    University of California, Berkeley
+                                    <br />
+                                    Haas School of Business
+                                  </div>
+                                </div>
+                              </div>
                             </div>
                           </div>
 
-                          {/* Name and title - mobile optimized */}
-                          <div className="flex-1 text-center lg:text-left lg:pt-4">
-                            <div className="space-y-3 sm:space-y-4 lg:space-y-6">
-                              <div>
-                                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-serif font-light text-gray-900 leading-tight tracking-tight mb-2">
-                                  Mingduo Zhao
-                                </h1>
-                                <div className="text-sm sm:text-base lg:text-xl text-gray-600 tracking-wide mb-1">
-                                  赵鸣铎
-                                </div>
-                              </div>
-
-                              <div className="space-y-2 lg:space-y-3">
-                                <div className="text-sm sm:text-base lg:text-xl text-gray-800 font-light">
-                                  PhD Candidate in Economics
-                                </div>
-                                <div className="text-xs sm:text-sm lg:text-lg text-gray-600 leading-relaxed">
-                                  University of California, Berkeley
-                                  <br />
-                                  Haas School of Business
-                                </div>
-                              </div>
-                            </div>
+                          {/* Research description */}
+                          <div className="max-w-4xl text-center lg:text-left">
+                            <div className="w-12 h-px bg-gray-300 mb-6 mx-auto lg:mx-0"></div>
+                            <p className="text-lg leading-relaxed text-gray-700 font-light">
+                              My research explores the intersection of{" "}
+                              <em className="text-gray-800 font-medium">
+                                marketing
+                              </em>
+                              ,{" "}
+                              <em className="text-gray-800 font-medium">
+                                economics
+                              </em>
+                              ,{" "}
+                              <em className="text-gray-800 font-medium">
+                                computer science
+                              </em>
+                              , and{" "}
+                              <em className="text-gray-800 font-medium">
+                                statistics
+                              </em>
+                              , with a focus on how technological advancements
+                              profoundly transform society, both economically
+                              and politically.
+                            </p>
                           </div>
                         </div>
 
-                        {/* Research description - mobile optimized */}
-                        <div className="max-w-none lg:max-w-4xl text-center lg:text-left px-2 sm:px-0 -mt-2 sm:-mt-4 lg:mt-0">
-                          <div className="w-4 sm:w-6 lg:w-12 h-px bg-gray-300 mb-2 sm:mb-3 lg:mb-6 mx-auto lg:mx-0"></div>
-                          <p className="text-xs sm:text-sm lg:text-lg leading-relaxed text-gray-700 font-light">
-                            My research explores the intersection of{" "}
-                            <em className="text-gray-800 font-medium">
-                              marketing
-                            </em>
-                            ,{" "}
-                            <em className="text-gray-800 font-medium">
-                              economics
-                            </em>
-                            ,{" "}
-                            <em className="text-gray-800 font-medium">
-                              computer science
-                            </em>
-                            , and{" "}
-                            <em className="text-gray-800 font-medium">
-                              statistics
-                            </em>
-                            , with a focus on how technological advancements
-                            profoundly transform society, both economically and
-                            politically.
-                          </p>
+                        {/* Navigation panel */}
+                        <div className="lg:col-span-5 flex flex-col justify-center">
+                          <div className="bg-white/60 backdrop-blur-lg border border-white/40 rounded-3xl p-8 xl:p-10 shadow-2xl">
+                            {/* Navigation menu */}
+                            <nav className="space-y-4 mb-8">
+                              {navItems.map((item) => (
+                                <button
+                                  key={item.href}
+                                  onClick={() => scrollToSection(item.id)}
+                                  className="group flex items-center justify-between py-3 px-4 -mx-4 rounded-xl hover:bg-white/50 transition-all duration-300 touch-manipulation w-full text-left"
+                                >
+                                  <div className="flex items-center space-x-4">
+                                    <span className="text-sm font-mono text-gray-400 group-hover:text-gray-600 transition-colors">
+                                      {item.number}
+                                    </span>
+                                    <span className="text-base font-medium text-gray-700 group-hover:text-gray-900 transition-colors tracking-wide">
+                                      {item.label}
+                                    </span>
+                                  </div>
+                                  <div className="w-6 h-px bg-gray-300 group-hover:bg-gray-600 group-hover:w-8 transition-all duration-300"></div>
+                                </button>
+                              ))}
+                            </nav>
+                          </div>
                         </div>
                       </div>
 
-                      {/* Navigation panel - mobile optimized positioning */}
-                      <div className="lg:col-span-5 flex flex-col justify-center mt-2 sm:mt-4 lg:mt-0">
-                        <div className="bg-white/50 lg:bg-white/60 backdrop-blur-lg border border-white/30 lg:border-white/40 rounded-xl sm:rounded-2xl lg:rounded-3xl p-3 sm:p-4 lg:p-8 xl:p-10 shadow-xl lg:shadow-2xl">
-                          {/* Navigation menu - mobile optimized */}
-                          <nav className="space-y-1.5 sm:space-y-2 lg:space-y-4 mb-3 sm:mb-4 lg:mb-8">
-                            {navItems.map((item) => (
-                              <button
-                                key={item.href}
-                                onClick={() => scrollToSection(item.id)}
-                                className="group flex items-center justify-between py-1.5 sm:py-2 lg:py-3 px-2 sm:px-3 lg:px-4 -mx-2 sm:-mx-3 lg:-mx-4 rounded-lg lg:rounded-xl hover:bg-white/40 lg:hover:bg-white/50 transition-all duration-300 touch-manipulation w-full text-left"
-                              >
-                                <div className="flex items-center space-x-2 sm:space-x-3 lg:space-x-4">
-                                  <span className="text-xs sm:text-xs lg:text-sm font-mono text-gray-400 group-hover:text-gray-600 transition-colors">
-                                    {item.number}
-                                  </span>
-                                  <span className="text-xs sm:text-sm lg:text-base font-medium text-gray-700 group-hover:text-gray-900 transition-colors tracking-wide">
-                                    {item.label}
-                                  </span>
-                                </div>
-                                <div className="w-2 sm:w-3 lg:w-6 h-px bg-gray-300 group-hover:bg-gray-600 group-hover:w-3 sm:group-hover:w-4 lg:group-hover:w-8 transition-all duration-300"></div>
-                              </button>
-                            ))}
-                          </nav>
+                      {/* Scroll indicator */}
+                      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2">
+                        <div className="flex flex-col items-center space-y-3">
+                          <div className="w-px h-12 bg-gradient-to-b from-transparent via-gray-300 to-transparent"></div>
+                          <svg
+                            className="w-6 h-6 text-gray-400 animate-smooth-bounce"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={1.5}
+                              d="M19 14l-7 7m0 0l-7-7m7 7V3"
+                            />
+                          </svg>
+                          <span className="text-xs text-gray-400 font-medium tracking-wider uppercase">
+                            Explore
+                          </span>
                         </div>
-                      </div>
-                    </div>
-
-                    {/* Scroll indicator - mobile optimized positioning */}
-                    <div className="absolute bottom-1 sm:bottom-2 md:bottom-4 lg:bottom-0 left-1/2 transform -translate-x-1/2">
-                      <div className="flex flex-col items-center space-y-1 sm:space-y-2 lg:space-y-3">
-                        <div className="w-px h-4 sm:h-6 lg:h-12 bg-gradient-to-b from-transparent via-gray-300 to-transparent"></div>
-                        <svg
-                          className="w-3 h-3 sm:w-4 sm:h-4 lg:w-6 lg:h-6 text-gray-400 animate-smooth-bounce"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={1.5}
-                            d="M19 14l-7 7m0 0l-7-7m7 7V3"
-                          />
-                        </svg>
-                        <span className="text-xs text-gray-400 font-medium tracking-wider uppercase hidden sm:block">
-                          Explore
-                        </span>
                       </div>
                     </div>
                   </div>
-                </div>
-              ) : (
-                // Sidebar/mobile header content with enhanced highlighting
-                <div
-                  className={`${
-                    isMobile
-                      ? "flex items-center justify-between h-full px-4 py-2"
-                      : "flex flex-col h-full justify-between py-4 sm:py-6 lg:py-8 overflow-y-auto max-h-screen"
-                  }`}
-                >
-                  {isMobile ? (
-                    // Mobile collapsed header
-                    <>
-                      <div className="flex items-center space-x-3">
-                        <div className="w-10 h-10 rounded-lg overflow-hidden shadow-sm">
+                ) : (
+                  // Desktop sidebar content
+                  <div className="flex flex-col h-full justify-between py-8 overflow-y-auto max-h-screen">
+                    <div className="flex-1 flex flex-col justify-center min-h-0">
+                      <div className="text-center mb-8">
+                        <div className="w-40 h-40 mx-auto rounded-2xl overflow-hidden shadow-lg mb-6">
                           <img
                             src="/picture/WechatIMG5527.jpg"
                             alt="Mingduo Zhao"
-                            className="w-full h-full object-cover scale-140"
+                            className="w-full h-full object-cover scale-150 hover:scale-115 transition-transform duration-500"
                           />
                         </div>
-                        <div>
-                          <h1 className="text-sm font-serif font-light text-gray-900 tracking-tight">
-                            Mingduo Zhao
-                          </h1>
-                          <div className="text-xs text-gray-600">
-                            PhD Candidate
-                          </div>
+                        <h1 className="text-3xl font-serif font-light text-gray-900 mb-2 tracking-tight">
+                          Mingduo Zhao
+                        </h1>
+                        <div className="text-lg text-gray-600 mb-2 font-light">
+                          赵鸣铎
+                        </div>
+                        <div className="text-lg text-gray-700 mb-6 font-light">
+                          PhD Candidate in Economics
+                        </div>
+                        <div className="text-sm text-gray-600 leading-relaxed mb-8">
+                          UC Berkeley • Haas School of Business
                         </div>
                       </div>
-                      <div className="flex items-center space-x-2">
-                        <a
-                          href="mailto:mingduo@berkeley.edu"
-                          className="p-2 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors touch-manipulation"
-                        >
-                          <svg
-                            className="w-4 h-4 text-gray-600"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth={2}
-                              d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                            />
-                          </svg>
-                        </a>
-                        <a
-                          href="/CV.pdf"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="p-2 bg-primary-600 hover:bg-primary-700 text-white rounded-lg transition-colors touch-manipulation"
-                        >
-                          <svg
-                            className="w-4 h-4"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth={2}
-                              d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                            />
-                          </svg>
-                        </a>
-                      </div>
-                    </>
-                  ) : (
-                    // Desktop sidebar content with enhanced navigation
-                    <>
-                      <div className="flex-1 flex flex-col justify-center min-h-0">
-                        <div className="text-center mb-4 sm:mb-6 lg:mb-8">
-                          <div className="w-32 h-32 sm:w-36 sm:h-36 lg:w-40 lg:h-40 mx-auto rounded-2xl overflow-hidden shadow-lg mb-4 sm:mb-5 lg:mb-6">
-                            <img
-                              src="/picture/WechatIMG5527.jpg"
-                              alt="Mingduo Zhao"
-                              className="w-full h-full object-cover scale-150 hover:scale-115 transition-transform duration-500"
-                            />
-                          </div>
-                          <h1 className="text-2xl sm:text-3xl lg:text-3xl font-serif font-light text-gray-900 mb-1 sm:mb-2 tracking-tight">
-                            Mingduo Zhao
-                          </h1>
-                          <div className="text-base sm:text-lg text-gray-600 mb-1 sm:mb-2 font-light">
-                            赵鸣铎
-                          </div>
-                          <div className="text-base sm:text-lg text-gray-700 mb-4 sm:mb-5 lg:mb-6 font-light">
-                            PhD Candidate in Economics
-                          </div>
-                          <div className="text-xs sm:text-sm text-gray-600 leading-relaxed mb-4 sm:mb-6 lg:mb-8">
-                            UC Berkeley • Haas School of Business
-                          </div>
-                        </div>
-                      </div>
+                    </div>
 
-                      {/* Enhanced Desktop Navigation with highlighting */}
-                      <nav className="px-4 sm:px-6 lg:px-8 py-1 sm:py-1 lg:py-1 border-t border-gray-200 flex-shrink-0">
-                        <div className="space-y-0.5 sm:space-y-1">
-                          {navItems.map((item) => (
-                            <button
-                              key={item.id}
-                              onClick={() => scrollToSection(item.id)}
-                              className={`group flex items-center justify-between w-full px-3 py-1.5 sm:py-2 rounded-lg transition-all duration-300 text-left ${
-                                activeSection === item.id
-                                  ? "bg-primary-50 border-l-4 border-primary-500 text-primary-700 shadow-sm pl-2"
-                                  : "text-gray-700 hover:text-gray-900 hover:bg-gray-50 border-l-4 border-transparent"
-                              }`}
-                            >
-                              <div className="flex items-center space-x-3">
-                                <span
-                                  className={`text-xs font-mono transition-colors ${
-                                    activeSection === item.id
-                                      ? "text-primary-600"
-                                      : "text-gray-400 group-hover:text-gray-600"
-                                  }`}
-                                >
-                                  {item.number}
-                                </span>
-                                <span className="text-xs sm:text-sm font-medium tracking-wide">
-                                  {item.label}
-                                </span>
-                              </div>
-                              <div
-                                className={`h-px transition-all duration-300 ${
+                    {/* Desktop Navigation with highlighting */}
+                    <nav className="px-8 py-1 border-t border-gray-200 flex-shrink-0">
+                      <div className="space-y-1">
+                        {navItems.map((item) => (
+                          <button
+                            key={item.id}
+                            onClick={() => scrollToSection(item.id)}
+                            className={`group flex items-center justify-between w-full px-3 py-2 rounded-lg transition-all duration-300 text-left ${
+                              activeSection === item.id
+                                ? "bg-primary-50 border-l-4 border-primary-500 text-primary-700 shadow-sm pl-2"
+                                : "text-gray-700 hover:text-gray-900 hover:bg-gray-50 border-l-4 border-transparent"
+                            }`}
+                          >
+                            <div className="flex items-center space-x-3">
+                              <span
+                                className={`text-xs font-mono transition-colors ${
                                   activeSection === item.id
-                                    ? "w-6 bg-primary-500"
-                                    : "w-4 bg-gray-300 group-hover:bg-gray-600 group-hover:w-6"
+                                    ? "text-primary-600"
+                                    : "text-gray-400 group-hover:text-gray-600"
                                 }`}
-                              ></div>
-                            </button>
-                          ))}
-                        </div>
-                      </nav>
-                    </>
-                  )}
-                </div>
-              )}
+                              >
+                                {item.number}
+                              </span>
+                              <span className="text-sm font-medium tracking-wide">
+                                {item.label}
+                              </span>
+                            </div>
+                            <div
+                              className={`h-px transition-all duration-300 ${
+                                activeSection === item.id
+                                  ? "w-6 bg-primary-500"
+                                  : "w-4 bg-gray-300 group-hover:bg-gray-600 group-hover:w-6"
+                              }`}
+                            ></div>
+                          </button>
+                        ))}
+                      </div>
+                    </nav>
+                  </div>
+                )}
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
+        )}
 
-        {/* Main Content - Responsive margin handling */}
+        {/* Mobile: Simple full-width hero section */}
+        {isMobile && (
+          <section
+            id="home"
+            className="min-h-screen flex items-center justify-center bg-white px-4 py-8"
+            style={{
+              backgroundImage: "url(/picture/bg252.png)",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+            }}
+          >
+            <div className="w-full max-w-lg mx-auto text-center bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-xl">
+              {/* Mobile hero content */}
+              <div className="space-y-6">
+                {/* Profile image */}
+                <div className="w-32 h-32 mx-auto rounded-2xl overflow-hidden shadow-lg">
+                  <img
+                    src="/picture/WechatIMG5527.jpg"
+                    alt="Mingduo Zhao"
+                    className="w-full h-full object-cover scale-110"
+                  />
+                </div>
+
+                {/* Name and title */}
+                <div>
+                  <h1 className="text-3xl font-serif font-light text-gray-900 mb-2 tracking-tight">
+                    Mingduo Zhao
+                  </h1>
+                  <div className="text-base text-gray-600 mb-1">赵鸣铎</div>
+                  <div className="text-lg text-gray-800 font-light mb-4">
+                    PhD Candidate in Economics
+                  </div>
+                  <div className="text-sm text-gray-600 leading-relaxed">
+                    University of California, Berkeley
+                    <br />
+                    Haas School of Business
+                  </div>
+                </div>
+
+                {/* Research description */}
+                <div>
+                  <div className="w-8 h-px bg-gray-300 mx-auto mb-4"></div>
+                  <p className="text-sm leading-relaxed text-gray-700 font-light">
+                    My research explores the intersection of{" "}
+                    <em className="text-gray-800 font-medium">marketing</em>,{" "}
+                    <em className="text-gray-800 font-medium">economics</em>,{" "}
+                    <em className="text-gray-800 font-medium">
+                      computer science
+                    </em>
+                    , and{" "}
+                    <em className="text-gray-800 font-medium">statistics</em>,
+                    with a focus on technological transformation.
+                  </p>
+                </div>
+
+                {/* Mobile navigation */}
+                <div className="space-y-2">
+                  {navItems.map((item) => (
+                    <button
+                      key={item.href}
+                      onClick={() => scrollToSection(item.id)}
+                      className="flex items-center justify-between w-full py-3 px-4 bg-white/40 hover:bg-white/60 rounded-lg transition-all duration-300 touch-manipulation"
+                    >
+                      <div className="flex items-center space-x-3">
+                        <span className="text-xs font-mono text-gray-400">
+                          {item.number}
+                        </span>
+                        <span className="text-sm font-medium text-gray-700">
+                          {item.label}
+                        </span>
+                      </div>
+                      <svg
+                        className="w-4 h-4 text-gray-400"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M9 5l7 7-7 7"
+                        />
+                      </svg>
+                    </button>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* Main Content - Simplified margin handling */}
         <div
-          className={`transition-all duration-1000 ease-out ${
-            isScrolled && !isMobile
-              ? "ml-64 sm:ml-72 lg:ml-80 xl:ml-96"
-              : isMobile && isScrolled
-              ? "mt-20"
+          className={`${
+            isMobile
+              ? "pt-0" // No complex margins on mobile
+              : isScrolled
+              ? "ml-64 sm:ml-72 lg:ml-80 xl:ml-96" // Desktop sidebar margins
               : "ml-0"
           }`}
           style={{
-            transition: "margin 1200ms cubic-bezier(0.4, 0, 0.2, 1)",
-            willChange: "margin-left, margin-top",
+            transition: isMobile
+              ? "none"
+              : "margin 1200ms cubic-bezier(0.4, 0, 0.2, 1)",
+            willChange: isMobile ? "auto" : "margin-left",
           }}
         >
-          {/* Spacer for initial scroll trigger */}
-          <div className="h-screen" style={{ scrollSnapAlign: "start" }}></div>
+          {/* Desktop spacer for initial scroll trigger */}
+          {!isMobile && (
+            <div
+              className="h-screen"
+              style={{ scrollSnapAlign: "start" }}
+            ></div>
+          )}
 
           {/* About Section - Mobile optimized */}
           <section

@@ -7,10 +7,18 @@
 @layer base {
   html {
     scroll-behavior: smooth;
-    scroll-snap-type: y mandatory;
+    /* Disable scroll snap on mobile to prevent issues */
+    scroll-snap-type: none;
     /* Better text rendering on mobile */
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
+  }
+  
+  /* Enable scroll snap only on desktop */
+  @media (min-width: 768px) {
+    html {
+      scroll-snap-type: y mandatory;
+    }
   }
   
   body {
@@ -21,10 +29,12 @@
     overflow-x: hidden;
   }
   
-  /* Enhanced scroll snap behavior */
-  section {
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
+  /* Enhanced scroll snap behavior - desktop only */
+  @media (min-width: 768px) {
+    section {
+      scroll-snap-align: start;
+      scroll-snap-stop: always;
+    }
   }
 
   /* Better touch targets for mobile */
@@ -61,6 +71,17 @@
     
     /* Better line height for mobile reading */
     p { line-height: 1.6; }
+    
+    /* Ensure sections don't have fixed heights on mobile */
+    section {
+      min-height: auto !important;
+      height: auto !important;
+    }
+    
+    /* Prevent fixed positioning issues on mobile */
+    .fixed {
+      position: relative;
+    }
   }
 }
 
@@ -104,6 +125,23 @@
   .safe-area-padding {
     padding-left: env(safe-area-inset-left);
     padding-right: env(safe-area-inset-right);
+  }
+
+  /* Mobile-specific scroll behavior */
+  @media (max-width: 768px) {
+    .mobile-no-scroll-snap {
+      scroll-snap-type: none !important;
+    }
+    
+    .mobile-section {
+      scroll-snap-align: none !important;
+      scroll-snap-stop: normal !important;
+    }
+    
+    /* Ensure proper spacing between sections on mobile */
+    .mobile-section + .mobile-section {
+      margin-top: 2rem;
+    }
   }
 }
 
@@ -162,4 +200,27 @@
 
 .animate-smooth-bounce {
   animation: subtleBounce 3s infinite;
+} 
+
+/* Mobile-specific overrides to prevent animations */
+@media (max-width: 768px) {
+  .animate-smooth-bounce {
+    animation: none;
+  }
+  
+  .animate-fade-in {
+    animation: none;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Disable complex transforms on mobile */
+  .transform {
+    transform: none !important;
+  }
+  
+  /* Simplify transitions on mobile */
+  .transition-all {
+    transition: none !important;
+  }
 } 
