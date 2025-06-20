@@ -171,7 +171,7 @@ export default function Home() {
                                 <img
                                   src="/picture/WechatIMG5527.jpg"
                                   alt="Mingduo Zhao"
-                                  className="w-full h-full object-cover"
+                                  className="w-full h-full object-cover scale-110 hover:scale-115 transition-transform duration-500"
                                 />
                               </div>
                               {/* Decorative accent - responsive */}
@@ -255,7 +255,7 @@ export default function Home() {
                     </div>
 
                     {/* Scroll indicator - mobile optimized positioning */}
-                    <div className="absolute bottom-2 sm:bottom-4 lg:bottom-12 left-1/2 transform -translate-x-1/2">
+                    <div className="absolute bottom-1 sm:bottom-2 md:bottom-4 lg:bottom-0 left-1/2 transform -translate-x-1/2">
                       <div className="flex flex-col items-center space-y-1 sm:space-y-2 lg:space-y-3">
                         <div className="w-px h-4 sm:h-6 lg:h-12 bg-gradient-to-b from-transparent via-gray-300 to-transparent"></div>
                         <svg
@@ -295,7 +295,7 @@ export default function Home() {
                           <img
                             src="/picture/WechatIMG5527.jpg"
                             alt="Mingduo Zhao"
-                            className="w-full h-full object-cover"
+                            className="w-full h-full object-cover scale-140"
                           />
                         </div>
                         <div>
@@ -357,7 +357,7 @@ export default function Home() {
                             <img
                               src="/picture/WechatIMG5527.jpg"
                               alt="Mingduo Zhao"
-                              className="w-full h-full object-cover"
+                              className="w-full h-full object-cover scale-150 hover:scale-115 transition-transform duration-500"
                             />
                           </div>
                           <h1 className="text-2xl sm:text-3xl lg:text-3xl font-serif font-light text-gray-900 mb-1 sm:mb-2 tracking-tight">
