@@ -382,7 +382,7 @@ export default function Home() {
                           PhD Candidate in Economics
                         </div>
                         <div className="text-sm text-gray-600 leading-relaxed mb-8">
-                          UC Berkeley • Haas School of Business
+                          UC Berkeley • Department of Economics
                         </div>
                       </div>
                     </div>
