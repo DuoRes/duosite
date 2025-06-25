@@ -365,7 +365,7 @@ export default function Home() {
                   </div>
                 ) : (
                   // Desktop sidebar content
-                  <div className="flex flex-col h-[1.2vh] justify-between py-8 overflow-y-auto max-h-screen">
+                  <div className="flex flex-col h-[120vh] justify-between py-8 overflow-y-auto max-h-screen">
                     <div className="flex-1 flex flex-col justify-center min-h-0">
                       <div className="text-center mb-8">
                         <div className="w-40 h-40 mx-auto rounded-2xl overflow-hidden shadow-lg mb-6">
