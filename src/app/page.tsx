@@ -3,11 +3,14 @@
 import { useEffect, useState } from "react";
 import PasswordProtection from "@/components/PasswordProtection";
 import Navigation from "@/components/Navigation";
+// import TopPopup from "@/components/TopPopup";
+import { usePopup } from "@/components/TopPopupProvider";
 
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
+  const { showPopup } = usePopup();
 
   useEffect(() => {
     const checkMobile = () => {
@@ -98,6 +101,7 @@ export default function Home() {
     }
   };
 
+
   const navItems = [
     { href: "#about", label: "About", number: "01", id: "about" },
     {
@@ -108,7 +112,7 @@ export default function Home() {
     },
     { href: "#working-papers", label: "Working Papers", number: "03", id: "working-papers" },
     { href: "#publish-papers", label: "Publish Papers", number: "04", id: "publish-papers" },
-    // { href: "#cv", label: "CV", number: "05", id: "cv" },
+    { href: "#cv", label: "CV", number: "05", id: "cv" },
     { href: "#teaching", label: "Teaching", number: "06", id: "teaching" },
     { href: "#contact", label: "Contact", number: "07", id: "contact" },
   ];
@@ -317,8 +321,32 @@ export default function Home() {
                           <div className="bg-white/60 backdrop-blur-lg border border-white/40 rounded-3xl p-8 xl:p-10 shadow-2xl">
                             {/* Navigation menu */}
                             <nav className="space-y-4 mb-8">
-                              {navItems.map((item) => (
-                                <button
+                              {navItems.map((item) => 
+                               item.id === "cv" ? (null
+                              // Special behavior for CV
+                              // <button
+                              //   key={item.href}
+                              //   onClick={() =>
+                              //     window.open(
+                              //       "https://drive.google.com/file/d/1pH_bCencAsriJI9ztSAAFlsbuOqLZVuj/view?usp=drive_link",
+                              //       "_blank"
+                              //     )
+                              //   }
+                              //   className="group flex items-center justify-between py-3 px-4 -mx-4 rounded-xl hover:bg-white/50 transition-all duration-300 touch-manipulation w-full text-left"
+                              //   >
+                              //     <div className="flex items-center space-x-4">
+                              //       <span className="text-sm font-mono text-gray-400 group-hover:text-gray-600 transition-colors">
+                              //         {item.number}
+                              //       </span>
+                              //       <span className="text-base font-medium text-gray-700 group-hover:text-gray-900 transition-colors tracking-wide">
+                              //         {item.label}
+                              //       </span>
+                              //     </div>
+                              //     <div className="w-6 h-px bg-gray-300 group-hover:bg-gray-600 group-hover:w-8 transition-all duration-300"></div>
+                              //   </button>
+                            ) : (
+                              // Default behavior for all other items
+                              <button
                                   key={item.href}
                                   onClick={() => scrollToSection(item.id)}
                                   className="group flex items-center justify-between py-3 px-4 -mx-4 rounded-xl hover:bg-white/50 transition-all duration-300 touch-manipulation w-full text-left"
@@ -333,7 +361,8 @@ export default function Home() {
                                   </div>
                                   <div className="w-6 h-px bg-gray-300 group-hover:bg-gray-600 group-hover:w-8 transition-all duration-300"></div>
                                 </button>
-                              ))}
+                              ))
+                            }
                             </nav>
                           </div>
                         </div>
@@ -365,8 +394,8 @@ export default function Home() {
                   </div>
                 ) : (
                   // Desktop sidebar content
-                  <div className="flex flex-col h-[100vh] justify-between py-8 overflow-y-auto max-h-screen">
-                    <div className="flex-1 flex flex-col justify-center min-h-0">
+                  <div className="flex flex-col h-[110vh] justify-between py-8 overflow-y-auto max-h-screen">
+                    <div className="flex-1 flex flex-col h-[60vh] justify-center min-h-0">
                       <div className="text-center mb-8">
                         <div className="w-40 h-40 mx-auto rounded-2xl overflow-hidden shadow-lg mb-6">
                           <img
@@ -381,19 +410,55 @@ export default function Home() {
                         <div className="text-lg text-gray-600 mb-2 font-light">
                           赵鸣铎
                         </div>
-                        <div className="text-lg text-gray-700 mb-6 font-light">
+                        <div className="text-lg text-gray-700 mb-1 font-light">
                           PhD Candidate in Economics
                         </div>
-                        <div className="text-sm text-gray-600 leading-relaxed mb-8">
+                        <div className="text-sm text-gray-600 leading-relaxed mb-1">
                           UC Berkeley • Department of Economics
                         </div>
                       </div>
                     </div>
 
                     {/* Desktop Navigation with highlighting */}
-                    <nav className="h-[0.5vh] px-8 py-1 border-t border-gray-200 flex-shrink-0">
+                    <nav className="h-[45vh] px-8 py-1 border-t border-gray-200 flex-shrink-0">
                       <div className="space-y-0.5">
-                        {navItems.map((item) => (
+                        {navItems.map((item) => 
+                        item.id === "cv" ? (
+                          <button
+                            key={item.id}
+                            onClick={() => window.open(
+                              "https://drive.google.com/file/d/1pH_bCencAsriJI9ztSAAFlsbuOqLZVuj/view?usp=drive_link",
+                              "_blank"
+                            )}
+                            className={`group flex items-center justify-between w-full px-3 py-0.5 rounded-lg transition-all duration-300 text-left ${
+                              activeSection === item.id
+                                ? "bg-primary-50 border-l-4 border-primary-500 text-primary-700 shadow-sm pl-2"
+                                : "text-gray-700 hover:text-gray-900 hover:bg-gray-50 border-l-4 border-transparent"
+                            }`}
+                          >
+                            <div className="flex items-center space-x-3">
+                              <span
+                                className={`text-xs font-mono transition-colors ${
+                                  activeSection === item.id
+                                    ? "text-primary-600"
+                                    : "text-gray-400 group-hover:text-gray-600"
+                                }`}
+                              >
+                                {item.number}
+                              </span>
+                              <span className="text-sm font-medium tracking-wide">
+                                {item.label}
+                              </span>
+                            </div>
+                            <div
+                              className={`h-px transition-all duration-300 ${
+                                activeSection === item.id
+                                  ? "w-6 bg-primary-500"
+                                  : "w-4 bg-gray-300 group-hover:bg-gray-600 group-hover:w-6"
+                              }`}
+                            ></div>
+                          </button>
+                        ):(
                           <button
                             key={item.id}
                             onClick={() => scrollToSection(item.id)}
@@ -692,10 +757,11 @@ export default function Home() {
 
                 <div className="border-t border-gray-100">
                   <div className="flex flex-wrap gap-7">
-                    <button className="px-4 py-2 text-xs font-medium text-white bg-blue-600 hover:bg-blue-700 transition-colors rounded-lg shadow-sm">
+                    {/* <button className="px-4 py-2 text-xs font-medium text-white bg-blue-600 hover:bg-blue-700 transition-colors rounded-lg shadow-sm">
                       Download Paper
-                    </button>
-                    <button className="px-4 py-2 text-xs font-medium text-gray-700 bg-gray-100 hover:bg-gray-200 transition-colors rounded-lg">
+                    </button> */}
+                    <button className="px-4 py-2 text-xs font-medium text-gray-700 bg-gray-100 hover:bg-gray-200 transition-colors rounded-lg"
+                    onClick={()=>showPopup(`Recommender systems shape how people consume news, possibly reinforcing political polarization. We run two field experiments to identify how user preferences and algorithms interact to amplify partisan news consumption. In the first study, 2,065 U.S. participants use blank Google accounts and a browser extension to track users' activities on Google News. The first-round recommendations are exogenous, allowing us to show that aligned content draws more clicks. A second experiment uses bots to randomly click on articles, revealing that each click leads to more ideologically aligned content. These two pieces of causal evidence establish a feedback loop between user preference and algorithmic recommendations. We also find in the field study that, after interacting with the recommender system, people's level of polarization increases. A structural model combining a discrete choice model (demand side) with a multi-armed bandit algorithm (supply side) confirms this positive-feedback mechanism. The model is then used to simulate a counterfactual "ideology-blind" recommendation policy that ignores political slant when curating content. While this policy reduces both affective and ideological polarization, it comes at the cost of likely lower engagement. Overall, the findings provide causal evidence that personalized algorithms reinforce partisan consumption and exacerbate polarization. They also uncover a fundamental trade-off between mitigating polarization and sustaining engagement, which offers important insights for both platform owners and policymakers.`)}>
                       Abstract
                     </button>
                     <button className="px-4 py-2 text-xs font-medium text-gray-700 bg-gray-100 hover:bg-gray-200 transition-colors rounded-lg">
@@ -736,15 +802,36 @@ export default function Home() {
                   {/* Working Papers Overview */}
                   <div className="bg-white/60 backdrop-blur-lg border border-white/40 rounded-2xl p-4 sm:p-6 shadow-lg">
                     <h3 className="text-lg sm:text-xl lg:text-2xl font-serif font-light text-gray-900 mb-3 sm:mb-4">
-                      Working Papers
+                      Game Against AI
                     </h3>
                     <p className="text-sm sm:text-base text-gray-700 leading-relaxed font-light mb-4">
-                      Research on algorithmic recommendations in e-commerce,
-                      dynamic pricing effects, and consumer learning in digital
-                      markets. Combines field experiments, structural modeling,
-                      and causal inference techniques.
+                      (with Yahu Cong)
                     </p>
-                    <div className="flex flex-wrap gap-1.5 sm:gap-2">
+                    <ul className="list-disc list-inside text-gray-700">
+                      <li>Under Review at Marketing Science</li>
+                    </ul>
+                    <button 
+                    className="mt-4 px-4 py-2 text-xs font-medium text-gray-700 bg-gray-100 hover:bg-gray-200 transition-colors rounded-lg"
+                    onClick={() => showPopup(`AI systems for dynamic pricing, targeted promotions, and individualized recommendations
+ typically assume that observed consumer behavior truthfully reveals underlying preferences. However,
+ when consumers recognize that their actions influence future targeting decisions, behavior becomes
+ strategic rather than preference-revealing, undermining the validity of standard machine learning
+based targeting. In order to address this challenge, we introduce Structural Transfer Learning (STL),
+ a new framework that incorporates structural economic modeling into machine learning pipelines to
+ account for strategic responses induced by policy interventions. STL constructs policy dependent in
+stance weights that adjust for endogenous domain shifts, enabling firms to learn targeting policies that
+ remain effective even when consumers actively game the system. Furthermore, we demonstrate the
+ practical value of STL through a stylized online experiment in a consumer research setting. While
+ simplified, the design captures a core strategic response common to many personalization environ
+ments, where targeting rules shape behavior. In this setting, naive behavioral targeting rules lead to
+ substantial misallocation of incentives. Applying STL improves expected profits by up to 35% relative
+ to the naive machine learning benchmark that ignores strategic responses, depending on the relative
+ cost of incentives. These findings highlight the need for a fundamental shift in firms’ personalization
+ strategies-from solely optimizing predictive models to designing incentive mechanisms that are robust
+ to strategic consumer behavior.`)} >
+                      Abstract
+                    </button>
+                    {/* <div className="flex flex-wrap gap-1.5 sm:gap-2">
                       <span className="px-2 sm:px-3 py-1 bg-gray-100 text-gray-700 text-xs sm:text-sm rounded-full">
                         E-commerce
                       </span>
@@ -754,11 +841,45 @@ export default function Home() {
                       <span className="px-2 sm:px-3 py-1 bg-gray-100 text-gray-700 text-xs sm:text-sm rounded-full">
                         Consumer Learning
                       </span>
-                    </div>
+                    </div> */}
+                  </div>
+
+                  <div className="bg-white/60 backdrop-blur-lg border border-white/40 rounded-2xl p-4 sm:p-6 shadow-lg">
+                    <h3 className="text-lg sm:text-xl lg:text-2xl font-serif font-light text-gray-900 mb-3 sm:mb-4">
+                      Unmasking the Deception: The Interplay between Fake Reviews, Ratings Discrepancy,
+ and Consumer Demand
+                    </h3>
+                    <p className="text-sm sm:text-base text-gray-700 leading-relaxed font-light mb-4">
+                      (with Yunhao Huang and J. Miguel Villas-Boas)
+                    </p>
+                    <ul className="list-disc list-inside text-gray-700">
+                      <li>Under Review at Journal of Marketing Research</li>
+                    </ul>
+                    <button 
+                    className="mt-4 px-4 py-2 text-xs font-medium text-gray-700 bg-gray-100 hover:bg-gray-200 transition-colors rounded-lg"
+                    onClick={() => showPopup(`In online marketplaces, consumers rely on reviews to make informed purchase decisions,
+ making the presence of fake reviews detrimental. Previous literature implies that products with fake
+ reviews can display some patterns in review distribution, such as a higher discrepancy in ratings.
+ Consumers might take this pattern into account when making their purchase decisions. In this paper,
+ we explore the interplay between fake reviews and ratings discrepancy, and their impact on consumer
+ demand, while controlling for average product ratings. First, using a data set with fake review labels,
+ we find that product ratings discrepancy is positively correlated with the probability that the product
+ has fake reviews. Second, through an identification strategy exploiting ratings discrepancy changes due
+ to rating distribution rounding, we find evidence consistent with a negative causal impact of ratings
+ discrepancy on consumer demand. Then, we conduct two experiments to establish and quantify the
+ mechanism of the impact of ratings discrepancy on consumer demand through consumer suspicion of
+ fake reviews. The first experiment shows that higher ratings discrepancy increases consumer suspicion
+ of fake reviews, and the second experiment shows that heightened suspicion reduces consumer willing
+ness to pay. Together, these findings reveal that consumers use ratings discrepancies as a signal of fake
+ reviews, and this suspicion impacts their purchase decisions. The findings highlight the importance of
+ understanding the relationship between fake reviews, ratings discrepancies, and consumer demand in
+ online marketplaces.`)} >
+                      Abstract
+                    </button>
                   </div>
 
                   {/* Research Interests */}
-                  <div className="bg-white/60 backdrop-blur-lg border border-white/40 rounded-2xl p-4 sm:p-6 shadow-lg">
+                  {/* <div className="bg-white/60 backdrop-blur-lg border border-white/40 rounded-2xl p-4 sm:p-6 shadow-lg">
                     <h3 className="text-lg sm:text-xl lg:text-2xl font-serif font-light text-gray-900 mb-3 sm:mb-4">
                       Research Focus
                     </h3>
@@ -767,7 +888,7 @@ export default function Home() {
                       behavior analysis, and empirical methods for causal
                       inference in marketing contexts.
                     </p>
-                  </div>
+                  </div> */}
                 </div>
 
                 {/* Read More Button */}
@@ -827,38 +948,32 @@ export default function Home() {
                   <div className="bg-white/60 backdrop-blur-lg border border-white/40 rounded-2xl p-4 sm:p-6 shadow-lg">
                     <h3 className="text-lg sm:text-xl lg:text-2xl font-serif font-light text-gray-900 mb-3 sm:mb-4">
                       Longitudinal Targeted Minimum Loss-based Estimation with Temporal-Difference Heterogeneous Transformer
-                      <br />
-                         (with Yi Li, Yuxuan Li, Sky Qiu, Toru Shirakawa, Yulun Wu, Hiroyasu Iso, and Mark J. Van Der Laan) 
                     </h3>
                     <p className="text-sm sm:text-base text-gray-700 leading-relaxed font-light mb-4">
-                      Research on algorithmic recommendations in e-commerce,
-                      dynamic pricing effects, and consumer learning in digital
-                      markets. Combines field experiments, structural modeling,
-                      and causal inference techniques.
+                      (with Yi Li, Yuxuan Li, Sky Qiu, Toru Shirakawa, Yulun Wu, Hiroyasu Iso, and Mark J. Van Der Laan) 
                     </p>
-{/*                     <div className="flex flex-wrap gap-1.5 sm:gap-2">
-                      <span className="px-2 sm:px-3 py-1 bg-gray-100 text-gray-700 text-xs sm:text-sm rounded-full">
-                        E-commerce
-                      </span>
-                      <span className="px-2 sm:px-3 py-1 bg-gray-100 text-gray-700 text-xs sm:text-sm rounded-full">
-                        Dynamic Pricing
-                      </span>
-                      <span className="px-2 sm:px-3 py-1 bg-gray-100 text-gray-700 text-xs sm:text-sm rounded-full">
-                        Consumer Learning
-                      </span>
-                    </div> */}
-                  </div>
-
-                  {/* Research Interests */}
-                  <div className="bg-white/60 backdrop-blur-lg border border-white/40 rounded-2xl p-4 sm:p-6 shadow-lg">
-                    <h3 className="text-lg sm:text-xl lg:text-2xl font-serif font-light text-gray-900 mb-3 sm:mb-4">
-                      Research Focus
-                    </h3>
-                    <p className="text-sm sm:text-base text-gray-700 leading-relaxed font-light">
-                      Platform economics, digital marketing algorithms, consumer
-                      behavior analysis, and empirical methods for causal
-                      inference in marketing contexts.
-                    </p>
+                    <ul className="list-disc list-inside text-gray-700">
+                      <li>Proceedings of the 41st International Conference on Machine Learning (ICML 2024)</li>
+                      <li>A+ conference as ranked by CORE (Computing Research and Education)</li>
+                      <li>Peer-reviewed with 27.5% acceptance rate</li>
+                    </ul>
+                    <button 
+                    className="mt-4 px-4 py-2 text-xs font-medium text-gray-700 bg-gray-100 hover:bg-gray-200 transition-colors rounded-lg"
+                    onClick={() => showPopup(`We propose Deep Longitudinal Targeted Minimum Loss-based Estimation (Deep LTMLE),
+ a novel approach to estimate the counterfactual mean of outcome under dynamic treatment policies
+ in longitudinal problem settings. Our approach utilizes a transformer architecture with heterogeneous
+ type embedding trained using temporal-difference learning. After obtaining an initial estimate using
+ the transformer, following the targeted minimum loss-based likelihood estimation (TMLE) framework,
+ we statistically corrected for the bias commonly associated with machine learning algorithms. Fur
+thermore, our method also facilitates statistical inference by enabling the provision of 95% confidence
+ intervals grounded in asymptotic statistical theory. Simulation results demonstrate our method’s su
+perior performance over existing approaches, particularly in complex, long time-horizon scenarios. It
+ remains effective in small-sample, short-duration contexts, matching the performance of asymptoti
+cally efficient estimators. To demonstrate our method in practice, we applied our method to estimate
+ counterfactual mean outcomes for standard versus intensive blood pressure management strategies in
+ a real-world cardiovascular epidemiology cohort study.`)} >
+                      Abstract
+                    </button>
                   </div>
                 </div>
 
@@ -867,7 +982,7 @@ export default function Home() {
           </section>
 
           {/* CV Section - Summarized */}
-{/*           <section
+          {/* <section
             id="cv"
             className="h-screen flex items-center justify-center bg-white overflow-hidden"
             style={{ scrollSnapAlign: "start" }}
@@ -875,18 +990,6 @@ export default function Home() {
           >
           
           </section> */}
-          <a href="/cv.pdf" target="_blank" rel="noopener noreferrer">
-            <section
-              id="cv"
-              className="h-screen flex items-center justify-center bg-white overflow-hidden"
-              style={{ scrollSnapAlign: "start" }}
-            >
-              <div className="text-center">
-                <h2 className="text-3xl font-bold">Curriculum Vitae</h2>
-                <p>Click to open my CV</p>
-              </div>
-            </section>
-          </a>
 
           {/* Teaching Section - Summarized */}
           <section
