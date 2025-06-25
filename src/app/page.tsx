@@ -114,7 +114,7 @@ export default function Home() {
   ];
 
   return (
-    // <PasswordProtection>
+    <PasswordProtection>
       <Navigation />
       <div
         className="min-h-screen bg-white scroll-smooth"
@@ -394,7 +394,7 @@ export default function Home() {
                     <nav className="h-[0.5vh] px-8 py-1 border-t border-gray-200 flex-shrink-0">
                       <div className="space-y-0.5">
                         {navItems.map((item) => (
-                                        if (item.id == "cv") {
+                                        if (item.id === "cv") {
                                <button
                             key={item.id}
                             onClick={() => window.open("https://drive.google.com/file/d/1pH_bCencAsriJI9ztSAAFlsbuOqLZVuj/view?usp=drive_link", "_blank")}
@@ -1138,6 +1138,6 @@ export default function Home() {
           </section>
         </div>
       </div>
-    // </PasswordProtection>
+    </PasswordProtection>
   );
 }
