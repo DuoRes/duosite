@@ -424,7 +424,7 @@ export default function Home() {
                                   : "w-4 bg-gray-300 group-hover:bg-gray-600 group-hover:w-6"
                               }`}
                             ></div>
-                          </button>}
+                          </button>
                         ))}
                       </div>
                     </nav>
