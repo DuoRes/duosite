@@ -158,7 +158,7 @@ const Navigation = () => {
             {shouldShowNav && (
               <div className="hidden md:block">
                 <a
-                  href="/CV.pdf"
+                  href="https://drive.google.com/file/d/1pH_bCencAsriJI9ztSAAFlsbuOqLZVuj/view?usp=drive_link"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center px-4 py-2 bg-primary-600 text-white text-sm font-medium rounded-lg hover:bg-primary-700 transition-colors duration-200 shadow-sm hover:shadow-md"
