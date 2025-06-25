@@ -392,12 +392,12 @@ export default function Home() {
 
                     {/* Desktop Navigation with highlighting */}
                     <nav className="px-8 py-1 border-t border-gray-200 flex-shrink-0">
-                      <div className="space-y-1">
+                      <div className="space-y-0.5">
                         {navItems.map((item) => (
                           <button
                             key={item.id}
                             onClick={() => scrollToSection(item.id)}
-                            className={`group flex items-center justify-between w-full px-3 py-1 rounded-lg transition-all duration-300 text-left ${
+                            className={`group flex items-center justify-between w-full px-3 py-0.5 rounded-lg transition-all duration-300 text-left ${
                               activeSection === item.id
                                 ? "bg-primary-50 border-l-4 border-primary-500 text-primary-700 shadow-sm pl-2"
                                 : "text-gray-700 hover:text-gray-900 hover:bg-gray-50 border-l-4 border-transparent"
