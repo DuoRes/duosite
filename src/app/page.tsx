@@ -459,7 +459,7 @@ export default function Home() {
                               }`}
                             ></div>
                           </button>}
-                        )))}
+                        ))}
                       </div>
                     </nav>
                   </div>
