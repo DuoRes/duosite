@@ -276,7 +276,7 @@ export default function Home() {
                                   <div className="text-lg text-gray-600 leading-relaxed">
                                     University of California, Berkeley
                                     <br />
-                                    Haas School of Business
+                                    I am currently on the job market in Marketing.
                                   </div>
                                 </div>
                               </div>
@@ -825,9 +825,8 @@ export default function Home() {
                   <div className="bg-white/60 backdrop-blur-lg border border-white/40 rounded-2xl p-4 sm:p-6 shadow-lg">
                     <h3 className="text-lg sm:text-xl lg:text-2xl font-serif font-light text-gray-900 mb-3 sm:mb-4">
                       Longitudinal Targeted Minimum Loss-based Estimation with Temporal-Difference Heterogeneous Transformer
-                      <br>
+                      <br />
                          (with Yi Li, Yuxuan Li, Sky Qiu, Toru Shirakawa, Yulun Wu, Hiroyasu Iso, and Mark J. Van Der Laan) 
-                      </br>
                     </h3>
                     <p className="text-sm sm:text-base text-gray-700 leading-relaxed font-light mb-4">
                       Research on algorithmic recommendations in e-commerce,
