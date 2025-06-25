@@ -707,7 +707,7 @@ export default function Home() {
 
           {/* Research Section - Summarized */}
           <section
-            id="research"
+            id="working-papers"
             className="h-screen flex items-center justify-center bg-white overflow-hidden"
             style={{ scrollSnapAlign: "start" }}
           >
@@ -797,7 +797,7 @@ export default function Home() {
 
           {/* Publish Papers Section - Summarized */}
           <section
-            id="published"
+            id="publish-papers"
             className="h-screen flex items-center justify-center bg-white overflow-hidden"
             style={{ scrollSnapAlign: "start" }}
           >
