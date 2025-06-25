@@ -391,7 +391,7 @@ export default function Home() {
                     </div>
 
                     {/* Desktop Navigation with highlighting */}
-                    <nav className="px-8 py-1 border-t border-gray-200 flex-shrink-0">
+                    <nav className="h-[0.5vh] px-8 py-1 border-t border-gray-200 flex-shrink-0">
                       <div className="space-y-0.5">
                         {navItems.map((item) => (
                           <button
