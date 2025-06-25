@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { TopPopupProvider } from "@/components/TopPopupProvider";
 
 export const metadata: Metadata = {
   title: "Mingduo Zhao | Economics Ph.D. Candidate | Berkeley Econ",
@@ -34,7 +35,11 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.ico" />
       </head>
-      <body className="bg-white text-black antialiased">{children}</body>
+      <body className="bg-white text-black antialiased">
+        <TopPopupProvider>
+          {children}
+        </TopPopupProvider>
+      </body>
     </html>
   );
 }
