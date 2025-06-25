@@ -290,7 +290,7 @@ const Navigation = () => {
               {/* Mobile Menu Footer */}
               <div className="border-t border-gray-100 p-4 space-y-3">
                 <a
-                  href="/CV.pdf"
+                  href="https://drive.google.com/file/d/1pH_bCencAsriJI9ztSAAFlsbuOqLZVuj/view?usp=drive_link"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center w-full px-4 py-3 bg-primary-600 text-white font-medium rounded-xl hover:bg-primary-700 transition-colors duration-200"
