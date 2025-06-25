@@ -468,7 +468,7 @@ export default function Home() {
                   <div className="text-sm text-gray-600 leading-relaxed">
                     University of California, Berkeley
                     <br />
-                    Haas School of Business
+                    I am currently on the job market in Marketing.
                   </div>
                 </div>
 
