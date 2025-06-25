@@ -794,6 +794,73 @@ export default function Home() {
             </div>
           </section>
 
+          {/* Publish Papers Section - Summarized */}
+          <section
+            id="published"
+            className="h-screen flex items-center justify-center bg-white overflow-hidden"
+            style={{ scrollSnapAlign: "start" }}
+          >
+            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-12 h-full flex flex-col justify-center">
+              <div className="mb-6 sm:mb-8">
+                <div className="flex items-center space-x-3 mb-4">
+                  <div className="w-1.5 h-1.5 bg-gray-800 rounded-full"></div>
+                  <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif font-light text-gray-900 tracking-tight">
+                    Publish Papers
+                  </h2>
+                </div>
+                <div className="w-12 h-px bg-gray-300 mb-4 sm:mb-6"></div>
+              </div>
+
+              <div className="flex-1 flex flex-col justify-center min-h-0">
+                <p className="text-base sm:text-lg leading-relaxed text-gray-700 font-light mb-6 sm:mb-8">
+                  My research examines the intersection of quantitative
+                  marketing, digital platforms, and consumer behavior through
+                  rigorous empirical analysis and causal inference
+                  methodologies.
+                </p>
+
+                <div className="space-y-4 sm:space-y-6 mb-6 sm:mb-8">
+                  {/* Working Papers Overview */}
+                  <div className="bg-white/60 backdrop-blur-lg border border-white/40 rounded-2xl p-4 sm:p-6 shadow-lg">
+                    <h3 className="text-lg sm:text-xl lg:text-2xl font-serif font-light text-gray-900 mb-3 sm:mb-4">
+                      Working Papers
+                    </h3>
+                    <p className="text-sm sm:text-base text-gray-700 leading-relaxed font-light mb-4">
+                      Research on algorithmic recommendations in e-commerce,
+                      dynamic pricing effects, and consumer learning in digital
+                      markets. Combines field experiments, structural modeling,
+                      and causal inference techniques.
+                    </p>
+{/*                     <div className="flex flex-wrap gap-1.5 sm:gap-2">
+                      <span className="px-2 sm:px-3 py-1 bg-gray-100 text-gray-700 text-xs sm:text-sm rounded-full">
+                        E-commerce
+                      </span>
+                      <span className="px-2 sm:px-3 py-1 bg-gray-100 text-gray-700 text-xs sm:text-sm rounded-full">
+                        Dynamic Pricing
+                      </span>
+                      <span className="px-2 sm:px-3 py-1 bg-gray-100 text-gray-700 text-xs sm:text-sm rounded-full">
+                        Consumer Learning
+                      </span>
+                    </div> */}
+                  </div>
+
+                  {/* Research Interests */}
+                  <div className="bg-white/60 backdrop-blur-lg border border-white/40 rounded-2xl p-4 sm:p-6 shadow-lg">
+                    <h3 className="text-lg sm:text-xl lg:text-2xl font-serif font-light text-gray-900 mb-3 sm:mb-4">
+                      Research Focus
+                    </h3>
+                    <p className="text-sm sm:text-base text-gray-700 leading-relaxed font-light">
+                      Platform economics, digital marketing algorithms, consumer
+                      behavior analysis, and empirical methods for causal
+                      inference in marketing contexts.
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </section>
+
           {/* Teaching Section - Summarized */}
           <section
             id="teaching"
