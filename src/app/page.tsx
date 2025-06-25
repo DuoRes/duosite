@@ -365,7 +365,7 @@ export default function Home() {
                   </div>
                 ) : (
                   // Desktop sidebar content
-                  <div className="flex flex-col h-[99vh] justify-between py-8 overflow-y-auto max-h-screen">
+                  <div className="flex flex-col h-[100vh] justify-between py-8 overflow-y-auto max-h-screen">
                     <div className="flex-1 flex flex-col justify-center min-h-0">
                       <div className="text-center mb-8">
                         <div className="w-40 h-40 mx-auto rounded-2xl overflow-hidden shadow-lg mb-6">
@@ -393,7 +393,7 @@ export default function Home() {
                     {/* Desktop Navigation with highlighting */}
                     <nav className="h-[0.5vh] px-8 py-1 border-t border-gray-200 flex-shrink-0">
                       <div className="space-y-0.5">
-                        {navItems.map((item) => (item.id === "cv" ? (
+                        {navItems.map((item) => (item.id == "cv" ? (
                                <button
                             key={item.id}
                             onClick={() => window.open("https://drive.google.com/file/d/1pH_bCencAsriJI9ztSAAFlsbuOqLZVuj/view?usp=drive_link", "_blank")}
