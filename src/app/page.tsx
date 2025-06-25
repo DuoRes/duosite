@@ -393,39 +393,41 @@ export default function Home() {
                     {/* Desktop Navigation with highlighting */}
                     <nav className="h-[0.5vh] px-8 py-1 border-t border-gray-200 flex-shrink-0">
                       <div className="space-y-0.5">
-                        {navItems.map((item) => (item.id == "cv" ? (
-                               <button
-                            key={item.id}
-                            onClick={() => window.open("https://drive.google.com/file/d/1pH_bCencAsriJI9ztSAAFlsbuOqLZVuj/view?usp=drive_link", "_blank")}
-                            className={`group flex items-center justify-between w-full px-3 py-0.5 rounded-lg transition-all duration-300 text-left ${
-                              activeSection === item.id
-                                ? "bg-primary-50 border-l-4 border-primary-500 text-primary-700 shadow-sm pl-2"
-                                : "text-gray-700 hover:text-gray-900 hover:bg-gray-50 border-l-4 border-transparent"
-                            }`}
-                          >
-                            <div className="flex items-center space-x-3">
-                              <span
-                                className={`text-xs font-mono transition-colors ${
-                                  activeSection === item.id
-                                    ? "text-primary-600"
-                                    : "text-gray-400 group-hover:text-gray-600"
-                                }`}
-                              >
-                                {item.number}
-                              </span>
-                              <span className="text-sm font-medium tracking-wide">
-                                {item.label}
-                              </span>
-                            </div>
-                            <div
-                              className={`h-px transition-all duration-300 ${
-                                activeSection === item.id
-                                  ? "w-6 bg-primary-500"
-                                  : "w-4 bg-gray-300 group-hover:bg-gray-600 group-hover:w-6"
-                              }`}
-                            ></div>
-                          </button>
-                            ) : (
+                        {navItems.map((item) => 
+                    // (item.id == "cv" ? (
+                    //            <button
+                    //         key={item.id}
+                    //         onClick={() => window.open("https://drive.google.com/file/d/1pH_bCencAsriJI9ztSAAFlsbuOqLZVuj/view?usp=drive_link", "_blank")}
+                    //         className={`group flex items-center justify-between w-full px-3 py-0.5 rounded-lg transition-all duration-300 text-left ${
+                    //           activeSection === item.id
+                    //             ? "bg-primary-50 border-l-4 border-primary-500 text-primary-700 shadow-sm pl-2"
+                    //             : "text-gray-700 hover:text-gray-900 hover:bg-gray-50 border-l-4 border-transparent"
+                    //         }`}
+                    //       >
+                    //         <div className="flex items-center space-x-3">
+                    //           <span
+                    //             className={`text-xs font-mono transition-colors ${
+                    //               activeSection === item.id
+                    //                 ? "text-primary-600"
+                    //                 : "text-gray-400 group-hover:text-gray-600"
+                    //             }`}
+                    //           >
+                    //             {item.number}
+                    //           </span>
+                    //           <span className="text-sm font-medium tracking-wide">
+                    //             {item.label}
+                    //           </span>
+                    //         </div>
+                    //         <div
+                    //           className={`h-px transition-all duration-300 ${
+                    //             activeSection === item.id
+                    //               ? "w-6 bg-primary-500"
+                    //               : "w-4 bg-gray-300 group-hover:bg-gray-600 group-hover:w-6"
+                    //           }`}
+                    //         ></div>
+                    //       </button>
+                    //         ) : 
+                    (
                           <button
                             key={item.id}
                             onClick={() => scrollToSection(item.id)}
