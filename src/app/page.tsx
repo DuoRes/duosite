@@ -372,7 +372,7 @@ export default function Home() {
                           <img
                             src="/picture/WechatIMG5527.jpg"
                             alt="Mingduo Zhao"
-                            className="w-full h-full object-cover scale-150 hover:scale-115 transition-transform duration-500"
+                            className="w-full h-full object-cover scale-105 hover:scale-115 transition-transform duration-500"
                           />
                         </div>
                         <h1 className="text-3xl font-serif font-light text-gray-900 mb-2 tracking-tight">
