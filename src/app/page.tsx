@@ -114,7 +114,7 @@ export default function Home() {
   ];
 
   return (
-    <PasswordProtection>
+    // <PasswordProtection>
       <Navigation />
       <div
         className="min-h-screen bg-white scroll-smooth"
@@ -1138,6 +1138,6 @@ export default function Home() {
           </section>
         </div>
       </div>
-    </PasswordProtection>
+    // </PasswordProtection>
   );
 }
