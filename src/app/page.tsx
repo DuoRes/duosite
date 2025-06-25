@@ -108,7 +108,7 @@ export default function Home() {
     },
     { href: "#working-papers", label: "Working Papers", number: "03", id: "working-papers" },
     { href: "#publish-papers", label: "Publish Papers", number: "04", id: "publish-papers" },
-    { href: "https://drive.google.com/file/d/1pH_bCencAsriJI9ztSAAFlsbuOqLZVuj/view?usp=drive_link", label: "CV", number: "05", id: "cv" },
+    { href: "#cv", label: "CV", number: "05", id: "cv" },
     { href: "#teaching", label: "Teaching", number: "06", id: "teaching" },
     { href: "#contact", label: "Contact", number: "07", id: "contact" },
   ];
@@ -871,6 +871,7 @@ export default function Home() {
             id="cv"
             className="h-screen flex items-center justify-center bg-white overflow-hidden"
             style={{ scrollSnapAlign: "start" }}
+            onClick={() => window.open("https://drive.google.com/file/d/1pH_bCencAsriJI9ztSAAFlsbuOqLZVuj/view?usp=drive_link", "_blank")}
           >
           
           </section>
