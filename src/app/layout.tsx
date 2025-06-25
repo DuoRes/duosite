@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Mingduo Zhao | Marketing PhD Candidate | Berkeley Haas",
+  title: "Mingduo Zhao | Economics PhD Candidate | Berkeley Econ",
   description:
     "Mingduo Zhao is a Marketing PhD Candidate at Berkeley Haas, specializing in quantitative marketing and digital platforms.",
   keywords: [
