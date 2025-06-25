@@ -22,7 +22,8 @@ const Navigation = () => {
         "home",
         "about",
         "job-market-paper",
-        "research",
+        "working-papers",
+        "publish-papers",
         "teaching",
         "contact",
       ];
