@@ -867,14 +867,26 @@ export default function Home() {
           </section>
 
           {/* CV Section - Summarized */}
-          <section
+{/*           <section
             id="cv"
             className="h-screen flex items-center justify-center bg-white overflow-hidden"
             style={{ scrollSnapAlign: "start" }}
             onClick={() => window.open("https://drive.google.com/file/d/1pH_bCencAsriJI9ztSAAFlsbuOqLZVuj/view?usp=drive_link", "_blank")}
           >
           
-          </section>
+          </section> */}
+          <a href="/cv.pdf" target="_blank" rel="noopener noreferrer">
+            <section
+              id="cv"
+              className="h-screen flex items-center justify-center bg-white overflow-hidden"
+              style={{ scrollSnapAlign: "start" }}
+            >
+              <div className="text-center">
+                <h2 className="text-3xl font-bold">Curriculum Vitae</h2>
+                <p>Click to open my CV</p>
+              </div>
+            </section>
+          </a>
 
           {/* Teaching Section - Summarized */}
           <section
