@@ -106,9 +106,11 @@ export default function Home() {
       number: "02",
       id: "job-market-paper",
     },
-    { href: "#research", label: "Research", number: "03", id: "research" },
-    { href: "#teaching", label: "Teaching", number: "04", id: "teaching" },
-    { href: "#contact", label: "Contact", number: "05", id: "contact" },
+    { href: "#working-papers", label: "Working Papers", number: "03", id: "working-papers" },
+    { href: "#publish-papers", label: "Publish Papers", number: "04", id: "publish-papers" },
+    { href: "#cv", label: "CV", number: "05", id: "cv" },
+    { href: "#teaching", label: "Teaching", number: "06", id: "teaching" },
+    { href: "#contact", label: "Contact", number: "07", id: "contact" },
   ];
 
   return (
@@ -165,7 +167,7 @@ export default function Home() {
                     </svg>
                   </a>
                   <a
-                    href="/CV.pdf"
+                    href="https://drive.google.com/file/d/1pH_bCencAsriJI9ztSAAFlsbuOqLZVuj/view?usp=drive_link"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-2 bg-primary-600 hover:bg-primary-700 text-white rounded-lg transition-colors touch-manipulation"
@@ -864,6 +866,16 @@ export default function Home() {
             </div>
           </section>
 
+          {/* CV Section - Summarized */}
+          <section
+            id="cv"
+            className="h-screen flex items-center justify-center bg-white overflow-hidden"
+            style={{ scrollSnapAlign: "start" }}
+            href = "https://drive.google.com/file/d/1pH_bCencAsriJI9ztSAAFlsbuOqLZVuj/view?usp=drive_link"
+          >
+          
+          </section>
+
           {/* Teaching Section - Summarized */}
           <section
             id="teaching"
@@ -1030,7 +1042,7 @@ export default function Home() {
 
                     <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 pt-4 sm:pt-6">
                       <a
-                        href="/CV.pdf"
+                        href="https://drive.google.com/file/d/1pH_bCencAsriJI9ztSAAFlsbuOqLZVuj/view?usp=drive_link"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="px-4 sm:px-6 py-2.5 sm:py-3 bg-gray-100 hover:bg-gray-200 text-gray-800 text-xs sm:text-sm font-medium tracking-wide transition-colors rounded-lg inline-flex items-center"
