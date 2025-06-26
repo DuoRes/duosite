@@ -913,10 +913,11 @@ ness to pay. Together, these findings reveal that consumers use ratings discrepa
                 {/* Read More Button */}
                 <div className="text-center">
                   <a
-                    href="/research"
+                    // href="/research"
+                    href = "/working-papers"
                     className="inline-flex items-center px-3 sm:px-4 py-2 sm:py-2.5 bg-white hover:bg-gray-200 text-gray-800 text-xs sm:text-sm font-medium tracking-wide transition-colors rounded-lg whitespace-nowrap"
                   >
-                    <span className="hidden sm:inline">View All Research</span>
+                    <span className="hidden sm:inline">View All Working Papers</span>
                     <span className="sm:hidden">Research</span>
                     <svg
                       className="w-3 h-3 ml-1.5 sm:ml-2"
