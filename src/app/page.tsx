@@ -654,8 +654,7 @@ export default function Home() {
                                 statistics
                               </em>
                               , with
- a focus on how technological advancements profoundly transform society, both economically and po
-litically.
+ a focus on how technological advancements profoundly transform society, both economically and politically.
                 </p>
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
