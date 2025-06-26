@@ -1184,6 +1184,19 @@ cally efficient estimators. To demonstrate our method in practice, we applied ou
                     </div>
                   </div>
 
+                  <div className="bg-white/60 backdrop-blur-lg border border-white/40 rounded-2xl p-4 sm:p-6 shadow-lg">
+                    <div className="mb-4">
+                      <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-2">
+                        <h3 className="text-lg sm:text-xl lg:text-2xl font-serif font-light text-gray-900 mb-1 sm:mb-0 sm:mr-4">
+                         Econometrics(Ph.D.)
+                        </h3>
+                        <span className="text-xs sm:text-sm text-gray-500 font-light flex-shrink-0">
+                          2021
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
                   {/* <div className="bg-white/60 backdrop-blur-lg border border-white/40 rounded-2xl p-4 sm:p-2 shadow-lg">
                     <div className="border-l-4 border-blue-500 pl-4 sm:pl-6">
                       <h4 className="text-base sm:text-lg font-serif font-light text-gray-900 mb-2">
