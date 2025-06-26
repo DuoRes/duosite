@@ -281,7 +281,8 @@ export default function Home() {
                                   </div>
                                   <div className="text-lg text-gray-600 leading-relaxed">
                                     University of California, Berkeley
-                                    <br />
+                                  </div>
+                                  <div className="text-lg font-bold text-gray-800 leading-relaxed">
                                     I am currently on the job market in Marketing.
                                   </div>
                                 </div>
@@ -636,21 +637,25 @@ export default function Home() {
 
               <div className="flex-1 flex flex-col justify-center min-h-0">
                 <p className="text-base sm:text-lg leading-relaxed text-gray-700 font-light mb-6 sm:mb-8 lg:mb-10">
-                  I am a PhD Candidate in Marketing at the Haas School of
-                  Business, University of California, Berkeley. My research
-                  interests lie at the intersection of{" "}
-                  <em className="text-gray-800 font-medium">
-                    quantitative marketing
-                  </em>
-                  ,{" "}
-                  <em className="text-gray-800 font-medium">
-                    digital platforms
-                  </em>
-                  , and{" "}
-                  <em className="text-gray-800 font-medium">
-                    consumer behavior
-                  </em>
-                  .
+                  I am a PhD Candidate in Marketing at the Departmemnt of Economics, University of California, Berkeley. My research explores the intersection of{" "}
+                              <em className="text-gray-800 font-medium">
+                                marketing
+                              </em>
+                              ,{" "}
+                              <em className="text-gray-800 font-medium">
+                                economics
+                              </em>
+                              ,{" "}
+                              <em className="text-gray-800 font-medium">
+                                computer science
+                              </em>
+                              , and{" "}
+                              <em className="text-gray-800 font-medium">
+                                statistics
+                              </em>
+                              , with
+ a focus on how technological advancements profoundly transform society, both economically and po
+litically.
                 </p>
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
@@ -662,19 +667,28 @@ export default function Home() {
                     <ul className="space-y-3 sm:space-y-4 text-sm sm:text-base text-gray-700 font-light">
                       <li className="flex items-start">
                         <div className="w-1 h-1 bg-gray-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                        Platform Economics and Competition
+                        Social Media
                       </li>
                       <li className="flex items-start">
                         <div className="w-1 h-1 bg-gray-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                        Consumer Learning and Decision-Making
+                        Recommender Systems
                       </li>
                       <li className="flex items-start">
                         <div className="w-1 h-1 bg-gray-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                        Digital Marketing and Algorithms
+                        Digital Platforms
                       </li>
                       <li className="flex items-start">
                         <div className="w-1 h-1 bg-gray-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                        Empirical Methods and Causal Inference
+                        User Generated Content
+                      </li>
+                      <li className="flex items-start">
+                        <div className="w-1 h-1 bg-gray-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                        Human
+ Computer/AI Interaction (HCI/HAII)
+                      </li>
+                      <li className="flex items-start">
+                        <div className="w-1 h-1 bg-gray-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                        Political Economics
                       </li>
                     </ul>
                   </div>
@@ -694,6 +708,11 @@ export default function Home() {
                         "Econometrics",
                         "Machine Learning",
                         "Causal Inference",
+                        "Policy Learning",
+                        "Structural Model",
+                        "Field/Lab Experiment",
+                        "Deep Learning",
+                        "Natural Language Processing (NLP)"
                       ].map((skill) => (
                         <span
                           key={skill}
@@ -784,19 +803,19 @@ export default function Home() {
                 <div className="flex items-center space-x-3 mb-4">
                   <div className="w-1.5 h-1.5 bg-gray-800 rounded-full"></div>
                   <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif font-light text-gray-900 tracking-tight">
-                    Research
+                    Working Papers
                   </h2>
                 </div>
                 <div className="w-12 h-px bg-gray-300 mb-4 sm:mb-6"></div>
               </div>
 
               <div className="flex-1 flex flex-col justify-center min-h-0">
-                <p className="text-base sm:text-lg leading-relaxed text-gray-700 font-light mb-6 sm:mb-8">
+                {/* <p className="text-base sm:text-lg leading-relaxed text-gray-700 font-light mb-6 sm:mb-8">
                   My research examines the intersection of quantitative
                   marketing, digital platforms, and consumer behavior through
                   rigorous empirical analysis and causal inference
                   methodologies.
-                </p>
+                </p> */}
 
                 <div className="space-y-4 sm:space-y-6 mb-6 sm:mb-8">
                   {/* Working Papers Overview */}
@@ -936,12 +955,12 @@ ness to pay. Together, these findings reveal that consumers use ratings discrepa
               </div>
 
               <div className="flex-1 flex flex-col justify-center min-h-0">
-                <p className="text-base sm:text-lg leading-relaxed text-gray-700 font-light mb-6 sm:mb-8">
+                {/* <p className="text-base sm:text-lg leading-relaxed text-gray-700 font-light mb-6 sm:mb-8">
                   My research examines the intersection of quantitative
                   marketing, digital platforms, and consumer behavior through
                   rigorous empirical analysis and causal inference
                   methodologies.
-                </p>
+                </p> */}
 
                 <div className="space-y-4 sm:space-y-6 mb-6 sm:mb-8">
                   {/* Publish Papers Overview */}
@@ -1147,7 +1166,7 @@ cally efficient estimators. To demonstrate our method in practice, we applied ou
                       </h3>
                       <div className="w-6 h-px bg-gray-300 mx-auto mb-3"></div>
                       <div className="text-base sm:text-lg text-gray-600 leading-relaxed font-light">
-                        Haas School of Business
+                        Department of Economics
                         <br />
                         University of California, Berkeley
                         <br />
@@ -1156,7 +1175,7 @@ cally efficient estimators. To demonstrate our method in practice, we applied ou
                     </div>
 
                     <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 pt-4 sm:pt-6">
-                      <a
+                      {/* <a
                         href="https://drive.google.com/file/d/1pH_bCencAsriJI9ztSAAFlsbuOqLZVuj/view?usp=drive_link"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -1176,7 +1195,7 @@ cally efficient estimators. To demonstrate our method in practice, we applied ou
                           />
                         </svg>
                         CV
-                      </a>
+                      </a> */}
                       <a
                         href="https://linkedin.com/in/mingduo-zhao"
                         target="_blank"
