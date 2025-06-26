@@ -748,7 +748,7 @@ export default function Home() {
                     News Consumption, Recommender Systems, and Polarization
                   </h3>
                   <div className="text-sm sm:text-base text-gray-600 font-light mb-4 sm:mb-6">
-                    Mingduo Zhao
+                    Mingduo Zhao (sole author)
                   </div>
                 </div>
 
@@ -756,7 +756,7 @@ export default function Home() {
                   <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-700 font-bold mb-4 sm:mb-6">
                     Abstract
                   </p>
-                  <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-700 font-light mb-4 sm:mb-6">
+                  <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-700 font-light mb-4 sm:mb-6 text-justify">
                     Recommender systems shape how people consume news, possibly
                   reinforcing political polarization. We run two field
                   experiments to identify how user preferences and algorithms
@@ -818,7 +818,7 @@ export default function Home() {
                   <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-700 font-bold mb-2 sm:mb-6">
                     Abstract
                   </p>
-                  <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-700 font-light mb-4 sm:mb-6">
+                  <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-700 font-light mb-4 sm:mb-6 text-justify">
                     AI systems for dynamic pricing, targeted promotions, and individualized recommendations
  typically assume that observed consumer behavior truthfully reveals underlying preferences. However,
  when consumers recognize that their actions influence future targeting decisions, behavior becomes
@@ -855,7 +855,7 @@ ments, where targeting rules shape behavior. In this setting, naive behavioral t
                   <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-700 font-bold mb-2 sm:mb-6">
                     Abstract
                   </p>
-                  <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-700 font-light mb-4 sm:mb-6">
+                  <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-700 font-light mb-4 sm:mb-6 text-justify">
                      In online marketplaces, consumers rely on reviews to make informed purchase decisions,
  making the presence of fake reviews detrimental. Previous literature implies that products with fake
  reviews can display some patterns in review distribution, such as a higher discrepancy in ratings.
@@ -888,7 +888,7 @@ ness to pay. Together, these findings reveal that consumers use ratings discrepa
                   <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-700 font-bold mb-2 sm:mb-6">
                     Abstract
                   </p>
-                  <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-700 font-light mb-4 sm:mb-6">
+                  <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-700 font-light mb-4 sm:mb-6 text-justify">
                     Are individuals from marginalized groups perceived as less persuasive? Does this perception
  lead to their underrepresentation in visible, influential roles? Does it also contribute to their reluc
 tance to share their views? These are important questions that require further investigation. Amazon
@@ -923,7 +923,7 @@ tance to share their views? These are important questions that require further i
                   <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-700 font-bold mb-2 sm:mb-6">
                     Abstract
                   </p>
-                  <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-700 font-light mb-4 sm:mb-6">
+                  <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-700 font-light mb-4 sm:mb-6 text-justify">
                     In recent years, numerous political candidates have achieved electoral success after first
  becoming well-known as influencers in non-political fields. Famous examples include Donald Trump,
  Ronald Reagan, Arnold Schwarzenegger, and others. This study explores the relationship between
@@ -957,7 +957,7 @@ encer candidates hold a significant and substantial advantage and in some cases 
                   <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-700 font-bold mb-2 sm:mb-6">
                     Abstract
                   </p>
-                  <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-700 font-light mb-4 sm:mb-6">
+                  <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-700 font-light mb-4 sm:mb-6 text-justify">
                     This study examines how media ownership consolidation influences the effectiveness of earned
  media in shaping political brands in U.S. mayoral elections. Using data from over 300 local radio mar
 kets between 1945 and 2006, we link radio station ownership records and news programming to local
@@ -1026,7 +1026,7 @@ toral outcomes. To address potential endogeneity in market structure, we leverag
                   <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-700 font-bold mb-2 sm:mb-6">
                     Abstract
                   </p>
-                  <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-700 font-light mb-4 sm:mb-6">
+                  <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-700 font-light mb-4 sm:mb-6 text-justify">
                     We propose Deep Longitudinal Targeted Minimum Loss-based Estimation (Deep LTMLE),
  a novel approach to estimate the counterfactual mean of outcome under dynamic treatment policies
  in longitudinal problem settings. Our approach utilizes a transformer architecture with heterogeneous
