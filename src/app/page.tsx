@@ -760,20 +760,14 @@ export default function Home() {
                     Recommender systems shape how people consume news, possibly
                   reinforcing political polarization. We run two field
                   experiments to identify how user preferences and algorithms
-                  interact to amplify partisan news consumption.
-                  </p>
-                  <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-700 font-light mb-4 sm:mb-6">
-                    In the first
+                  interact to amplify partisan news consumption. In the first
                   study, 2,065 U.S. participants use blank Google accounts and a
                   browser extension to track users' activities on Google News. The first-round recommendations are exogenous, allowing us to
                   show that aligned content draws more clicks. A second
                   experiment uses bots to randomly click on articles, revealing
                   that each click leads to more ideologically aligned content.
                   These two pieces of causal evidence establish a feedback loop
-                  between user preference and algorithmic recommendations.
-                  </p>
-                  <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-700 font-light">
-                    We also find in the field study that, after interacting with
+                  between user preference and algorithmic recommendations.  We also find in the field study that, after interacting with
                   the recommender system, people's level of polarization
                   increases. A structural model combining a discrete choice
                   model (demand side) with a multi-armed bandit algorithm
@@ -831,10 +825,7 @@ export default function Home() {
  strategic rather than preference-revealing, undermining the validity of standard machine learning
 based targeting. In order to address this challenge, we introduce Structural Transfer Learning (STL),
  a new framework that incorporates structural economic modeling into machine learning pipelines to
- account for strategic responses induced by policy interventions. 
-                  </p>
-                  <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-700 font-light">
-                     STL constructs policy dependent in
+ account for strategic responses induced by policy interventions. STL constructs policy dependent in
 stance weights that adjust for endogenous domain shifts, enabling firms to learn targeting policies that
  remain effective even when consumers actively game the system. Furthermore, we demonstrate the
  practical value of STL through a stylized online experiment in a consumer research setting. While
@@ -870,19 +861,13 @@ ments, where targeting rules shape behavior. In this setting, naive behavioral t
  reviews can display some patterns in review distribution, such as a higher discrepancy in ratings.
  Consumers might take this pattern into account when making their purchase decisions. In this paper,
  we explore the interplay between fake reviews and ratings discrepancy, and their impact on consumer
- demand, while controlling for average product ratings.
-                  </p>
-                  <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-700 font-light mb-4 sm:mb-6">
-                     First, using a data set with fake review labels,
+ demand, while controlling for average product ratings. First, using a data set with fake review labels,
  we find that product ratings discrepancy is positively correlated with the probability that the product
  has fake reviews. Second, through an identification strategy exploiting ratings discrepancy changes due
  to rating distribution rounding, we find evidence consistent with a negative causal impact of ratings
  discrepancy on consumer demand. Then, we conduct two experiments to establish and quantify the
  mechanism of the impact of ratings discrepancy on consumer demand through consumer suspicion of
- fake reviews.
-                  </p>
-                  <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-700 font-light">
-                    The first experiment shows that higher ratings discrepancy increases consumer suspicion
+ fake reviews. The first experiment shows that higher ratings discrepancy increases consumer suspicion
  of fake reviews, and the second experiment shows that heightened suspicion reduces consumer willing
 ness to pay. Together, these findings reveal that consumers use ratings discrepancies as a signal of fake
  reviews, and this suspicion impacts their purchase decisions. The findings highlight the importance of
@@ -909,10 +894,7 @@ ness to pay. Together, these findings reveal that consumers use ratings discrepa
 tance to share their views? These are important questions that require further investigation. Amazon
  reviews provide a valuable and quantifiable context to explore these questions. This paper investigates
  how the perceived identity of reviewers influences helpfulness votes, the ranking of their reviews, and
- their willingness to post new reviews on Amazon. 
-                  </p>
-                  <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-700 font-light mb-4 sm:mb-6">
-                     Utilizing a data set of over 1.8 million reviews, we
+ their willingness to post new reviews on Amazon. Utilizing a data set of over 1.8 million reviews, we
  apply advanced natural language processing and computer vision tools to infer the gender and ethnicity
  of reviewers based on their user aliases and avatars. Combined with experimental data, our analysis
  shows causal evidence that reviews perceived as authored by women, non-binary individuals, or ethnic
@@ -921,10 +903,7 @@ tance to share their views? These are important questions that require further i
  Because reviews from marginalized groups receive fewer votes, they are ranked lower and receive less
  exposure, which in turn leads to even fewer votes-creating a self-reinforcing loop that perpetuates the
  underrepresentation of marginalized voices. We also find evidence of self-censorship: reviewers are less
- willing to continue contributing after receiving fewer helpfulness votes on their previous reviews.
-                  </p>
-                  <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-700 font-light">
-                    To
+ willing to continue contributing after receiving fewer helpfulness votes on their previous reviews. To
  address these disparities, we propose two platform-level interventions-identity blind review displays
  and affirmative action mechanisms within the review ranking algorithm. To evaluate their impact, we
  further estimate a structural model that captures both the supply and demand sides of the review
@@ -951,17 +930,11 @@ tance to share their views? These are important questions that require further i
  one’s fame as an influencer and their performance in U.S. gubernatorial elections from 1865 to 2020.
  With a dataset of 3,942 candidates and their Wikipedia biographies, we use Large Language Models
  (LLMs) to identify influencers as individuals who achieved public prominence through roles such as
- entrepreneurs, professional experts, or athletes before entering politics.
-                  </p>
-                  <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-700 font-light mb-4 sm:mb-6">
-                   The findings reveal that influ
+ entrepreneurs, professional experts, or athletes before entering politics. The findings reveal that influ
 encer candidates hold a significant and substantial advantage and in some cases are 20% more likely
  to win governor elections. This effect is particularly pronounced in three cases: Republican candidates
  in general, especially those running in swing states, and individuals making their first run for office
- and/or lacking prior experience as a governor. 
-                  </p>
-                  <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-700 font-light mb-4 sm:mb-6">
-                    As is common in much of the existing literature in
+ and/or lacking prior experience as a governor. As is common in much of the existing literature in
  this field, establishing causality presents a common challenge. To address this, we conduct a voting
  experiment with approximately 1,800 participants. The results show that the estimated advantage of
  being an influencer closely aligns with findings from the observational analysis, reinforcing the causal
@@ -991,10 +964,7 @@ kets between 1945 and 2006, we link radio station ownership records and news pro
  election outcomes. We find that increased market concentration strengthens the re-election prospects
  of incumbent mayors while hindering the performance of challengers. The effect of increased concen
 tration is primarily driven by a reduction in the number of news-producing stations, and it dispro
-portionately benefits lower-quality incumbents. 
-                  </p>
-                  <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-700 font-light">
-                    We theoretically model this phenomenon within an
+portionately benefits lower-quality incumbents. We theoretically model this phenomenon within an
  oligopoly framework, demonstrating how ownership structure affects news quality, and ultimately, elec
 toral outcomes. To address potential endogeneity in market structure, we leverage a novel instrument
  based on multi-market mergers. From both managerial and policy perspectives, our results underscore
@@ -1062,10 +1032,7 @@ toral outcomes. To address potential endogeneity in market structure, we leverag
  in longitudinal problem settings. Our approach utilizes a transformer architecture with heterogeneous
  type embedding trained using temporal-difference learning. After obtaining an initial estimate using
  the transformer, following the targeted minimum loss-based likelihood estimation (TMLE) framework,
- we statistically corrected for the bias commonly associated with machine learning algorithms.
-                  </p>
-                  <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-700 font-light">
-                     Furthermore, our method also facilitates statistical inference by enabling the provision of 95% confidence
+ we statistically corrected for the bias commonly associated with machine learning algorithms. Furthermore, our method also facilitates statistical inference by enabling the provision of 95% confidence
  intervals grounded in asymptotic statistical theory. Simulation results demonstrate our method’s su
 perior performance over existing approaches, particularly in complex, long time-horizon scenarios. It
  remains effective in small-sample, short-duration contexts, matching the performance of asymptoti
@@ -1198,7 +1165,20 @@ cally efficient estimators. To demonstrate our method in practice, we applied ou
                          Econometrics(Ph.D.)
                         </h3>
                         <span className="text-xs sm:text-sm text-gray-500 font-light flex-shrink-0">
-                          2021-2022
+                          2022
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="bg-white/60 backdrop-blur-lg border border-white/40 rounded-2xl p-4 sm:p-6 shadow-lg">
+                    <div className="mb-4">
+                      <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-2">
+                        <h3 className="text-lg sm:text-xl lg:text-2xl font-serif font-light text-gray-900 mb-1 sm:mb-0 sm:mr-4">
+                         Econometrics(Ph.D.)
+                        </h3>
+                        <span className="text-xs sm:text-sm text-gray-500 font-light flex-shrink-0">
+                          2021
                         </span>
                       </div>
                     </div>
