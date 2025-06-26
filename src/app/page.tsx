@@ -1162,7 +1162,7 @@ cally efficient estimators. To demonstrate our method in practice, we applied ou
                     <div className="mb-4">
                       <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-2">
                         <h3 className="text-lg sm:text-xl lg:text-2xl font-serif font-light text-gray-900 mb-1 sm:mb-0 sm:mr-4">
-                         Econometrics(Ph.D.)
+                         Econometrics (Ph.D.)
                         </h3>
                         <span className="text-xs sm:text-sm text-gray-500 font-light flex-shrink-0">
                           2022
@@ -1175,7 +1175,7 @@ cally efficient estimators. To demonstrate our method in practice, we applied ou
                     <div className="mb-4">
                       <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-2">
                         <h3 className="text-lg sm:text-xl lg:text-2xl font-serif font-light text-gray-900 mb-1 sm:mb-0 sm:mr-4">
-                         Econometrics(Ph.D.)
+                         Econometrics (Ph.D.)
                         </h3>
                         <span className="text-xs sm:text-sm text-gray-500 font-light flex-shrink-0">
                           2021
@@ -1188,7 +1188,7 @@ cally efficient estimators. To demonstrate our method in practice, we applied ou
                     <div className="mb-4">
                       <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-2">
                         <h3 className="text-lg sm:text-xl lg:text-2xl font-serif font-light text-gray-900 mb-1 sm:mb-0 sm:mr-4">
-                         Econometrics(Ph.D.)
+                         Econometrics (Ph.D.)
                         </h3>
                         <span className="text-xs sm:text-sm text-gray-500 font-light flex-shrink-0">
                           2021
