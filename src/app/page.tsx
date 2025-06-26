@@ -122,7 +122,7 @@ export default function Home() {
       <Navigation />
       <div
         className="min-h-screen bg-white scroll-smooth"
-        style={{ scrollSnapType: isMobile ? "none" : "y mandatory" }}
+        style={{ scrollSnapType: isMobile ? "none" : "none" }}
       >
         {/* Mobile: Simple header layout, Desktop: Complex transformation */}
         {isMobile ? (
@@ -270,9 +270,9 @@ export default function Home() {
                                   <h1 className="text-5xl xl:text-6xl font-serif font-light text-gray-900 leading-tight tracking-tight mb-2">
                                     Mingduo Zhao
                                   </h1>
-                                  <div className="text-xl text-gray-600 tracking-wide mb-1">
+                                  {/* <div className="text-xl text-gray-600 tracking-wide mb-1">
                                     赵鸣铎
-                                  </div>
+                                  </div> */}
                                 </div>
 
                                 <div className="space-y-3">
@@ -408,9 +408,9 @@ export default function Home() {
                         <h1 className="text-3xl font-serif font-light text-gray-900 mb-2 tracking-tight">
                           Mingduo Zhao
                         </h1>
-                        <div className="text-lg text-gray-600 mb-2 font-light">
+                        {/* <div className="text-lg text-gray-600 mb-2 font-light">
                           赵鸣铎
-                        </div>
+                        </div> */}
                         <div className="text-lg text-gray-700 mb-1 font-light">
                           PhD Candidate in Economics
                         </div>
@@ -530,13 +530,14 @@ export default function Home() {
                   <h1 className="text-3xl font-serif font-light text-gray-900 mb-2 tracking-tight">
                     Mingduo Zhao
                   </h1>
-                  <div className="text-base text-gray-600 mb-1">赵鸣铎</div>
+                  {/* <div className="text-base text-gray-600 mb-1">赵鸣铎</div> */}
                   <div className="text-lg text-gray-800 font-light mb-4">
                     PhD Candidate in Economics
                   </div>
                   <div className="text-sm text-gray-600 leading-relaxed">
                     University of California, Berkeley
-                    <br />
+                  </div>
+                  <div className="text-lg font-bold text-gray-800 leading-relaxed">
                     I am currently on the job market in Marketing.
                   </div>
                 </div>
@@ -614,15 +615,15 @@ export default function Home() {
           {!isMobile && (
             <div
               className="h-screen"
-              style={{ scrollSnapAlign: "start" }}
+              
             ></div>
           )}
 
           {/* About Section - Mobile optimized */}
           <section
             id="about"
-            className="min-h-screen flex items-center justify-center bg-white overflow-hidden px-4 sm:px-6 lg:px-8"
-            style={{ scrollSnapAlign: "start" }}
+            className="scroll-mt-24 flex items-center justify-center bg-white overflow-hidden px-4 sm:px-6 lg:px-8"
+            
           >
             <div className="max-w-4xl mx-auto py-8 sm:py-12 lg:py-16 h-full flex flex-col justify-center">
               <div className="mb-6 sm:mb-8 lg:mb-10">
@@ -660,7 +661,7 @@ export default function Home() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
                   <div>
                     <h3 className="text-lg sm:text-xl lg:text-2xl font-serif font-light text-gray-900 mb-4 sm:mb-6">
-                      Research Interests
+                      Topics
                     </h3>
                     <div className="w-6 sm:w-8 h-px bg-gray-300 mb-4 sm:mb-6"></div>
                     <ul className="space-y-3 sm:space-y-4 text-sm sm:text-base text-gray-700 font-light">
@@ -694,17 +695,11 @@ export default function Home() {
 
                   <div>
                     <h3 className="text-lg sm:text-xl lg:text-2xl font-serif font-light text-gray-900 mb-4 sm:mb-6">
-                      Methodological Expertise
+                      Methodologies
                     </h3>
                     <div className="w-6 sm:w-8 h-px bg-gray-300 mb-4 sm:mb-6"></div>
                     <div className="grid grid-cols-2 gap-2 sm:gap-3">
                       {[
-                        "R",
-                        "Python",
-                        "Stata",
-                        "MATLAB",
-                        "SQL",
-                        "Econometrics",
                         "Machine Learning",
                         "Causal Inference",
                         "Policy Learning",
@@ -730,8 +725,7 @@ export default function Home() {
           {/* Job Market Paper Section - Responsive */}
           <section
             id="job-market-paper"
-            className="h-screen flex items-center justify-center bg-gray-50 overflow-hidden"
-            style={{ scrollSnapAlign: "start" }}
+            className="flex items-center justify-center bg-gray-50 overflow-hidden"
           >
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-12 h-full flex flex-col justify-center">
               <div className="mb-6 sm:mb-8">
@@ -754,42 +748,41 @@ export default function Home() {
                     News Consumption, Recommender Systems, and Polarization
                   </h3>
                   <div className="text-sm sm:text-base text-gray-600 font-light mb-4 sm:mb-6">
-                    Mingduo Zhao • 2024
+                    Mingduo Zhao
                   </div>
                 </div>
 
                 <div className="mb-8 sm:mb-3">
+                  <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-700 font-bold mb-4 sm:mb-6">
+                    Abstract
+                  </p>
                   <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-700 font-light mb-4 sm:mb-6">
-                    Field experiments with 2,065 participants reveal how
-                    recommendation algorithms and user preferences interact to
-                    create feedback loops that amplify partisan news consumption
-                    and increase political polarization.
+                    Recommender systems shape how people consume news, possibly
+                  reinforcing political polarization. We run two field
+                  experiments to identify how user preferences and algorithms
+                  interact to amplify partisan news consumption.
+                  </p>
+                  <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-700 font-light mb-4 sm:mb-6">
+                    In the first
+                  study, 2,065 U.S. participants use blank Google accounts and a
+                  browser extension to track users' activities on Google News. The first-round recommendations are exogenous, allowing us to
+                  show that aligned content draws more clicks. A second
+                  experiment uses bots to randomly click on articles, revealing
+                  that each click leads to more ideologically aligned content.
+                  These two pieces of causal evidence establish a feedback loop
+                  between user preference and algorithmic recommendations.
                   </p>
                   <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-700 font-light">
-                    Using structural modeling that combines discrete choice
-                    models with multi-armed bandit algorithms, we provide causal
-                    evidence for this positive-feedback mechanism and its impact
-                    on democratic discourse.
+                    We also find in the field study that, after interacting with
+                  the recommender system, people's level of polarization
+                  increases. A structural model combining a discrete choice
+                  model (demand side) with a multi-armed bandit algorithm
+                  (supply side) confirms this positive-feedback mechanism.
                   </p>
                 </div>
 
                 <div className="border-t border-gray-100">
                   <div className="flex flex-wrap gap-7">
-                    {/* <button className="px-4 py-2 text-xs font-medium text-white bg-blue-600 hover:bg-blue-700 transition-colors rounded-lg shadow-sm">
-                      Download Paper
-                    </button> */}
-                    {/* <button className="px-4 py-2 text-xs font-medium text-gray-700 bg-gray-100 hover:bg-gray-200 transition-colors rounded-lg"
-                    onClick={()=>showPopup(`Recommender systems shape how people consume news, possibly reinforcing political polarization. We run two field experiments to identify how user preferences and algorithms interact to amplify partisan news consumption. In the first study, 2,065 U.S. participants use blank Google accounts and a browser extension to track users' activities on Google News. The first-round recommendations are exogenous, allowing us to show that aligned content draws more clicks. A second experiment uses bots to randomly click on articles, revealing that each click leads to more ideologically aligned content. These two pieces of causal evidence establish a feedback loop between user preference and algorithmic recommendations. We also find in the field study that, after interacting with the recommender system, people's level of polarization increases. A structural model combining a discrete choice model (demand side) with a multi-armed bandit algorithm (supply side) confirms this positive-feedback mechanism. The model is then used to simulate a counterfactual "ideology-blind" recommendation policy that ignores political slant when curating content. While this policy reduces both affective and ideological polarization, it comes at the cost of likely lower engagement. Overall, the findings provide causal evidence that personalized algorithms reinforce partisan consumption and exacerbate polarization. They also uncover a fundamental trade-off between mitigating polarization and sustaining engagement, which offers important insights for both platform owners and policymakers.`)}>
-                      Abstract
-                    </button> */}
-                    <button
-                    className="px-4 py-2 text-xs font-medium text-gray-700 bg-gray-100 hover:bg-gray-200 transition-colors rounded-lg"
-                    onClick={() => window.open("/job-market-paper",'_parent')}>
-                      View Details
-                    </button>
-                    {/* <button className="px-4 py-2 text-xs font-medium text-gray-700 bg-gray-100 hover:bg-gray-200 transition-colors rounded-lg">
-                      Slides
-                    </button> */}
                   </div>
                 </div>
               </div>
@@ -799,8 +792,8 @@ export default function Home() {
           {/* Research Section - Summarized */}
           <section
             id="working-papers"
-            className="h-screen flex items-center justify-center bg-white overflow-hidden"
-            style={{ scrollSnapAlign: "start" }}
+            className=" flex items-center justify-center bg-white overflow-hidden"
+            
           >
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-12 h-full flex flex-col justify-center">
               <div className="mb-6 sm:mb-8">
@@ -814,12 +807,6 @@ export default function Home() {
               </div>
 
               <div className="flex-1 flex flex-col justify-center min-h-0">
-                {/* <p className="text-base sm:text-lg leading-relaxed text-gray-700 font-light mb-6 sm:mb-8">
-                  My research examines the intersection of quantitative
-                  marketing, digital platforms, and consumer behavior through
-                  rigorous empirical analysis and causal inference
-                  methodologies.
-                </p> */}
 
                 <div className="space-y-4 sm:space-y-6 mb-6 sm:mb-8">
                   {/* Working Papers Overview */}
@@ -830,18 +817,24 @@ export default function Home() {
                     <p className="text-sm sm:text-base text-gray-700 leading-relaxed font-light mb-4">
                       (with Yahu Cong)
                     </p>
-                    <ul className="list-disc list-inside text-gray-700">
-                      <li>Under Review at Marketing Science</li>
+                    <ul className="list-disc list-inside text-gray-700 mb-4 sm:mb-6">
+                      <li>Under Review at <em className="font-bold">Marketing Science</em></li>
                     </ul>
-                    {/* <button 
-                    className="mt-4 px-4 py-2 text-xs font-medium text-gray-700 bg-gray-100 hover:bg-gray-200 transition-colors rounded-lg"
-                    onClick={() => showPopup(`AI systems for dynamic pricing, targeted promotions, and individualized recommendations
+                  <div className="mb-8 sm:mb-3">
+                  <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-700 font-bold mb-2 sm:mb-6">
+                    Abstract
+                  </p>
+                  <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-700 font-light mb-4 sm:mb-6">
+                    AI systems for dynamic pricing, targeted promotions, and individualized recommendations
  typically assume that observed consumer behavior truthfully reveals underlying preferences. However,
  when consumers recognize that their actions influence future targeting decisions, behavior becomes
  strategic rather than preference-revealing, undermining the validity of standard machine learning
 based targeting. In order to address this challenge, we introduce Structural Transfer Learning (STL),
  a new framework that incorporates structural economic modeling into machine learning pipelines to
- account for strategic responses induced by policy interventions. STL constructs policy dependent in
+ account for strategic responses induced by policy interventions. 
+                  </p>
+                  <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-700 font-light">
+                     STL constructs policy dependent in
 stance weights that adjust for endogenous domain shifts, enabling firms to learn targeting policies that
  remain effective even when consumers actively game the system. Furthermore, we demonstrate the
  practical value of STL through a stylized online experiment in a consumer research setting. While
@@ -851,93 +844,172 @@ ments, where targeting rules shape behavior. In this setting, naive behavioral t
  to the naive machine learning benchmark that ignores strategic responses, depending on the relative
  cost of incentives. These findings highlight the need for a fundamental shift in firms’ personalization
  strategies-from solely optimizing predictive models to designing incentive mechanisms that are robust
- to strategic consumer behavior.`)} >
-                      Abstract
-                    </button> */}
-                    {/* <div className="flex flex-wrap gap-1.5 sm:gap-2">
-                      <span className="px-2 sm:px-3 py-1 bg-gray-100 text-gray-700 text-xs sm:text-sm rounded-full">
-                        E-commerce
-                      </span>
-                      <span className="px-2 sm:px-3 py-1 bg-gray-100 text-gray-700 text-xs sm:text-sm rounded-full">
-                        Dynamic Pricing
-                      </span>
-                      <span className="px-2 sm:px-3 py-1 bg-gray-100 text-gray-700 text-xs sm:text-sm rounded-full">
-                        Consumer Learning
-                      </span>
-                    </div> */}
+ to strategic consumer behavior
+                  </p>
+                </div>
                   </div>
 
-                  <div className="bg-white/60 backdrop-blur-lg border border-white/40 rounded-2xl p-4 sm:p-6 shadow-lg">
+                <div className="bg-white/60 backdrop-blur-lg border border-white/40 rounded-2xl p-4 sm:p-6 shadow-lg">
                     <h3 className="text-lg sm:text-xl lg:text-2xl font-serif font-light text-gray-900 mb-3 sm:mb-4">
                       Unmasking the Deception: The Interplay between Fake Reviews, Ratings Discrepancy,
  and Consumer Demand
                     </h3>
                     <p className="text-sm sm:text-base text-gray-700 leading-relaxed font-light mb-4">
-                      (with Yunhao Huang and J. Miguel Villas-Boas)
+                     (with Yunhao Huang and J. Miguel Villas-Boas)
                     </p>
-                    <ul className="list-disc list-inside text-gray-700">
-                      <li>Under Review at Journal of Marketing Research</li>
+                    <ul className="list-disc list-inside text-gray-700 mb-4 sm:mb-6">
+                      <li>Under Review at <em className="font-bold">Journal of Marketing Research</em></li>
                     </ul>
-                    {/* <button 
-                    className="mt-4 px-4 py-2 text-xs font-medium text-gray-700 bg-gray-100 hover:bg-gray-200 transition-colors rounded-lg"
-                    onClick={() => showPopup(`In online marketplaces, consumers rely on reviews to make informed purchase decisions,
+                  <div className="mb-8 sm:mb-3">
+                  <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-700 font-bold mb-2 sm:mb-6">
+                    Abstract
+                  </p>
+                  <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-700 font-light mb-4 sm:mb-6">
+                     In online marketplaces, consumers rely on reviews to make informed purchase decisions,
  making the presence of fake reviews detrimental. Previous literature implies that products with fake
  reviews can display some patterns in review distribution, such as a higher discrepancy in ratings.
  Consumers might take this pattern into account when making their purchase decisions. In this paper,
  we explore the interplay between fake reviews and ratings discrepancy, and their impact on consumer
- demand, while controlling for average product ratings. First, using a data set with fake review labels,
+ demand, while controlling for average product ratings.
+                  </p>
+                  <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-700 font-light mb-4 sm:mb-6">
+                     First, using a data set with fake review labels,
  we find that product ratings discrepancy is positively correlated with the probability that the product
  has fake reviews. Second, through an identification strategy exploiting ratings discrepancy changes due
  to rating distribution rounding, we find evidence consistent with a negative causal impact of ratings
  discrepancy on consumer demand. Then, we conduct two experiments to establish and quantify the
  mechanism of the impact of ratings discrepancy on consumer demand through consumer suspicion of
- fake reviews. The first experiment shows that higher ratings discrepancy increases consumer suspicion
+ fake reviews.
+                  </p>
+                  <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-700 font-light">
+                    The first experiment shows that higher ratings discrepancy increases consumer suspicion
  of fake reviews, and the second experiment shows that heightened suspicion reduces consumer willing
 ness to pay. Together, these findings reveal that consumers use ratings discrepancies as a signal of fake
  reviews, and this suspicion impacts their purchase decisions. The findings highlight the importance of
  understanding the relationship between fake reviews, ratings discrepancies, and consumer demand in
- online marketplaces.`)} >
-                      Abstract
-                    </button> */}
+ online marketplaces.
+                  </p>
+                </div>
                   </div>
 
-                  {/* Research Interests */}
-                  {/* <div className="bg-white/60 backdrop-blur-lg border border-white/40 rounded-2xl p-4 sm:p-6 shadow-lg">
+                <div className="bg-white/60 backdrop-blur-lg border border-white/40 rounded-2xl p-4 sm:p-6 shadow-lg">
                     <h3 className="text-lg sm:text-xl lg:text-2xl font-serif font-light text-gray-900 mb-3 sm:mb-4">
-                      Research Focus
+                      Identity-Based Bias, Algorithm Bias, and Self-Censorship in Online Reviews
                     </h3>
-                    <p className="text-sm sm:text-base text-gray-700 leading-relaxed font-light">
-                      Platform economics, digital marketing algorithms, consumer
-                      behavior analysis, and empirical methods for causal
-                      inference in marketing contexts.
+                    <p className="text-sm sm:text-base text-gray-700 leading-relaxed font-light mb-4">
+                      (sole author)
                     </p>
-                  </div> */}
+                  <div className="mb-8 sm:mb-3">
+                  <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-700 font-bold mb-2 sm:mb-6">
+                    Abstract
+                  </p>
+                  <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-700 font-light mb-4 sm:mb-6">
+                    Are individuals from marginalized groups perceived as less persuasive? Does this perception
+ lead to their underrepresentation in visible, influential roles? Does it also contribute to their reluc
+tance to share their views? These are important questions that require further investigation. Amazon
+ reviews provide a valuable and quantifiable context to explore these questions. This paper investigates
+ how the perceived identity of reviewers influences helpfulness votes, the ranking of their reviews, and
+ their willingness to post new reviews on Amazon. 
+                  </p>
+                  <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-700 font-light mb-4 sm:mb-6">
+                     Utilizing a data set of over 1.8 million reviews, we
+ apply advanced natural language processing and computer vision tools to infer the gender and ethnicity
+ of reviewers based on their user aliases and avatars. Combined with experimental data, our analysis
+ shows causal evidence that reviews perceived as authored by women, non-binary individuals, or ethnic
+ minorities are rated as less helpful than those associated with men or white individuals. Furthermore,
+ we show that Amazon’s review ranking algorithm amplifies initial disparities in helpfulness recognition.
+ Because reviews from marginalized groups receive fewer votes, they are ranked lower and receive less
+ exposure, which in turn leads to even fewer votes-creating a self-reinforcing loop that perpetuates the
+ underrepresentation of marginalized voices. We also find evidence of self-censorship: reviewers are less
+ willing to continue contributing after receiving fewer helpfulness votes on their previous reviews.
+                  </p>
+                  <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-700 font-light">
+                    To
+ address these disparities, we propose two platform-level interventions-identity blind review displays
+ and affirmative action mechanisms within the review ranking algorithm. To evaluate their impact, we
+ further estimate a structural model that captures both the supply and demand sides of the review
+ ”market” to assess the welfare implications of these interventions.
+                  </p>
+                </div>
+                  </div>
+
+                <div className="bg-white/60 backdrop-blur-lg border border-white/40 rounded-2xl p-4 sm:p-6 shadow-lg">
+                    <h3 className="text-lg sm:text-xl lg:text-2xl font-serif font-light text-gray-900 mb-3 sm:mb-4">
+                      From Fame to Office: Electoral Advantage of Political Influencers
+                    </h3>
+                    <p className="text-sm sm:text-base text-gray-700 leading-relaxed font-light mb-4">
+                      (with Ganesh Iyer and Yi Yu)
+                    </p>
+                  <div className="mb-8 sm:mb-3">
+                  <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-700 font-bold mb-2 sm:mb-6">
+                    Abstract
+                  </p>
+                  <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-700 font-light mb-4 sm:mb-6">
+                    In recent years, numerous political candidates have achieved electoral success after first
+ becoming well-known as influencers in non-political fields. Famous examples include Donald Trump,
+ Ronald Reagan, Arnold Schwarzenegger, and others. This study explores the relationship between
+ one’s fame as an influencer and their performance in U.S. gubernatorial elections from 1865 to 2020.
+ With a dataset of 3,942 candidates and their Wikipedia biographies, we use Large Language Models
+ (LLMs) to identify influencers as individuals who achieved public prominence through roles such as
+ entrepreneurs, professional experts, or athletes before entering politics.
+                  </p>
+                  <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-700 font-light mb-4 sm:mb-6">
+                   The findings reveal that influ
+encer candidates hold a significant and substantial advantage and in some cases are 20% more likely
+ to win governor elections. This effect is particularly pronounced in three cases: Republican candidates
+ in general, especially those running in swing states, and individuals making their first run for office
+ and/or lacking prior experience as a governor. 
+                  </p>
+                  <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-700 font-light mb-4 sm:mb-6">
+                    As is common in much of the existing literature in
+ this field, establishing causality presents a common challenge. To address this, we conduct a voting
+ experiment with approximately 1,800 participants. The results show that the estimated advantage of
+ being an influencer closely aligns with findings from the observational analysis, reinforcing the causal
+ interpretation. This research provides important insights into the dynamics of American democracy,
+ indicating that public recognition and celebrity status can serve as pathways to electoral success.
+                  </p>
+                </div>
+                  </div>
+
+
+                <div className="bg-white/60 backdrop-blur-lg border border-white/40 rounded-2xl p-4 sm:p-6 shadow-lg">
+                    <h3 className="text-lg sm:text-xl lg:text-2xl font-serif font-light text-gray-900 mb-3 sm:mb-4">
+                      Ownership Consolidation and Performance of Earned Media when Building Political
+ Brands
+                    </h3>
+                    <p className="text-sm sm:text-base text-gray-700 leading-relaxed font-light mb-4">
+                      (with Hulya Eraslan, Przemyslaw Jeziorski, and Gizem Kosar)
+                    </p>
+                  <div className="mb-8 sm:mb-3">
+                  <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-700 font-bold mb-2 sm:mb-6">
+                    Abstract
+                  </p>
+                  <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-700 font-light mb-4 sm:mb-6">
+                    This study examines how media ownership consolidation influences the effectiveness of earned
+ media in shaping political brands in U.S. mayoral elections. Using data from over 300 local radio mar
+kets between 1945 and 2006, we link radio station ownership records and news programming to local
+ election outcomes. We find that increased market concentration strengthens the re-election prospects
+ of incumbent mayors while hindering the performance of challengers. The effect of increased concen
+tration is primarily driven by a reduction in the number of news-producing stations, and it dispro
+portionately benefits lower-quality incumbents. 
+                  </p>
+                  <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-700 font-light">
+                    We theoretically model this phenomenon within an
+ oligopoly framework, demonstrating how ownership structure affects news quality, and ultimately, elec
+toral outcomes. To address potential endogeneity in market structure, we leverage a novel instrument
+ based on multi-market mergers. From both managerial and policy perspectives, our results underscore
+ the broader consequences of media consolidation: it not only weakens the informative performance of
+ earned media but also lowers the quality of decision-making, which poses serious risks to the electoral
+ process, as it may prevent the most qualified candidates from winning. Additionally, for firms, more
+ concentrated media ownership reduces opportunities for visibility through earned media, diminishing
+ the impact of superior offerings and limiting entry of new products.
+                  </p>
+                </div>
+                  </div>
+
+
                 </div>
 
-                {/* Read More Button */}
-                <div className="text-center">
-                  <a
-                    // href="/research"
-                    href = "/working-papers"
-                    className="inline-flex items-center px-3 sm:px-4 py-2 sm:py-2.5 bg-white hover:bg-gray-200 text-gray-800 text-xs sm:text-sm font-medium tracking-wide transition-colors rounded-lg whitespace-nowrap"
-                  >
-                    <span className="hidden sm:inline">View All Working Papers</span>
-                    <span className="sm:hidden">Research</span>
-                    <svg
-                      className="w-3 h-3 ml-1.5 sm:ml-2"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M9 5l7 7-7 7"
-                      />
-                    </svg>
-                  </a>
-                </div>
               </div>
             </div>
           </section>
@@ -945,8 +1017,7 @@ ness to pay. Together, these findings reveal that consumers use ratings discrepa
           {/* Publish Papers Section - Summarized */}
           <section
             id="publish-papers"
-            className="h-screen flex items-center justify-center bg-white overflow-hidden"
-            style={{ scrollSnapAlign: "start" }}
+            className=" flex items-center justify-center bg-white overflow-hidden"
           >
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-12 h-full flex flex-col justify-center">
               <div className="mb-6 sm:mb-8">
@@ -976,33 +1047,33 @@ ness to pay. Together, these findings reveal that consumers use ratings discrepa
                     <p className="text-sm sm:text-base text-gray-700 leading-relaxed font-light mb-4">
                       (with Yi Li, Yuxuan Li, Sky Qiu, Toru Shirakawa, Yulun Wu, Hiroyasu Iso, and Mark J. Van Der Laan) 
                     </p>
-                    <ul className="list-disc list-inside text-gray-700">
+                    <ul className="list-disc list-inside text-gray-700 mb-4 sm:mb-6">
                       <li>Proceedings of the 41st International Conference on Machine Learning (ICML 2024)</li>
                       <li>A+ conference as ranked by CORE (Computing Research and Education)</li>
                       <li>Peer-reviewed with 27.5% acceptance rate</li>
                     </ul>
-                    {/* <button 
-                    className="mt-4 px-4 py-2 text-xs font-medium text-gray-700 bg-gray-100 hover:bg-gray-200 transition-colors rounded-lg"
-                    onClick={() => showPopup(`We propose Deep Longitudinal Targeted Minimum Loss-based Estimation (Deep LTMLE),
+                    <div className="mb-8 sm:mb-3">
+                  <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-700 font-bold mb-2 sm:mb-6">
+                    Abstract
+                  </p>
+                  <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-700 font-light mb-4 sm:mb-6">
+                    We propose Deep Longitudinal Targeted Minimum Loss-based Estimation (Deep LTMLE),
  a novel approach to estimate the counterfactual mean of outcome under dynamic treatment policies
  in longitudinal problem settings. Our approach utilizes a transformer architecture with heterogeneous
  type embedding trained using temporal-difference learning. After obtaining an initial estimate using
  the transformer, following the targeted minimum loss-based likelihood estimation (TMLE) framework,
- we statistically corrected for the bias commonly associated with machine learning algorithms. Fur
-thermore, our method also facilitates statistical inference by enabling the provision of 95% confidence
+ we statistically corrected for the bias commonly associated with machine learning algorithms.
+                  </p>
+                  <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-700 font-light">
+                     Furthermore, our method also facilitates statistical inference by enabling the provision of 95% confidence
  intervals grounded in asymptotic statistical theory. Simulation results demonstrate our method’s su
 perior performance over existing approaches, particularly in complex, long time-horizon scenarios. It
  remains effective in small-sample, short-duration contexts, matching the performance of asymptoti
 cally efficient estimators. To demonstrate our method in practice, we applied our method to estimate
  counterfactual mean outcomes for standard versus intensive blood pressure management strategies in
- a real-world cardiovascular epidemiology cohort study.`)} >
-                      Abstract
-                    </button> */}
-                    <button 
-                    className="mt-4 px-4 py-2 text-xs font-medium text-gray-700 bg-gray-100 hover:bg-gray-200 transition-colors rounded-lg"
-                    onClick={() => window.open("/publish-papers/arxiv2024", "_parent")}>
-                      View Details
-                    </button>
+ a real-world cardiovascular epidemiology cohort study
+                  </p>
+                </div>
                   </div>
                 </div>
 
@@ -1014,7 +1085,7 @@ cally efficient estimators. To demonstrate our method in practice, we applied ou
           {/* <section
             id="cv"
             className="h-screen flex items-center justify-center bg-white overflow-hidden"
-            style={{ scrollSnapAlign: "start" }}
+            
             onClick={() => window.open("https://drive.google.com/file/d/1pH_bCencAsriJI9ztSAAFlsbuOqLZVuj/view?usp=drive_link", "_blank")}
           >
           
@@ -1023,8 +1094,8 @@ cally efficient estimators. To demonstrate our method in practice, we applied ou
           {/* Teaching Section - Summarized */}
           <section
             id="teaching"
-            className="h-screen flex items-center justify-center bg-gray-50 overflow-hidden"
-            style={{ scrollSnapAlign: "start" }}
+            className=" flex items-center justify-center bg-gray-50 overflow-hidden"
+            
           >
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-12 h-full flex flex-col justify-center">
               <div className="mb-6 sm:mb-8">
@@ -1043,19 +1114,19 @@ cally efficient estimators. To demonstrate our method in practice, we applied ou
                     <div className="mb-4">
                       <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-2">
                         <h3 className="text-lg sm:text-xl lg:text-2xl font-serif font-light text-gray-900 mb-1 sm:mb-0 sm:mr-4">
-                          Marketing Analytics (MBA)
+                          Industrial Organization (undergraduate)
                         </h3>
                         <span className="text-xs sm:text-sm text-gray-500 font-light flex-shrink-0">
-                          2023-2024
+                          2024
                         </span>
                       </div>
                     </div>
-                    <p className="text-sm sm:text-base text-gray-700 leading-relaxed font-light mb-3 sm:mb-4">
+                    {/* <p className="text-sm sm:text-base text-gray-700 leading-relaxed font-light mb-3 sm:mb-4">
                       Advanced course covering statistical methods, causal
                       inference, and predictive modeling. Conducted lab sessions
                       for 40+ MBA students with focus on R/Python programming.
-                    </p>
-                    <div className="flex flex-wrap gap-1.5 sm:gap-2">
+                    </p> */}
+                    {/* <div className="flex flex-wrap gap-1.5 sm:gap-2">
                       <span className="px-2 sm:px-3 py-1 bg-blue-50 text-blue-700 text-xs sm:text-sm rounded-full">
                         Causal Inference
                       </span>
@@ -1065,6 +1136,19 @@ cally efficient estimators. To demonstrate our method in practice, we applied ou
                       <span className="px-2 sm:px-3 py-1 bg-blue-50 text-blue-700 text-xs sm:text-sm rounded-full">
                         R/Python
                       </span>
+                    </div> */}
+                  </div>
+
+                  <div className="bg-white/60 backdrop-blur-lg border border-white/40 rounded-2xl p-4 sm:p-6 shadow-lg">
+                    <div className="mb-4">
+                      <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-2">
+                        <h3 className="text-lg sm:text-xl lg:text-2xl font-serif font-light text-gray-900 mb-1 sm:mb-0 sm:mr-4">
+                         Behavioral Economics (undergraduate)
+                        </h3>
+                        <span className="text-xs sm:text-sm text-gray-500 font-light flex-shrink-0">
+                          2024
+                        </span>
+                      </div>
                     </div>
                   </div>
 
@@ -1072,32 +1156,55 @@ cally efficient estimators. To demonstrate our method in practice, we applied ou
                     <div className="mb-4">
                       <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-2">
                         <h3 className="text-lg sm:text-xl lg:text-2xl font-serif font-light text-gray-900 mb-1 sm:mb-0 sm:mr-4">
-                          Digital Marketing Strategy (MBA)
+                         Financial Economics (undergraduate)
                         </h3>
                         <span className="text-xs sm:text-sm text-gray-500 font-light flex-shrink-0">
-                          2022-2023
+                          2023
                         </span>
                       </div>
                     </div>
-                    <p className="text-sm sm:text-base text-gray-700 leading-relaxed font-light mb-3 sm:mb-4">
-                      MBA course on digital marketing strategies and platform
-                      economics. Led case discussions for 60+ students and
-                      delivered guest lectures.
-                    </p>
-                    <div className="flex flex-wrap gap-1.5 sm:gap-2">
-                      <span className="px-2 sm:px-3 py-1 bg-green-50 text-green-700 text-xs sm:text-sm rounded-full">
-                        Digital Strategy
-                      </span>
-                      <span className="px-2 sm:px-3 py-1 bg-green-50 text-green-700 text-xs sm:text-sm rounded-full">
-                        Platform Economics
-                      </span>
-                      <span className="px-2 sm:px-3 py-1 bg-green-50 text-green-700 text-xs sm:text-sm rounded-full">
-                        Case Analysis
-                      </span>
+                  </div>
+
+                  <div className="bg-white/60 backdrop-blur-lg border border-white/40 rounded-2xl p-4 sm:p-6 shadow-lg">
+                    <div className="mb-4">
+                      <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-2">
+                        <h3 className="text-lg sm:text-xl lg:text-2xl font-serif font-light text-gray-900 mb-1 sm:mb-0 sm:mr-4">
+                         Game Theory (undergraduate)
+                        </h3>
+                        <span className="text-xs sm:text-sm text-gray-500 font-light flex-shrink-0">
+                          2023
+                        </span>
+                      </div>
                     </div>
                   </div>
 
-                  <div className="bg-white/60 backdrop-blur-lg border border-white/40 rounded-2xl p-4 sm:p-2 shadow-lg">
+                  <div className="bg-white/60 backdrop-blur-lg border border-white/40 rounded-2xl p-4 sm:p-6 shadow-lg">
+                    <div className="mb-4">
+                      <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-2">
+                        <h3 className="text-lg sm:text-xl lg:text-2xl font-serif font-light text-gray-900 mb-1 sm:mb-0 sm:mr-4">
+                         Econometrics (undergraduate)
+                        </h3>
+                        <span className="text-xs sm:text-sm text-gray-500 font-light flex-shrink-0">
+                          2022
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-white/60 backdrop-blur-lg border border-white/40 rounded-2xl p-4 sm:p-6 shadow-lg">
+                    <div className="mb-4">
+                      <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-2">
+                        <h3 className="text-lg sm:text-xl lg:text-2xl font-serif font-light text-gray-900 mb-1 sm:mb-0 sm:mr-4">
+                         Econometrics(Ph.D.)
+                        </h3>
+                        <span className="text-xs sm:text-sm text-gray-500 font-light flex-shrink-0">
+                          2021-2022
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* <div className="bg-white/60 backdrop-blur-lg border border-white/40 rounded-2xl p-4 sm:p-2 shadow-lg">
                     <div className="border-l-4 border-blue-500 pl-4 sm:pl-6">
                       <h4 className="text-base sm:text-lg font-serif font-light text-gray-900 mb-2">
                         Teaching Recognition
@@ -1107,11 +1214,11 @@ cally efficient estimators. To demonstrate our method in practice, we applied ou
                         Excellence Recognition (Fall 2023)
                       </p>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
 
                 {/* Read More Button */}
-                <div className="text-center">
+                {/* <div className="text-center">
                   <a
                     href="/teaching"
                     className="inline-flex items-center px-4 sm:px-6 py-2.5 sm:py-2 bg-none hover:bg-gray-200 text-gray-800 text-xs sm:text-sm font-medium tracking-wide transition-colors rounded-lg"
@@ -1131,7 +1238,7 @@ cally efficient estimators. To demonstrate our method in practice, we applied ou
                       />
                     </svg>
                   </a>
-                </div>
+                </div> */}
               </div>
             </div>
           </section>
@@ -1139,8 +1246,8 @@ cally efficient estimators. To demonstrate our method in practice, we applied ou
           {/* Contact Section */}
           <section
             id="contact"
-            className="min-h-screen flex items-center justify-center bg-white overflow-hidden"
-            style={{ scrollSnapAlign: "start" }}
+            className="min-h-screen flex items-center justify-center bg-white overflow-y-auto"
+            
           >
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-12 h-full flex flex-col justify-between text-center">
               <div></div> {/* Spacer for centering */}
@@ -1170,7 +1277,7 @@ cally efficient estimators. To demonstrate our method in practice, we applied ou
                       </a>
                     </div>
 
-                    <div>
+                    {/* <div>
                       <h3 className="text-lg sm:text-xl font-serif font-light text-gray-900 mb-3">
                         Office
                       </h3>
@@ -1182,7 +1289,7 @@ cally efficient estimators. To demonstrate our method in practice, we applied ou
                         <br />
                         Berkeley, CA 94720
                       </div>
-                    </div>
+                    </div> */}
 
                     <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 pt-4 sm:pt-6">
                       {/* <a
@@ -1207,7 +1314,7 @@ cally efficient estimators. To demonstrate our method in practice, we applied ou
                         CV
                       </a> */}
                       <a
-                        href="https://linkedin.com/in/mingduo-zhao"
+                        href="https://www.linkedin.com/in/mingduo-zhao3/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="px-4 sm:px-6 py-2.5 sm:py-3 border border-gray-300 hover:border-gray-400 text-gray-700 text-xs sm:text-sm font-medium tracking-wide hover:bg-gray-50 transition-colors rounded-lg"
