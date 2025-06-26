@@ -779,13 +779,18 @@ litically.
                     {/* <button className="px-4 py-2 text-xs font-medium text-white bg-blue-600 hover:bg-blue-700 transition-colors rounded-lg shadow-sm">
                       Download Paper
                     </button> */}
-                    <button className="px-4 py-2 text-xs font-medium text-gray-700 bg-gray-100 hover:bg-gray-200 transition-colors rounded-lg"
+                    {/* <button className="px-4 py-2 text-xs font-medium text-gray-700 bg-gray-100 hover:bg-gray-200 transition-colors rounded-lg"
                     onClick={()=>showPopup(`Recommender systems shape how people consume news, possibly reinforcing political polarization. We run two field experiments to identify how user preferences and algorithms interact to amplify partisan news consumption. In the first study, 2,065 U.S. participants use blank Google accounts and a browser extension to track users' activities on Google News. The first-round recommendations are exogenous, allowing us to show that aligned content draws more clicks. A second experiment uses bots to randomly click on articles, revealing that each click leads to more ideologically aligned content. These two pieces of causal evidence establish a feedback loop between user preference and algorithmic recommendations. We also find in the field study that, after interacting with the recommender system, people's level of polarization increases. A structural model combining a discrete choice model (demand side) with a multi-armed bandit algorithm (supply side) confirms this positive-feedback mechanism. The model is then used to simulate a counterfactual "ideology-blind" recommendation policy that ignores political slant when curating content. While this policy reduces both affective and ideological polarization, it comes at the cost of likely lower engagement. Overall, the findings provide causal evidence that personalized algorithms reinforce partisan consumption and exacerbate polarization. They also uncover a fundamental trade-off between mitigating polarization and sustaining engagement, which offers important insights for both platform owners and policymakers.`)}>
                       Abstract
+                    </button> */}
+                    <button
+                    className="px-4 py-2 text-xs font-medium text-gray-700 bg-gray-100 hover:bg-gray-200 transition-colors rounded-lg"
+                    onClick={() => window.open("/job-market-paper",'_parent')}>
+                      View Details
                     </button>
-                    <button className="px-4 py-2 text-xs font-medium text-gray-700 bg-gray-100 hover:bg-gray-200 transition-colors rounded-lg">
+                    {/* <button className="px-4 py-2 text-xs font-medium text-gray-700 bg-gray-100 hover:bg-gray-200 transition-colors rounded-lg">
                       Slides
-                    </button>
+                    </button> */}
                   </div>
                 </div>
               </div>
@@ -829,7 +834,7 @@ litically.
                     <ul className="list-disc list-inside text-gray-700">
                       <li>Under Review at Marketing Science</li>
                     </ul>
-                    <button 
+                    {/* <button 
                     className="mt-4 px-4 py-2 text-xs font-medium text-gray-700 bg-gray-100 hover:bg-gray-200 transition-colors rounded-lg"
                     onClick={() => showPopup(`AI systems for dynamic pricing, targeted promotions, and individualized recommendations
  typically assume that observed consumer behavior truthfully reveals underlying preferences. However,
@@ -849,7 +854,7 @@ ments, where targeting rules shape behavior. In this setting, naive behavioral t
  strategies-from solely optimizing predictive models to designing incentive mechanisms that are robust
  to strategic consumer behavior.`)} >
                       Abstract
-                    </button>
+                    </button> */}
                     {/* <div className="flex flex-wrap gap-1.5 sm:gap-2">
                       <span className="px-2 sm:px-3 py-1 bg-gray-100 text-gray-700 text-xs sm:text-sm rounded-full">
                         E-commerce
@@ -874,7 +879,7 @@ ments, where targeting rules shape behavior. In this setting, naive behavioral t
                     <ul className="list-disc list-inside text-gray-700">
                       <li>Under Review at Journal of Marketing Research</li>
                     </ul>
-                    <button 
+                    {/* <button 
                     className="mt-4 px-4 py-2 text-xs font-medium text-gray-700 bg-gray-100 hover:bg-gray-200 transition-colors rounded-lg"
                     onClick={() => showPopup(`In online marketplaces, consumers rely on reviews to make informed purchase decisions,
  making the presence of fake reviews detrimental. Previous literature implies that products with fake
@@ -894,7 +899,7 @@ ness to pay. Together, these findings reveal that consumers use ratings discrepa
  understanding the relationship between fake reviews, ratings discrepancies, and consumer demand in
  online marketplaces.`)} >
                       Abstract
-                    </button>
+                    </button> */}
                   </div>
 
                   {/* Research Interests */}
@@ -977,7 +982,7 @@ ness to pay. Together, these findings reveal that consumers use ratings discrepa
                       <li>A+ conference as ranked by CORE (Computing Research and Education)</li>
                       <li>Peer-reviewed with 27.5% acceptance rate</li>
                     </ul>
-                    <button 
+                    {/* <button 
                     className="mt-4 px-4 py-2 text-xs font-medium text-gray-700 bg-gray-100 hover:bg-gray-200 transition-colors rounded-lg"
                     onClick={() => showPopup(`We propose Deep Longitudinal Targeted Minimum Loss-based Estimation (Deep LTMLE),
  a novel approach to estimate the counterfactual mean of outcome under dynamic treatment policies
@@ -993,6 +998,11 @@ cally efficient estimators. To demonstrate our method in practice, we applied ou
  counterfactual mean outcomes for standard versus intensive blood pressure management strategies in
  a real-world cardiovascular epidemiology cohort study.`)} >
                       Abstract
+                    </button> */}
+                    <button 
+                    className="mt-4 px-4 py-2 text-xs font-medium text-gray-700 bg-gray-100 hover:bg-gray-200 transition-colors rounded-lg"
+                    onClick={() => window.open("/publish-papers/arxiv2024", "_parent")}>
+                      View Details
                     </button>
                   </div>
                 </div>
