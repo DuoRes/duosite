@@ -91,7 +91,7 @@ const Navigation = () => {
     { id: "home", label: "Home" },
     { id: "about", label: "About" },
     { id: "working-papers", label: "Working Papers" },
-    { id: "publish-papers", label: "Publish Papers" },
+    { id: "publish-papers", label: "Publications" },
     { id: "teaching", label: "Teaching" },
     { id: "contact", label: "Contact" },
   ];
@@ -198,14 +198,14 @@ const Navigation = () => {
                   stroke="currentColor"
                   viewBox="0 0 24 24"
                 >
-                  {mobileMenuOpen ? (
+                  {mobileMenuOpen ? ( 
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
                       strokeWidth={2}
                       d="M6 18L18 6M6 6l12 12"
                     />
-                  ) : (
+                  ) : ( 
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
@@ -264,9 +264,9 @@ const Navigation = () => {
                       }`}
                     >
                       <div className="flex items-center space-x-4">
-                        <span className="text-sm font-mono text-gray-400">
+                        {/* <span className="text-sm font-mono text-gray-400">
                           {String(index + 1).padStart(2, "0")}
-                        </span>
+                        </span> */}
                         <span className="font-medium">{item.label}</span>
                       </div>
                       <svg
