@@ -28,7 +28,7 @@ export default function Home() {
         // Only enable scroll transformation on desktop
         if (!isMobile) {
           // Smoother transition trigger with slight delay
-          setIsScrolled(scrollTop > 80);
+          setIsScrolled(scrollTop > 50);
         } else {
           // On mobile, keep it simple - no complex transformations
           setIsScrolled(scrollTop > 50);
@@ -149,7 +149,7 @@ export default function Home() {
                     <h1 className="text-sm font-serif font-light text-gray-900 tracking-tight">
                       Mingduo Zhao
                     </h1>
-                    <div className="text-xs text-gray-600">PhD Candidate</div>
+                    <div className="text-xs text-gray-600">Ph.D. Candidate</div>
                   </div>
                 </div>
                 <div className="flex items-center space-x-2">
@@ -280,7 +280,7 @@ export default function Home() {
 
                                 <div className="space-y-3">
                                   <div className="text-xl text-gray-800 font-light">
-                                    PhD Candidate in Economics
+                                    Ph.D. Candidate in Economics
                                   </div>
                                   <div className="text-lg text-gray-600 leading-relaxed">
                                     University of California, Berkeley
@@ -288,7 +288,7 @@ export default function Home() {
                                   <div className="text-lg font-bold text-gray-800 leading-relaxed">
                                     I am currently on the job market in Marketing.
                                   </div>
-                                  <div className="text-lg font-bold text-gray-800 leading-relaxed">
+                                  <div className="text-lg text-gray-800 leading-relaxed">
                                     I am expected to graduate in May 2026.
                                   </div>
                                 </div>
@@ -418,7 +418,7 @@ export default function Home() {
                           赵鸣铎
                         </div> */}
                         <div className="text-lg text-gray-700 mb-1 font-light">
-                          PhD Candidate in Economics
+                          Ph.D. Candidate in Economics
                         </div>
                         <div className="text-sm text-gray-600 leading-relaxed mb-1">
                           UC Berkeley • Department of Economics
@@ -538,7 +538,7 @@ export default function Home() {
                   </h1>
                   {/* <div className="text-base text-gray-600 mb-1">赵鸣铎</div> */}
                   <div className="text-lg text-gray-800 font-light mb-4">
-                    PhD Candidate in Economics
+                    Ph.D. Candidate in Economics
                   </div>
                   <div className="text-sm text-gray-600 leading-relaxed">
                     University of California, Berkeley
@@ -546,7 +546,7 @@ export default function Home() {
                   <div className="text-lg font-bold text-gray-800 leading-relaxed">
                     I am currently on the job market in Marketing.
                   </div>
-                  <div className="text-lg font-bold text-gray-800 leading-relaxed">
+                  <div className="text-lg text-gray-800 leading-relaxed">
                     I am expected to graduate in May 2026.
                   </div>
                 </div>
@@ -667,17 +667,17 @@ export default function Home() {
               <div className="mb-6 sm:mb-8 lg:mb-10">
                 <div className="flex items-center w-full space-x-3 mb-4">
                   {/* <div className="w-full"></div> */}
-                  <div className="w-1.5 h-1.5 bg-gray-800 rounded-full ml-auto"></div>
+                  <div className="w-1.5 h-1.5 bg-gray-800 rounded-full"></div>
                   <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif font-light text-gray-900 tracking-tight">
                     About
                   </h2>
                 </div>
-                <div className="w-8 sm:w-12 h-px bg-gray-300 mb-4 sm:mb-6 ml-auto"></div>
+                <div className="w-8 sm:w-12 h-px bg-gray-300 mb-4 sm:mb-6"></div>
               </div>
 
               <div className="flex-1 flex flex-col justify-center min-h-0">
                 <p className="text-base sm:text-lg leading-relaxed text-gray-700 font-light mb-6 sm:mb-8 lg:mb-10">
-                  I am a PhD Candidate in Marketing at the Departmemnt of Economics, University of California, Berkeley. My research explores the intersection of{" "}
+                  I am a Ph.D. Candidate in Marketing at the Departmemnt of Economics, University of California, Berkeley. My research explores the intersection of{" "}
                               <em className="text-gray-800 font-medium">
                                 marketing
                               </em>
@@ -767,12 +767,12 @@ export default function Home() {
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-12 h-full flex flex-col justify-center">
               <div className="mb-6 sm:mb-8">
                 <div className="flex items-center space-x-3 mb-4">
-                  <div className="w-1.5 h-1.5 bg-gray-800 rounded-full ml-auto"></div>
+                  <div className="w-1.5 h-1.5 bg-gray-800 rounded-full"></div>
                   <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif font-light text-gray-900 tracking-tight">
                     Job Market Paper
                   </h2>
                 </div>
-                <div className="w-12 h-px bg-gray-300 mb-4 sm:mb-6 ml-auto"></div>
+                <div className="w-12 h-px bg-gray-300 mb-4 sm:mb-6"></div>
               </div>
 
               <div className="bg-white/60 backdrop-blur-lg border border-white/40 rounded-2xl p-6 sm:p-8 lg:p-10 shadow-xl flex-1 flex flex-col justify-center min-h-0">
@@ -829,12 +829,12 @@ export default function Home() {
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-12 h-full flex flex-col justify-center">
               <div className="mb-6 sm:mb-8">
                 <div className="flex items-center space-x-3 mb-4">
-                  <div className="w-1.5 h-1.5 bg-gray-800 rounded-full ml-auto"></div>
+                  <div className="w-1.5 h-1.5 bg-gray-800 rounded-full"></div>
                   <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif font-light text-gray-900 tracking-tight">
                     Working Papers
                   </h2>
                 </div>
-                <div className="w-12 h-px bg-gray-300 mb-4 sm:mb-6 ml-auto"></div>
+                <div className="w-12 h-px bg-gray-300 mb-4 sm:mb-6"></div>
               </div>
 
               <div className="flex-1 flex flex-col justify-center min-h-0">
@@ -1022,12 +1022,12 @@ portionately benefits lower-quality incumbents. We theoretically model this phen
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-12 h-full flex flex-col justify-center">
               <div className="mb-6 sm:mb-8">
                 <div className="flex items-center space-x-3 mb-4">
-                  <div className="w-1.5 h-1.5 bg-gray-800 rounded-full ml-auto"></div>
+                  <div className="w-1.5 h-1.5 bg-gray-800 rounded-full"></div>
                   <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif font-light text-gray-900 tracking-tight">
                     Publications
                   </h2>
                 </div>
-                <div className="w-12 h-px bg-gray-300 mb-4 sm:mb-6 ml-auto"></div>
+                <div className="w-12 h-px bg-gray-300 mb-4 sm:mb-6"></div>
               </div>
 
               <div className="flex-1 flex flex-col justify-center min-h-0">
@@ -1095,12 +1095,12 @@ portionately benefits lower-quality incumbents. We theoretically model this phen
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-12 h-full flex flex-col justify-center">
               <div className="mb-6 sm:mb-8">
                 <div className="flex items-center space-x-3 mb-4">
-                  <div className="w-1.5 h-1.5 bg-gray-800 rounded-full ml-auto"></div>
+                  <div className="w-1.5 h-1.5 bg-gray-800 rounded-full"></div>
                   <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif font-light text-gray-900 tracking-tight">
                     Teaching
                   </h2>
                 </div>
-                <div className="w-12 h-px bg-gray-300 mb-4 sm:mb-6 ml-auto"></div>
+                <div className="w-12 h-px bg-gray-300 mb-4 sm:mb-6"></div>
               </div>
 
               <div className="flex-1 flex flex-col justify-center min-h-0">
@@ -1274,13 +1274,13 @@ portionately benefits lower-quality incumbents. We theoretically model this phen
               <div></div> {/* Spacer for centering */}
               <div className="flex-1 flex flex-col justify-center">
                 <div className="mb-6 sm:mb-8">
-                  <div className="flex items-center justify-center space-x-3 mb-4">
+                  <div className="flex items-center justify-start space-x-3 mb-4">
                     <div className="w-1.5 h-1.5 bg-gray-800 rounded-full"></div>
                     <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif font-light text-gray-900 tracking-tight">
                       Contact
                     </h2>
                   </div>
-                  <div className="w-12 h-px bg-gray-300 mx-auto mb-4 sm:mb-6"></div>
+                  <div className="w-12 h-px bg-gray-300 mb-4 sm:mb-6"></div>
                 </div>
 
                 <div className="bg-white/60 backdrop-blur-lg border border-white/40 rounded-2xl p-6 sm:p-8 lg:p-10 shadow-lg max-w-2xl mx-auto">
