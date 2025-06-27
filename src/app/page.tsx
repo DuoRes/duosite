@@ -665,13 +665,14 @@ export default function Home() {
           >
             <div className="max-w-4xl mx-auto py-8 sm:py-12 lg:py-16 h-full flex flex-col justify-center">
               <div className="mb-6 sm:mb-8 lg:mb-10">
-                <div className="flex items-center space-x-3 mb-4">
-                  <div className="w-1.5 h-1.5 bg-gray-800 rounded-full"></div>
+                <div className="flex items-center w-full space-x-3 mb-4">
+                  {/* <div className="w-full"></div> */}
+                  <div className="w-1.5 h-1.5 bg-gray-800 rounded-full ml-auto"></div>
                   <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif font-light text-gray-900 tracking-tight">
                     About
                   </h2>
                 </div>
-                <div className="w-8 sm:w-12 h-px bg-gray-300 mb-4 sm:mb-6"></div>
+                <div className="w-8 sm:w-12 h-px bg-gray-300 mb-4 sm:mb-6 ml-auto"></div>
               </div>
 
               <div className="flex-1 flex flex-col justify-center min-h-0">
@@ -766,12 +767,12 @@ export default function Home() {
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-12 h-full flex flex-col justify-center">
               <div className="mb-6 sm:mb-8">
                 <div className="flex items-center space-x-3 mb-4">
-                  <div className="w-1.5 h-1.5 bg-gray-800 rounded-full"></div>
+                  <div className="w-1.5 h-1.5 bg-gray-800 rounded-full ml-auto"></div>
                   <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif font-light text-gray-900 tracking-tight">
                     Job Market Paper
                   </h2>
                 </div>
-                <div className="w-12 h-px bg-gray-300 mb-4 sm:mb-6"></div>
+                <div className="w-12 h-px bg-gray-300 mb-4 sm:mb-6 ml-auto"></div>
               </div>
 
               <div className="bg-white/60 backdrop-blur-lg border border-white/40 rounded-2xl p-6 sm:p-8 lg:p-10 shadow-xl flex-1 flex flex-col justify-center min-h-0">
@@ -828,12 +829,12 @@ export default function Home() {
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-12 h-full flex flex-col justify-center">
               <div className="mb-6 sm:mb-8">
                 <div className="flex items-center space-x-3 mb-4">
-                  <div className="w-1.5 h-1.5 bg-gray-800 rounded-full"></div>
+                  <div className="w-1.5 h-1.5 bg-gray-800 rounded-full ml-auto"></div>
                   <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif font-light text-gray-900 tracking-tight">
                     Working Papers
                   </h2>
                 </div>
-                <div className="w-12 h-px bg-gray-300 mb-4 sm:mb-6"></div>
+                <div className="w-12 h-px bg-gray-300 mb-4 sm:mb-6 ml-auto"></div>
               </div>
 
               <div className="flex-1 flex flex-col justify-center min-h-0">
@@ -1021,12 +1022,12 @@ portionately benefits lower-quality incumbents. We theoretically model this phen
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-12 h-full flex flex-col justify-center">
               <div className="mb-6 sm:mb-8">
                 <div className="flex items-center space-x-3 mb-4">
-                  <div className="w-1.5 h-1.5 bg-gray-800 rounded-full"></div>
+                  <div className="w-1.5 h-1.5 bg-gray-800 rounded-full ml-auto"></div>
                   <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif font-light text-gray-900 tracking-tight">
                     Publications
                   </h2>
                 </div>
-                <div className="w-12 h-px bg-gray-300 mb-4 sm:mb-6"></div>
+                <div className="w-12 h-px bg-gray-300 mb-4 sm:mb-6 ml-auto"></div>
               </div>
 
               <div className="flex-1 flex flex-col justify-center min-h-0">
@@ -1094,12 +1095,12 @@ portionately benefits lower-quality incumbents. We theoretically model this phen
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-12 h-full flex flex-col justify-center">
               <div className="mb-6 sm:mb-8">
                 <div className="flex items-center space-x-3 mb-4">
-                  <div className="w-1.5 h-1.5 bg-gray-800 rounded-full"></div>
+                  <div className="w-1.5 h-1.5 bg-gray-800 rounded-full ml-auto"></div>
                   <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif font-light text-gray-900 tracking-tight">
                     Teaching
                   </h2>
                 </div>
-                <div className="w-12 h-px bg-gray-300 mb-4 sm:mb-6"></div>
+                <div className="w-12 h-px bg-gray-300 mb-4 sm:mb-6 ml-auto"></div>
               </div>
 
               <div className="flex-1 flex flex-col justify-center min-h-0">
