@@ -4,8 +4,13 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Improve font loading and text rendering for SEO */
 @layer base {
   html {
+    font-display: swap;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     scroll-behavior: smooth;
     /* Disable scroll snap on mobile to prevent issues */
     scroll-snap-type: none;
@@ -82,6 +87,34 @@
     .fixed {
       position: relative;
     }
+  }
+
+  /* Ensure proper heading hierarchy for SEO */
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: inherit;
+    line-height: 1.2;
+  }
+  
+  /* Improve accessibility and SEO with better focus states */
+  *:focus {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+  }
+  
+  /* Skip link for accessibility and SEO */
+  .skip-link {
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    background: #000;
+    color: white;
+    padding: 8px;
+    text-decoration: none;
+    z-index: 1000;
+  }
+  
+  .skip-link:focus {
+    top: 6px;
   }
 }
 
