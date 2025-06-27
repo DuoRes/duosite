@@ -288,7 +288,7 @@ export default function Home() {
                                   <div className="text-lg font-bold text-gray-800 leading-relaxed">
                                     I am currently on the job market in Marketing.
                                   </div>
-                                  <div className="text-lg text-gray-800 leading-relaxed">
+                                  <div className="text-lg text-gray-600 leading-relaxed">
                                     I am expected to graduate in May 2026.
                                   </div>
                                 </div>
@@ -546,7 +546,7 @@ export default function Home() {
                   <div className="text-lg font-bold text-gray-800 leading-relaxed">
                     I am currently on the job market in Marketing.
                   </div>
-                  <div className="text-lg text-gray-800 leading-relaxed">
+                  <div className="text-lg text-gray-600 leading-relaxed">
                     I am expected to graduate in May 2026.
                   </div>
                 </div>
