@@ -271,7 +271,7 @@ export default function Home() {
                               <div className="space-y-6">
                                 <div>
                                   <h1 className="text-5xl xl:text-6xl font-serif font-light text-gray-900 leading-tight tracking-tight mb-2">
-                                    Mingduo Zhao <span className="text-base">(pronounced Ming-dwo Jow)</span>
+                                    Mingduo Zhao <br/><span className="text-2xl">(pronounced Ming-dwo Jow)</span>
                                   </h1>
                                   {/* <div className="text-xl text-gray-600 tracking-wide mb-1">
                                     赵鸣铎
@@ -296,7 +296,7 @@ export default function Home() {
                           {/* Research description */}
                           <div className="max-w-4xl text-center lg:text-left">
                             <div className="w-12 h-px bg-gray-300 mb-6 mx-auto lg:mx-0"></div>
-                            <p className="text-lg leading-relaxed text-gray-700 font-light">
+                            <p className="text-lg leading-relaxed text-gray-700 font-light text-justify">
                               My research explores the intersection of{" "}
                               <em className="text-gray-800 font-medium">
                                 marketing
@@ -531,7 +531,7 @@ export default function Home() {
                 {/* Name and title */}
                 <div>
                   <h1 className="text-3xl font-serif font-light text-gray-900 mb-2 tracking-tight">
-                    Mingduo Zhao <span className="text-base">(pronounced Ming-dwo Jow)</span>
+                    Mingduo Zhao <br/> <span className="text-base">(pronounced Ming-dwo Jow)</span>
                   </h1>
                   {/* <div className="text-base text-gray-600 mb-1">赵鸣铎</div> */}
                   <div className="text-lg text-gray-800 font-light mb-4">
@@ -548,7 +548,7 @@ export default function Home() {
                 {/* Research description */}
                 <div>
                   <div className="w-8 h-px bg-gray-300 mx-auto mb-4"></div>
-                  <p className="text-sm leading-relaxed text-gray-700 font-light">
+                  <p className="text-sm leading-relaxed text-gray-700 font-light text-justify">
                     My research explores the intersection of{" "}
                               <em className="text-gray-800 font-medium">
                                 marketing
