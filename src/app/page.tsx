@@ -271,7 +271,7 @@ export default function Home() {
                               <div className="space-y-6">
                                 <div>
                                   <h1 className="text-5xl xl:text-6xl font-serif font-light text-gray-900 leading-tight tracking-tight mb-2">
-                                    Mingduo Zhao
+                                    Mingduo Zhao <span className="text-base">(pronounced Ming-dwo Jow)</span>
                                   </h1>
                                   {/* <div className="text-xl text-gray-600 tracking-wide mb-1">
                                     赵鸣铎
@@ -321,33 +321,33 @@ export default function Home() {
                         </div>
 
                         {/* Navigation panel */}
-                        <div className="lg:col-span-5 flex flex-col justify-center">
+                        <div className="lg:col-span-5 flex flex-col justify-center mt-10">
                           <div className="bg-white/60 backdrop-blur-lg border border-white/40 rounded-3xl p-8 xl:p-10 shadow-2xl">
                             {/* Navigation menu */}
                             <nav className="space-y-4 mb-8">
                               {navItems.map((item) => 
-                               item.id === "cv" ? (null
+                               item.id === "cv" ? (
                               // Special behavior for CV
-                              // <button
-                              //   key={item.href}
-                              //   onClick={() =>
-                              //     window.open(
-                              //       "https://drive.google.com/file/d/1pH_bCencAsriJI9ztSAAFlsbuOqLZVuj/view?usp=drive_link",
-                              //       "_blank"
-                              //     )
-                              //   }
-                              //   className="group flex items-center justify-between py-3 px-4 -mx-4 rounded-xl hover:bg-white/50 transition-all duration-300 touch-manipulation w-full text-left"
-                              //   >
-                              //     <div className="flex items-center space-x-4">
-                              //       <span className="text-sm font-mono text-gray-400 group-hover:text-gray-600 transition-colors">
-                              //         {item.number}
-                              //       </span>
-                              //       <span className="text-base font-medium text-gray-700 group-hover:text-gray-900 transition-colors tracking-wide">
-                              //         {item.label}
-                              //       </span>
-                              //     </div>
-                              //     <div className="w-6 h-px bg-gray-300 group-hover:bg-gray-600 group-hover:w-8 transition-all duration-300"></div>
-                              //   </button>
+                              <button
+                                key={item.href}
+                                onClick={() =>
+                                  window.open(
+                                    "https://drive.google.com/file/d/1pH_bCencAsriJI9ztSAAFlsbuOqLZVuj/view?usp=drive_link",
+                                    "_blank"
+                                  )
+                                }
+                                className="group flex items-center justify-between py-3 px-4 -mx-4 rounded-xl hover:bg-white/50 transition-all duration-300 touch-manipulation w-full text-left"
+                                >
+                                  <div className="flex items-center space-x-4">
+                                    <span className="text-sm font-mono text-gray-400 group-hover:text-gray-600 transition-colors">
+                                      {item.number}
+                                    </span>
+                                    <span className="text-base font-medium text-gray-700 group-hover:text-gray-900 transition-colors tracking-wide">
+                                      {item.label}
+                                    </span>
+                                  </div>
+                                  <div className="w-6 h-px bg-gray-300 group-hover:bg-gray-600 group-hover:w-8 transition-all duration-300"></div>
+                                </button>
                             ) : (
                               // Default behavior for all other items
                               <button
@@ -531,7 +531,7 @@ export default function Home() {
                 {/* Name and title */}
                 <div>
                   <h1 className="text-3xl font-serif font-light text-gray-900 mb-2 tracking-tight">
-                    Mingduo Zhao
+                    Mingduo Zhao <span className="text-base">(pronounced Ming-dwo Jow)</span>
                   </h1>
                   {/* <div className="text-base text-gray-600 mb-1">赵鸣铎</div> */}
                   <div className="text-lg text-gray-800 font-light mb-4">
@@ -550,14 +550,24 @@ export default function Home() {
                   <div className="w-8 h-px bg-gray-300 mx-auto mb-4"></div>
                   <p className="text-sm leading-relaxed text-gray-700 font-light">
                     My research explores the intersection of{" "}
-                    <em className="text-gray-800 font-medium">marketing</em>,{" "}
-                    <em className="text-gray-800 font-medium">economics</em>,{" "}
-                    <em className="text-gray-800 font-medium">
-                      computer science
-                    </em>
-                    , and{" "}
-                    <em className="text-gray-800 font-medium">statistics</em>,
-                    with a focus on technological transformation.
+                              <em className="text-gray-800 font-medium">
+                                marketing
+                              </em>
+                              ,{" "}
+                              <em className="text-gray-800 font-medium">
+                                economics
+                              </em>
+                              ,{" "}
+                              <em className="text-gray-800 font-medium">
+                                computer science
+                              </em>
+                              , and{" "}
+                              <em className="text-gray-800 font-medium">
+                                statistics
+                              </em>
+                              , with a focus on how technological advancements
+                              profoundly transform society, both economically
+                              and politically.
                   </p>
                 </div>
 
@@ -671,7 +681,7 @@ export default function Home() {
 
               <div className="flex-1 flex flex-col justify-center min-h-0">
                 <p className="text-base sm:text-lg leading-relaxed text-gray-700 font-light mb-6 sm:mb-8 lg:mb-10">
-                  I am a Ph.D. Candidate in Marketing at the Departmemnt of Economics, University of California, Berkeley. My research explores the intersection of{" "}
+                  I am a Ph.D. candidate in Economics at the University of California, Berkeley. My research explores the intersection of{" "}
                               <em className="text-gray-800 font-medium">
                                 marketing
                               </em>
@@ -788,21 +798,7 @@ export default function Home() {
                     Abstract
                   </p>
                   <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-700 font-light mb-4 sm:mb-6 text-justify">
-                    Recommender systems shape how people consume news, possibly
-                  reinforcing political polarization. We run two field
-                  experiments to identify how user preferences and algorithms
-                  interact to amplify partisan news consumption. In the first
-                  study, 2,065 U.S. participants use blank Google accounts and a
-                  browser extension to track users' activities on Google News. The first-round recommendations are exogenous, allowing us to
-                  show that aligned content draws more clicks. A second
-                  experiment uses bots to randomly click on articles, revealing
-                  that each click leads to more ideologically aligned content.
-                  These two pieces of causal evidence establish a feedback loop
-                  between user preference and algorithmic recommendations.  We also find in the field study that, after interacting with
-                  the recommender system, people's level of polarization
-                  increases. A structural model combining a discrete choice
-                  model (demand side) with a multi-armed bandit algorithm
-                  (supply side) confirms this positive-feedback mechanism.
+                    Recommender systems shape how people consume news, possibly reinforcing political polarization. We run two field experiments to identify how user preferences and algorithms interact to amplify partisan news consumption. In the first study, 2,065 U.S. participants use blank Google accounts and a browser extension to track users' activities on Google News. The first-round recommendations are exogenous, allowing us to show that aligned content draws more clicks. A second experiment uses bots to randomly click on articles, revealing that each click leads to more ideologically aligned content. These two pieces of causal evidence establish a feedback loop between user preference and algorithmic recommendations. We also find in the field study that, after interacting with the recommender system, people's level of polarization increases. A structural model combining a discrete choice model (demand side) with a multi-armed bandit algorithm (supply side) confirms this positive-feedback mechanism. The model is then used to simulate a counterfactual “ideology-blind” recommendation policy that ignores political slant when curating content. While this policy reduces polarization, it comes at the cost of likely lower engagement. Overall, the findings provide causal evidence that personalized algorithms reinforce partisan consumption and exacerbate polarization. They also uncover a fundamental trade-off between mitigating polarization and sustaining engagement, which offers important insights for both platform owners and policymakers.
                   </p>
                 </div>
 
