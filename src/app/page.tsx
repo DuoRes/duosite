@@ -285,11 +285,8 @@ export default function Home() {
                                   <div className="text-lg text-gray-600 leading-relaxed">
                                     University of California, Berkeley
                                   </div>
-                                  <div className="text-lg font-bold text-gray-800 leading-relaxed">
-                                    I am currently on the job market in Marketing.
-                                  </div>
-                                  <div className="text-lg text-gray-600 leading-relaxed">
-                                    I am expected to graduate in May 2026.
+                                  <div className="text-lg text-gray-800 leading-relaxed">
+                                    I am currently on the <span className="font-bold">job market in Marketing</span> and expect to graduate in May 2026.
                                   </div>
                                 </div>
                               </div>
@@ -543,11 +540,8 @@ export default function Home() {
                   <div className="text-sm text-gray-600 leading-relaxed">
                     University of California, Berkeley
                   </div>
-                  <div className="text-lg font-bold text-gray-800 leading-relaxed">
-                    I am currently on the job market in Marketing.
-                  </div>
-                  <div className="text-sm text-gray-600 leading-relaxed">
-                    I am expected to graduate in May 2026.
+                  <div className="text-lg text-gray-800 leading-relaxed">
+                    I am currently on the <span className="font-bold">job market in Marketing</span> and expect to graduate in May 2026.
                   </div>
                 </div>
 
@@ -1066,7 +1060,7 @@ portionately benefits lower-quality incumbents. We theoretically model this phen
  intervals grounded in asymptotic statistical theory. Simulation results demonstrate our method’s superior performance over existing approaches, particularly in complex, long time-horizon scenarios. It
  remains effective in small-sample, short-duration contexts, matching the performance of asymptotically efficient estimators. To demonstrate our method in practice, we applied our method to estimate
  counterfactual mean outcomes for standard versus intensive blood pressure management strategies in
- a real-world cardiovascular epidemiology cohort study
+ a real-world cardiovascular epidemiology cohort study.
                   </p>
                 </div>
                   </div>
