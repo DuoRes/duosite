@@ -140,7 +140,7 @@ export default function Home() {
                 <div className="flex items-center space-x-3">
                   <div className="w-10 h-10 rounded-lg overflow-hidden shadow-sm">
                     <img
-                      src="/picture/WechatIMG5527.jpg"
+                      src="/picture/Lingxi_IMG_13476.png"
                       alt="Mingduo Zhao"
                       className="w-full h-full object-cover scale-140"
                     />
@@ -256,7 +256,7 @@ export default function Home() {
                               <div className="relative">
                                 <div className="w-64 h-64 lg:w-64 lg:h-64 xl:w-72 xl:h-72 rounded-2xl overflow-hidden shadow-xl ring-1 ring-white/30 transform hover:scale-105 transition-transform duration-500">
                                   <img
-                                    src="/picture/WechatIMG5527.jpg"
+                                    src="/picture/Lingxi_IMG_13476.png"
                                     alt="Mingduo Zhao"
                                     className="w-full h-full object-cover scale-110 hover:scale-115 transition-transform duration-500"
                                   />
@@ -403,7 +403,7 @@ export default function Home() {
                       <div className="text-center mb-8">
                         <div className="w-40 h-40 mx-auto rounded-2xl overflow-hidden shadow-lg mb-6">
                           <img
-                            src="/picture/WechatIMG5527.jpg"
+                            src="/picture/Lingxi_IMG_13476.png"
                             alt="Mingduo Zhao"
                             className="w-full h-full object-cover scale-105 hover:scale-115 transition-transform duration-500"
                           />
@@ -522,7 +522,7 @@ export default function Home() {
                 {/* Profile image */}
                 <div className="w-32 h-32 mx-auto rounded-2xl overflow-hidden shadow-lg">
                   <img
-                    src="/picture/WechatIMG5527.jpg"
+                    src="/picture/Lingxi_IMG_13476.png"
                     alt="Mingduo Zhao"
                     className="w-full h-full object-cover scale-110"
                   />
