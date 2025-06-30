@@ -409,7 +409,7 @@ export default function Home() {
                           />
                         </div>
                         <h1 className="text-3xl font-serif font-light text-gray-900 mb-2 tracking-tight">
-                          Mingduo Zhao
+                          Mingduo Zhao <br/><span className="text-xl">(pronounced Ming-dwo Jow)</span>
                         </h1>
                         {/* <div className="text-lg text-gray-600 mb-2 font-light">
                           赵鸣铎
