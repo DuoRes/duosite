@@ -3,8 +3,6 @@
 import { useEffect, useState } from "react";
 import PasswordProtection from "@/components/PasswordProtection";
 import Navigation from "@/components/Navigation";
-// import TopPopup from "@/components/TopPopup";
-// import { usePopup } from "@/components/TopPopupProvider";
 
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
