@@ -681,7 +681,7 @@ export default function Home() {
 
               <div className="flex-1 flex flex-col justify-center min-h-0">
                 <p className="text-base sm:text-lg leading-relaxed text-gray-700 font-light mb-6 sm:mb-8 lg:mb-10">
-                  I am a Ph.D. candidate in Economics at the University of California, Berkeley. My research explores the intersection of{" "}
+                  I am a Ph.D. candidate in Economics at the University of California, Berkeley. I am currently on the job market in Marketing. My research explores the intersection of{" "}
                               <em className="text-gray-800 font-medium">
                                 marketing
                               </em>
