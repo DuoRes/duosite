@@ -286,7 +286,7 @@ export default function Home() {
                                     University of California, Berkeley
                                   </div>
                                   <div className="text-lg text-gray-800 leading-relaxed">
-                                    I am currently on the <span className="font-bold">job market in Marketing</span> and expect to graduate in May 2026.
+                                    I am currently on the <span className="font-bold">2025–2026 academic job market</span> and expect to graduate in May 2026.
                                   </div>
                                 </div>
                               </div>
@@ -541,7 +541,7 @@ export default function Home() {
                     University of California, Berkeley
                   </div>
                   <div className="text-lg text-gray-800 leading-relaxed">
-                    I am currently on the <span className="font-bold">job market in Marketing</span> and expect to graduate in May 2026.
+                    I am currently on the <span className="font-bold">2025–2026 academic job market</span> and expect to graduate in May 2026.
                   </div>
                 </div>
 
@@ -681,7 +681,7 @@ export default function Home() {
 
               <div className="flex-1 flex flex-col justify-center min-h-0">
                 <p className="text-base sm:text-lg leading-relaxed text-gray-700 font-light mb-6 sm:mb-8 lg:mb-10">
-                  I am a Ph.D. candidate in Economics at the University of California, Berkeley. I am currently on the job market in Marketing. My research explores the intersection of{" "}
+                  I am a Ph.D. candidate in Economics at the University of California, Berkeley. I am currently on the 2025–2026 academic job market. My research explores the intersection of{" "}
                               <em className="text-gray-800 font-medium">
                                 marketing
                               </em>
