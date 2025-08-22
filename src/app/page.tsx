@@ -271,7 +271,7 @@ export default function Home() {
                               <div className="space-y-6">
                                 <div>
                                   <h1 className="text-5xl xl:text-6xl font-serif font-light text-gray-900 leading-tight tracking-tight mb-2">
-                                    Mingduo Zhao <br/><span className="text-2xl">(pronounced Ming-dwo Jow)</span>
+                                    Mingduo Zhao <br/><span className="text-xl">(pronounced Ming-dwo Jow)</span>
                                   </h1>
                                   {/* <div className="text-xl text-gray-600 tracking-wide mb-1">
                                     赵鸣铎
@@ -282,10 +282,10 @@ export default function Home() {
                                   <div className="text-xl text-gray-800 font-light">
                                     Ph.D. Candidate in Economics
                                   </div>
-                                  <div className="text-lg text-gray-600 leading-relaxed">
+                                  <div className="text-xl text-gray-600 leading-relaxed">
                                     University of California, Berkeley
                                   </div>
-                                  <div className="text-lg text-gray-800 leading-relaxed">
+                                  <div className="text-xl text-gray-800 leading-relaxed">
                                      My research focuses on how technological advancements profoundly transform platforms and society.
                                   </div>
                                 </div>
@@ -532,17 +532,17 @@ export default function Home() {
                 {/* Name and title */}
                 <div>
                   <h1 className="text-3xl font-serif font-light text-gray-900 mb-2 tracking-tight">
-                    Mingduo Zhao <br/> <span className="text-base">(pronounced Ming-dwo Jow)</span>
+                    Mingduo Zhao <br/> <span className="text-sm">(pronounced Ming-dwo Jow)</span>
                   </h1>
                   {/* <div className="text-base text-gray-600 mb-1">赵鸣铎</div> */}
-                  <div className="text-lg text-gray-800 font-light mb-4">
+                  <div className="text-lg text-gray-800 mb-4">
                     Ph.D. Candidate in Economics
                   </div>
                   <div className="text-sm text-gray-600 leading-relaxed">
                     University of California, Berkeley
                   </div>
-                  <div className="text-lg text-gray-800 leading-relaxed">
-                    My research focuses on how technological advancements profoundly transform platforms and society.
+                  <div className="text-lg text-gray-800 leading-relaxed text-justify">
+                    My research studies how technological advancements profoundly transform platforms and society.
                   </div>
                 </div>
 
@@ -682,7 +682,7 @@ export default function Home() {
               </div>
 
               <div className="flex-1 flex flex-col justify-center min-h-0">
-                <p className="text-base sm:text-lg leading-relaxed text-gray-700 font-light mb-6 sm:mb-8 lg:mb-10">
+                <p className="text-base sm:text-lg leading-relaxed text-gray-700 font-light mb-6 sm:mb-8 lg:mb-10 text-justify">
                   I am a Ph.D. candidate in Economics at the University of California, Berkeley. {/*My research explores the intersection of{" "}
                               <em className="text-gray-800 font-medium">
                                 marketing
