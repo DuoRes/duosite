@@ -286,7 +286,7 @@ export default function Home() {
                                     University of California, Berkeley
                                   </div>
                                   <div className="text-lg text-gray-800 leading-relaxed">
-                                    I am currently on the <span className="font-bold">2025–2026 academic job market</span> and expect to graduate in May 2026.
+                                     My research focuses on how technological advancements profoundly transform platforms and society.
                                   </div>
                                 </div>
                               </div>
@@ -316,7 +316,7 @@ export default function Home() {
                               , with a focus on how technological advancements
                               profoundly transform society, both economically
                               and politically.*/}
-                              My research focuses on how technological advancements profoundly transform platforms and society.
+                             I am currently on the 2025–2026 academic job market and expect to graduate in May 2026.
                             </p>
                           </div>
                         </div>
@@ -683,7 +683,7 @@ export default function Home() {
 
               <div className="flex-1 flex flex-col justify-center min-h-0">
                 <p className="text-base sm:text-lg leading-relaxed text-gray-700 font-light mb-6 sm:mb-8 lg:mb-10">
-                  I am a Ph.D. candidate in Economics at the University of California, Berkeley. I am currently on the 2025–2026 academic job market. {/*My research explores the intersection of{" "}
+                  I am a Ph.D. candidate in Economics at the University of California, Berkeley. {/*My research explores the intersection of{" "}
                               <em className="text-gray-800 font-medium">
                                 marketing
                               </em>
@@ -702,6 +702,7 @@ export default function Home() {
                               , with
  a focus on how technological advancements profoundly transform society, both economically and politically.*/}
 My research focuses on how technological advancements profoundly transform platforms and society.
+I am currently on the 2025–2026 academic job market.
                 </p>
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
