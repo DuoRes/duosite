@@ -297,7 +297,7 @@ export default function Home() {
                           <div className="max-w-4xl text-center lg:text-left">
                             <div className="w-12 h-px bg-gray-300 mb-6 mx-auto lg:mx-0"></div>
                             <p className="text-lg leading-relaxed text-gray-700 font-light text-justify">
-                              My research explores the intersection of{" "}
+                              {/* My research explores the intersection of{" "}
                               <em className="text-gray-800 font-medium">
                                 marketing
                               </em>
@@ -315,7 +315,8 @@ export default function Home() {
                               </em>
                               , with a focus on how technological advancements
                               profoundly transform society, both economically
-                              and politically.
+                              and politically.*/}
+                              My research focuses on how technological advancements profoundly transform society, both economically and politically.
                             </p>
                           </div>
                         </div>
@@ -549,7 +550,7 @@ export default function Home() {
                 <div>
                   <div className="w-8 h-px bg-gray-300 mx-auto mb-4"></div>
                   <p className="text-sm leading-relaxed text-gray-700 font-light text-justify">
-                    My research explores the intersection of{" "}
+                    {/*My research explores the intersection of{" "}
                               <em className="text-gray-800 font-medium">
                                 marketing
                               </em>
@@ -567,7 +568,8 @@ export default function Home() {
                               </em>
                               , with a focus on how technological advancements
                               profoundly transform society, both economically
-                              and politically.
+                              and politically.*/}
+                    My research focuses on how technological advancements profoundly transform society, both economically and politically.
                   </p>
                 </div>
 
@@ -681,7 +683,7 @@ export default function Home() {
 
               <div className="flex-1 flex flex-col justify-center min-h-0">
                 <p className="text-base sm:text-lg leading-relaxed text-gray-700 font-light mb-6 sm:mb-8 lg:mb-10">
-                  I am a Ph.D. candidate in Economics at the University of California, Berkeley. I am currently on the 2025–2026 academic job market. My research explores the intersection of{" "}
+                  I am a Ph.D. candidate in Economics at the University of California, Berkeley. I am currently on the 2025–2026 academic job market. {/*My research explores the intersection of{" "}
                               <em className="text-gray-800 font-medium">
                                 marketing
                               </em>
@@ -698,7 +700,8 @@ export default function Home() {
                                 statistics
                               </em>
                               , with
- a focus on how technological advancements profoundly transform society, both economically and politically.
+ a focus on how technological advancements profoundly transform society, both economically and politically.*/}
+ My research focuses on how technological advancements profoundly transform society, both economically and politically.
                 </p>
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
@@ -745,11 +748,10 @@ export default function Home() {
                       {[
                         "Machine Learning",
                         "Causal Inference",
-                        "Policy Learning",
                         "Structural Model",
                         "Field/Lab Experiment",
                         "Deep Learning",
-                        "Natural Language Processing (NLP)"
+                        "Large Language Models (LLMs)"
                       ].map((skill) => (
                         <li className="flex items-start">
                         <div className="w-1 h-1 bg-gray-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
