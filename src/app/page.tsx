@@ -271,7 +271,7 @@ export default function Home() {
                               <div className="space-y-6">
                                 <div>
                                   <h1 className="text-5xl xl:text-6xl font-serif font-light text-gray-900 leading-tight tracking-tight mb-2">
-                                    Mingduo Zhao <br/><span className="text-xl">(pronounced Ming-dwo Jow)</span>
+                                    Mingduo Zhao <br/><span className="text-2xl">(pronounced Ming-dwo Jow)</span>
                                   </h1>
                                   {/* <div className="text-xl text-gray-600 tracking-wide mb-1">
                                     赵鸣铎
@@ -282,10 +282,10 @@ export default function Home() {
                                   <div className="text-xl text-gray-800 font-light">
                                     Ph.D. Candidate in Economics
                                   </div>
-                                  <div className="text-xl text-gray-600 leading-relaxed">
+                                  <div className="text-lg text-gray-600 leading-relaxed">
                                     University of California, Berkeley
                                   </div>
-                                  <div className="text-xl text-gray-800 leading-relaxed">
+                                  <div className="text-lg text-gray-800 leading-relaxed">
                                      My research focuses on how technological advancements profoundly transform platforms and society.
                                   </div>
                                 </div>
