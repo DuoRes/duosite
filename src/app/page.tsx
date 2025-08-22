@@ -542,7 +542,7 @@ export default function Home() {
                     University of California, Berkeley
                   </div>
                   <div className="text-lg text-gray-800 leading-relaxed">
-                    I am currently on the <span className="font-bold">2025–2026 academic job market</span> and expect to graduate in May 2026.
+                    My research focuses on how technological advancements profoundly transform platforms and society.
                   </div>
                 </div>
 
@@ -569,7 +569,7 @@ export default function Home() {
                               , with a focus on how technological advancements
                               profoundly transform society, both economically
                               and politically.*/}
-                    My research focuses on how technological advancements profoundly transform platforms and society.
+                  I am currently on the 2025–2026 academic job market and expect to graduate in May 2026.
                   </p>
                 </div>
 
