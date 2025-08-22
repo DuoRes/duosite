@@ -316,7 +316,7 @@ export default function Home() {
                               , with a focus on how technological advancements
                               profoundly transform society, both economically
                               and politically.*/}
-                              My research focuses on how technological advancements profoundly transform society, both economically and politically.
+                              My research focuses on how technological advancements profoundly transform platforms and society.
                             </p>
                           </div>
                         </div>
@@ -569,7 +569,7 @@ export default function Home() {
                               , with a focus on how technological advancements
                               profoundly transform society, both economically
                               and politically.*/}
-                    My research focuses on how technological advancements profoundly transform society, both economically and politically.
+                    My research focuses on how technological advancements profoundly transform platforms and society.
                   </p>
                 </div>
 
@@ -701,7 +701,7 @@ export default function Home() {
                               </em>
                               , with
  a focus on how technological advancements profoundly transform society, both economically and politically.*/}
- My research focuses on how technological advancements profoundly transform society, both economically and politically.
+My research focuses on how technological advancements profoundly transform platforms and society.
                 </p>
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
