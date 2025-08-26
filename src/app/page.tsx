@@ -762,6 +762,17 @@ I am currently on the 2025–2026 academic job market.
                     </ul>
                   </div>
                 </div>
+                <div>
+                    <h3 className="mt-4 sm:mt-6 text-lg sm:text-xl lg:text-2xl font-serif font-light text-gray-900 mb-4 sm:mb-6">
+                      Education
+                    </h3>
+                    <div className="w-6 sm:w-8 h-px bg-gray-300 mb-4 sm:mb-6"></div>
+                    <p className="text-base sm:text-base leading-relaxed text-gray-700 font-light text-justify">
+                  I am currently pursuing my Ph.D. in Economics at the University of California, Berkeley, where I concurrently completed an M.S. in Computer Science and an M.A. in Statistics.
+                   Before Berkeley, I received my B.Sc. from the University of Michigan, Ann Arbor, graduating with Highest Honors in Economics, High Honors in Mathematics, and Honors in Statistics.
+                </p>
+
+                </div>
               </div>
             </div>
           </section>
