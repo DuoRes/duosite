@@ -541,9 +541,6 @@ export default function Home() {
                   <div className="text-sm text-gray-600 leading-relaxed">
                     University of California, Berkeley
                   </div>
-                  <div className="text-lg text-gray-800 leading-relaxed text-justify">
-                    My research studies how technological advancements profoundly transform platforms and society.
-                  </div>
                 </div>
 
                 {/* Research description */}
@@ -683,7 +680,7 @@ export default function Home() {
 
               <div className="flex-1 flex flex-col justify-center min-h-0">
                 <p className="text-base sm:text-lg leading-relaxed text-gray-700 font-light mb-6 sm:mb-8 lg:mb-10 text-justify">
-                  I am a Ph.D. candidate in Economics at the University of California, Berkeley. {/*My research explores the intersection of{" "}
+                  {/*My research explores the intersection of{" "}
                               <em className="text-gray-800 font-medium">
                                 marketing
                               </em>
@@ -702,7 +699,6 @@ export default function Home() {
                               , with
  a focus on how technological advancements profoundly transform society, both economically and politically.*/}
 My research focuses on how technological advancements profoundly transform platforms and society.
-I am currently on the 2025–2026 academic job market.
                 </p>
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
@@ -763,12 +759,12 @@ I am currently on the 2025–2026 academic job market.
                   </div>
                 </div>
                 <div>
-                    <h3 className="mt-4 sm:mt-6 text-lg sm:text-xl lg:text-2xl font-serif font-light text-gray-900 mb-4 sm:mb-6">
+                    <h3 className="mt-6 sm:mt-10 text-lg sm:text-xl lg:text-2xl font-serif font-light text-gray-900 mb-4 sm:mb-6">
                       Education
                     </h3>
                     <div className="w-6 sm:w-8 h-px bg-gray-300 mb-4 sm:mb-6"></div>
                     <p className="text-base sm:text-base leading-relaxed text-gray-700 font-light text-justify">
-                  I am currently pursuing my Ph.D. in Economics at the University of California, Berkeley, where I concurrently completed an M.S. in Computer Science and an M.A. in Statistics.
+                  I am a Ph.D. candidate in Economics at the University of California, Berkeley, where I concurrently completed an M.S. in Computer Science and an M.A. in Statistics.
                    Before Berkeley, I received my B.Sc. from the University of Michigan, Ann Arbor, graduating with Highest Honors in Economics, High Honors in Mathematics, and Honors in Statistics.
                 </p>
 
