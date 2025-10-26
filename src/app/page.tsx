@@ -796,12 +796,12 @@ My research focuses on how technological advancements profoundly transform platf
                     <span>JOB MARKET PAPER</span>
                   </div>
                   <h3 className="text-xl sm:text-2xl lg:text-3xl font-serif font-light text-gray-900 leading-tight mb-3 sm:mb-4">
-                    News Consumption, Recommender Systems, and Polarization [
-                      <a 
+                    News Consumption, Recommender Systems, and Polarization
+                      [<a 
                       href="https://drive.google.com/file/d/1iu2bNeZ6cp4pFCNXZtiIau6nadTq1JvC/view" 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="text-blue-600 underline hover:text-blue-800 hover:underline underline-offset-4 transition-colors duration-200"
+                      className="text-blue-600 underline hover:text-blue-800 hover:underline underline-offset-4 transition-colors duration-200 text-[80%]"
                     >Paper</a>]
                   </h3>
                   <div className="text-sm sm:text-base text-gray-600 font-light mb-4 sm:mb-6">
@@ -850,6 +850,12 @@ My research focuses on how technological advancements profoundly transform platf
                   <div className="bg-white/60 backdrop-blur-lg border border-white/40 rounded-2xl p-4 sm:p-6 shadow-lg">
                     <h3 className="text-lg sm:text-xl lg:text-2xl font-serif font-light text-gray-900 mb-3 sm:mb-4">
                       Game Against AI
+                      [<a 
+                      href="https://drive.google.com/file/d/1YM1K-IQuVnOsshmZkJ-hJFOzMuYxRWtv/view?usp=drive_link" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-blue-600 underline hover:text-blue-800 hover:underline underline-offset-4 transition-colors duration-200 text-[80%]"
+                    >Paper</a>]
                     </h3>
                     <p className="text-sm sm:text-base text-gray-700 leading-relaxed font-light mb-4">
                       (with Yahu Cong)
@@ -884,8 +890,13 @@ stance weights that adjust for endogenous domain shifts, enabling firms to learn
 
                 <div className="bg-white/60 backdrop-blur-lg border border-white/40 rounded-2xl p-4 sm:p-6 shadow-lg">
                     <h3 className="text-lg sm:text-xl lg:text-2xl font-serif font-light text-gray-900 mb-3 sm:mb-4">
-                      Unmasking the Deception: The Interplay between Fake Reviews, Ratings Discrepancy,
- and Consumer Demand
+                      Unmasking the Deception: The Interplay between Fake Reviews, Ratings Discrepancy, and Consumer Demand
+                      [<a 
+                      href="https://drive.google.com/file/d/1Pe7IILIVWLsaKG9us-7heSmsZyGKN8su/view?usp=drive_link" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-blue-600 underline hover:text-blue-800 hover:underline underline-offset-4 transition-colors duration-200 text-[80%]"
+                    >Paper</a>]
                     </h3>
                     <p className="text-sm sm:text-base text-gray-700 leading-relaxed font-light mb-4">
                      (with Yunhao Huang and J. Miguel Villas-Boas)
@@ -925,6 +936,9 @@ stance weights that adjust for endogenous domain shifts, enabling firms to learn
                     <p className="text-sm sm:text-base text-gray-700 leading-relaxed font-light mb-4">
                       (sole author)
                     </p>
+                    <ul className="list-disc list-inside text-gray-700 mb-4 sm:mb-6">
+                      <li>Draft upon request</li>
+                    </ul>
                   <div className="mb-8 sm:mb-3">
                   <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-700 font-bold mb-2 sm:mb-6">
                     Abstract
@@ -959,6 +973,9 @@ stance weights that adjust for endogenous domain shifts, enabling firms to learn
                     <p className="text-sm sm:text-base text-gray-700 leading-relaxed font-light mb-4">
                       (with Ganesh Iyer and Yi Yu)
                     </p>
+                    <ul className="list-disc list-inside text-gray-700 mb-4 sm:mb-6">
+                      <li>Draft upon request</li>
+                    </ul>
                   <div className="mb-8 sm:mb-3">
                   <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-700 font-bold mb-2 sm:mb-6">
                     Abstract
@@ -986,8 +1003,13 @@ stance weights that adjust for endogenous domain shifts, enabling firms to learn
 
                 <div className="bg-white/60 backdrop-blur-lg border border-white/40 rounded-2xl p-4 sm:p-6 shadow-lg">
                     <h3 className="text-lg sm:text-xl lg:text-2xl font-serif font-light text-gray-900 mb-3 sm:mb-4">
-                      Ownership Consolidation and Performance of Earned Media when Building Political
- Brands
+                      Ownership Consolidation and Performance of Earned Media when Building Political Brands
+                      [<a 
+                      href="https://drive.google.com/file/d/1gJgc4GR7TbRsGlcIcgbzck65z1xhMyah/view?usp=drive_link" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-blue-600 underline hover:text-blue-800 hover:underline underline-offset-4 transition-colors duration-200 text-[80%]"
+                    >Paper</a>]
                     </h3>
                     <p className="text-sm sm:text-base text-gray-700 leading-relaxed font-light mb-4">
                       (with Hulya Eraslan, Przemyslaw Jeziorski, and Gizem Kosar)
@@ -1016,8 +1038,13 @@ portionately benefits lower-quality incumbents. We theoretically model this phen
 
                 <div className="bg-white/60 backdrop-blur-lg border border-white/40 rounded-2xl p-4 sm:p-6 shadow-lg">
                     <h3 className="text-lg sm:text-xl lg:text-2xl font-serif font-light text-gray-900 mb-3 sm:mb-4">
-                      Beyond Likes: Complementing Popularity Signals with LLM-Generated Normative
- Feedback
+                      Beyond Likes: Complementing Popularity Signals with LLM-Generated Normative Feedback
+                      [<a 
+                      href="https://arxiv.org/abs/2505.09583" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-blue-600 underline hover:text-blue-800 hover:underline underline-offset-4 transition-colors duration-200 text-[80%]"
+                    >Paper</a>]
                     </h3>
                     <p className="text-sm sm:text-base text-gray-700 leading-relaxed font-light mb-4">
                       (with John Canny and Yuchen Wu)
@@ -1082,6 +1109,12 @@ However, they can unintentionally elevate content that is less inclusive and may
                   <div className="bg-white/60 backdrop-blur-lg border border-white/40 rounded-2xl p-4 sm:p-6 shadow-lg">
                     <h3 className="text-lg sm:text-xl lg:text-2xl font-serif font-light text-gray-900 mb-3 sm:mb-4">
                       Longitudinal Targeted Minimum Loss-based Estimation with Temporal-Difference Heterogeneous Transformer
+                       [<a 
+                      href="https://arxiv.org/pdf/2404.04399" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-blue-600 underline hover:text-blue-800 hover:underline underline-offset-4 transition-colors duration-200 text-[80%]"
+                    >Paper</a>]
                     </h3>
                     <p className="text-sm sm:text-base text-gray-700 leading-relaxed font-light mb-4">
                       (with Yi Li, Yuxuan Li, Sky Qiu, Toru Shirakawa, Yulun Wu, Hiroyasu Iso, and Mark J. Van Der Laan) 
