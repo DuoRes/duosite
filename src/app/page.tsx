@@ -796,12 +796,13 @@ My research focuses on how technological advancements profoundly transform platf
                     <span>JOB MARKET PAPER</span>
                   </div>
                   <h3 className="text-xl sm:text-2xl lg:text-3xl font-serif font-light text-gray-900 leading-tight mb-3 sm:mb-4">
+                    News Consumption, Recommender Systems, and Polarization [
                       <a 
                       href="https://drive.google.com/file/d/1iu2bNeZ6cp4pFCNXZtiIau6nadTq1JvC/view" 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="hover:text-primary-600 transition-colors duration-200 underline-offset-4 hover:underline"
-                    >News Consumption, Recommender Systems, and Polarization</a>
+                      className="text-blue-600 underline hover:text-blue-800 hover:underline underline-offset-4 transition-colors duration-200"
+                    >Paper</a>]
                   </h3>
                   <div className="text-sm sm:text-base text-gray-600 font-light mb-4 sm:mb-6">
                    (sole author) <br></br>
