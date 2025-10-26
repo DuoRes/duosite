@@ -860,9 +860,6 @@ My research focuses on how technological advancements profoundly transform platf
                     <p className="text-sm sm:text-base text-gray-700 leading-relaxed font-light mb-4">
                       (with Yahu Cong)
                     </p>
-                    <ul className="list-disc list-inside text-gray-700 mb-4 sm:mb-6">
-                      <li>Under review</li>
-                    </ul>
                   <div className="mb-8 sm:mb-3">
                   <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-700 font-bold mb-2 sm:mb-6">
                     Abstract
@@ -884,6 +881,42 @@ stance weights that adjust for endogenous domain shifts, enabling firms to learn
  cost of incentives. These findings highlight the need for a fundamental shift in firms’ personalization
  strategies-from solely optimizing predictive models to designing incentive mechanisms that are robust
  to strategic consumer behavior.
+                  </p>
+                </div>
+                  </div>
+
+                <div className="bg-white/60 backdrop-blur-lg border border-white/40 rounded-2xl p-4 sm:p-6 shadow-lg">
+                    <h3 className="text-lg sm:text-xl lg:text-2xl font-serif font-light text-gray-900 mb-3 sm:mb-4">
+                      When the Airwaves Narrow: Radio Ownership Concentration and Local Elections
+                      [<a 
+                      href="https://drive.google.com/file/d/1gJgc4GR7TbRsGlcIcgbzck65z1xhMyah/view?usp=drive_link" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-blue-600 underline hover:text-blue-800 hover:underline underline-offset-4 transition-colors duration-200 text-[80%]"
+                    >Paper</a>]
+                    </h3>
+                    <p className="text-sm sm:text-base text-gray-700 leading-relaxed font-light mb-4">
+                      (with Hulya Eraslan, Przemyslaw Jeziorski, and Gizem Kosar)
+                    </p>
+                    <ul className="list-disc list-inside text-gray-700 mb-4 sm:mb-6">
+                      <li>Under review</li>
+                    </ul>
+                  <div className="mb-8 sm:mb-3">
+                  <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-700 font-bold mb-2 sm:mb-6">
+                    Abstract
+                  </p>
+                  <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-700 font-light mb-4 sm:mb-6 text-justify">
+                    We examine how media ownership consolidation shapes U.S. mayoral election outcomes.
+Using data from more than 300 local radio markets between 1950 and 2006, we link radio
+station ownership records and news programming to local electoral results. Our findings
+show that increased market concentration significantly boosts the re-election prospects of
+incumbent mayors while weakening challengers’ performance. This effect is largely driven by
+a decline in the number of news-producing stations and disproportionately benefits lower-quality incumbents. We develop a theoretical framework of imperfect competition to explain
+these patterns, showing how ownership structure influences news quality and, in turn, voter
+decisions. To address potential endogeneity in media market structure, we exploit a novel
+instrumental variable based on multi-market mergers. From both managerial and policy perspectives, our results highlight the broader democratic consequences of media consolidation:
+it diminishes the informational role of earned media and can impede the electoral success of
+the most qualified candidates.
                   </p>
                 </div>
                   </div>
@@ -929,6 +962,47 @@ stance weights that adjust for endogenous domain shifts, enabling firms to learn
                 </div>
                   </div>
 
+
+                <div className="bg-white/60 backdrop-blur-lg border border-white/40 rounded-2xl p-4 sm:p-6 shadow-lg">
+                    <h3 className="text-lg sm:text-xl lg:text-2xl font-serif font-light text-gray-900 mb-3 sm:mb-4">
+                      Beyond Likes: Complementing Popularity Signals with LLM-Generated Normative Feedback
+                      [<a 
+                      href="https://arxiv.org/pdf/2505.09583" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-blue-600 underline hover:text-blue-800 hover:underline underline-offset-4 transition-colors duration-200 text-[80%]"
+                    >Paper</a>]
+                    </h3>
+                    <p className="text-sm sm:text-base text-gray-700 leading-relaxed font-light mb-4">
+                      (with John Canny and Yuchen Wu)
+                    </p>
+                    <ul className="list-disc list-inside text-gray-700 mb-4 sm:mb-6">
+                      <li>Under review</li>
+                    </ul>
+                  <div className="mb-8 sm:mb-3">
+                  <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-700 font-bold mb-2 sm:mb-6">
+                    Abstract
+                  </p>
+                  <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-700 font-light mb-4 sm:mb-6 text-justify">
+                    Many online platforms incorporate popularity signals–such as likes and upvotes–into their content ranking systems and interface design. These signals are designed to boost user engagement.
+However, they can unintentionally elevate content that is less inclusive and may not support normatively desirable behavior. This issue becomes especially concerning when toxic content correlates
+ strongly with popularity indicators such as likes and upvotes. In this study, we propose prosocial
+ feedback as a complementary signal to likes and upvotes–one that highlights content quality based on
+ normative criteria to help address the limitations of conventional engagement signals. We begin by
+ designing and implementing a machine learning feedback system powered by a large language model
+ (LLM), which evaluates user comments based on principles of positive psychology, such as individual
+ well-being, constructive social media use, and character strengths. We then conduct a an experiment
+ to examine how existing peer-based and the new expert-based feedback interact to shape users’ selection of comments in a social media setting. Results show that peer feedback increases conformity to
+ popularity cues, while expert feedback shifts preferences toward normatively higher-quality content.
+ Moreover, incorporating expert feedback alongside peer evaluations improves alignment with expert
+ assessments and contributes to a less toxic community environment. This illustrates the added value of
+ normative cues–such as expert scores generated by LLMs using psychological rubrics–and underscores
+ the potential benefits of incorporating such signals into platform feedback systems to foster healthier
+ online environments.
+                  </p>
+                </div>
+                  </div>
+
                 <div className="bg-white/60 backdrop-blur-lg border border-white/40 rounded-2xl p-4 sm:p-6 shadow-lg">
                     <h3 className="text-lg sm:text-xl lg:text-2xl font-serif font-light text-gray-900 mb-3 sm:mb-4">
                       Identity-Based Bias, Algorithm Bias, and Self-Censorship in Online Reviews
@@ -937,7 +1011,7 @@ stance weights that adjust for endogenous domain shifts, enabling firms to learn
                       (sole author)
                     </p>
                     <ul className="list-disc list-inside text-gray-700 mb-4 sm:mb-6">
-                      <li>Draft upon request</li>
+                      <li>Available upon request</li>
                     </ul>
                   <div className="mb-8 sm:mb-3">
                   <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-700 font-bold mb-2 sm:mb-6">
@@ -974,7 +1048,7 @@ stance weights that adjust for endogenous domain shifts, enabling firms to learn
                       (with Ganesh Iyer and Yi Yu)
                     </p>
                     <ul className="list-disc list-inside text-gray-700 mb-4 sm:mb-6">
-                      <li>Draft upon request</li>
+                      <li>Available upon request</li>
                     </ul>
                   <div className="mb-8 sm:mb-3">
                   <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-700 font-bold mb-2 sm:mb-6">
@@ -996,79 +1070,6 @@ stance weights that adjust for endogenous domain shifts, enabling firms to learn
  being an influencer closely aligns with findings from the observational analysis, reinforcing the causal
  interpretation. This research provides important insights into the dynamics of American democracy,
  indicating that public recognition and celebrity status can serve as pathways to electoral success.
-                  </p>
-                </div>
-                  </div>
-
-
-                <div className="bg-white/60 backdrop-blur-lg border border-white/40 rounded-2xl p-4 sm:p-6 shadow-lg">
-                    <h3 className="text-lg sm:text-xl lg:text-2xl font-serif font-light text-gray-900 mb-3 sm:mb-4">
-                      Ownership Consolidation and Performance of Earned Media when Building Political Brands
-                      [<a 
-                      href="https://drive.google.com/file/d/1gJgc4GR7TbRsGlcIcgbzck65z1xhMyah/view?usp=drive_link" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="text-blue-600 underline hover:text-blue-800 hover:underline underline-offset-4 transition-colors duration-200 text-[80%]"
-                    >Paper</a>]
-                    </h3>
-                    <p className="text-sm sm:text-base text-gray-700 leading-relaxed font-light mb-4">
-                      (with Hulya Eraslan, Przemyslaw Jeziorski, and Gizem Kosar)
-                    </p>
-                  <div className="mb-8 sm:mb-3">
-                  <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-700 font-bold mb-2 sm:mb-6">
-                    Abstract
-                  </p>
-                  <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-700 font-light mb-4 sm:mb-6 text-justify">
-                    This study examines how media ownership consolidation influences the effectiveness of earned
- media in shaping political brands in U.S. mayoral elections. Using data from over 300 local radio markets between 1945 and 2006, we link radio station ownership records and news programming to local
- election outcomes. We find that increased market concentration strengthens the re-election prospects
- of incumbent mayors while hindering the performance of challengers. The effect of increased concentration is primarily driven by a reduction in the number of news-producing stations, and it dispro
-portionately benefits lower-quality incumbents. We theoretically model this phenomenon within an
- oligopoly framework, demonstrating how ownership structure affects news quality, and ultimately, electoral outcomes. To address potential endogeneity in market structure, we leverage a novel instrument
- based on multi-market mergers. From both managerial and policy perspectives, our results underscore
- the broader consequences of media consolidation: it not only weakens the informative performance of
- earned media but also lowers the quality of decision-making, which poses serious risks to the electoral
- process, as it may prevent the most qualified candidates from winning. Additionally, for firms, more
- concentrated media ownership reduces opportunities for visibility through earned media, diminishing
- the impact of superior offerings and limiting entry of new products.
-                  </p>
-                </div>
-                  </div>
-
-
-                <div className="bg-white/60 backdrop-blur-lg border border-white/40 rounded-2xl p-4 sm:p-6 shadow-lg">
-                    <h3 className="text-lg sm:text-xl lg:text-2xl font-serif font-light text-gray-900 mb-3 sm:mb-4">
-                      Beyond Likes: Complementing Popularity Signals with LLM-Generated Normative Feedback
-                      [<a 
-                      href="https://arxiv.org/abs/2505.09583" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="text-blue-600 underline hover:text-blue-800 hover:underline underline-offset-4 transition-colors duration-200 text-[80%]"
-                    >Paper</a>]
-                    </h3>
-                    <p className="text-sm sm:text-base text-gray-700 leading-relaxed font-light mb-4">
-                      (with John Canny and Yuchen Wu)
-                    </p>
-                  <div className="mb-8 sm:mb-3">
-                  <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-700 font-bold mb-2 sm:mb-6">
-                    Abstract
-                  </p>
-                  <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-700 font-light mb-4 sm:mb-6 text-justify">
-                    Many online platforms incorporate popularity signals–such as likes and upvotes–into their content ranking systems and interface design. These signals are designed to boost user engagement.
-However, they can unintentionally elevate content that is less inclusive and may not support normatively desirable behavior. This issue becomes especially concerning when toxic content correlates
- strongly with popularity indicators such as likes and upvotes. In this study, we propose prosocial
- feedback as a complementary signal to likes and upvotes–one that highlights content quality based on
- normative criteria to help address the limitations of conventional engagement signals. We begin by
- designing and implementing a machine learning feedback system powered by a large language model
- (LLM), which evaluates user comments based on principles of positive psychology, such as individual
- well-being, constructive social media use, and character strengths. We then conduct a an experiment
- to examine how existing peer-based and the new expert-based feedback interact to shape users’ selection of comments in a social media setting. Results show that peer feedback increases conformity to
- popularity cues, while expert feedback shifts preferences toward normatively higher-quality content.
- Moreover, incorporating expert feedback alongside peer evaluations improves alignment with expert
- assessments and contributes to a less toxic community environment. This illustrates the added value of
- normative cues–such as expert scores generated by LLMs using psychological rubrics–and underscores
- the potential benefits of incorporating such signals into platform feedback systems to foster healthier
- online environments.
                   </p>
                 </div>
                   </div>
