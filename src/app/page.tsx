@@ -710,6 +710,10 @@ My research focuses on how technological advancements profoundly transform platf
                     <ul className="space-y-3 sm:space-y-4 text-sm sm:text-base text-gray-700 font-light">
                       <li className="flex items-start">
                         <div className="w-1 h-1 bg-gray-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                        Human-AI Interaction
+                      </li>
+                      <li className="flex items-start">
+                        <div className="w-1 h-1 bg-gray-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
                         Social Media
                       </li>
                       <li className="flex items-start">
@@ -723,11 +727,6 @@ My research focuses on how technological advancements profoundly transform platf
                       <li className="flex items-start">
                         <div className="w-1 h-1 bg-gray-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
                         User Generated Content
-                      </li>
-                      <li className="flex items-start">
-                        <div className="w-1 h-1 bg-gray-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                        Human
- Computer/AI Interaction (HCI/HAII)
                       </li>
                       <li className="flex items-start">
                         <div className="w-1 h-1 bg-gray-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
@@ -745,10 +744,10 @@ My research focuses on how technological advancements profoundly transform platf
                       {[
                         "Machine Learning",
                         "Causal Inference",
-                        "Structural Model",
+                        "Large Language Models (LLMs)",
                         "Field/Lab Experiment",
-                        "Deep Learning",
-                        "Large Language Models (LLMs)"
+                        "Structural Model",
+                        "Deep Learning"
                       ].map((skill) => (
                         <li className="flex items-start">
                         <div className="w-1 h-1 bg-gray-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
@@ -887,6 +886,83 @@ stance weights that adjust for endogenous domain shifts, enabling firms to learn
 
                 <div className="bg-white/60 backdrop-blur-lg border border-white/40 rounded-2xl p-4 sm:p-6 shadow-lg">
                     <h3 className="text-lg sm:text-xl lg:text-2xl font-serif font-light text-gray-900 mb-3 sm:mb-4">
+                      Identity-Based Bias, Algorithm Bias, and Self-Censorship in Online Reviews
+                    </h3>
+                    <p className="text-sm sm:text-base text-gray-700 leading-relaxed font-light mb-4">
+                      (sole author)
+                    </p>
+                    <ul className="list-disc list-inside text-gray-700 mb-4 sm:mb-6">
+                      <li>Available upon request</li>
+                    </ul>
+                  <div className="mb-8 sm:mb-3">
+                  <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-700 font-bold mb-2 sm:mb-6">
+                    Abstract
+                  </p>
+                  <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-700 font-light mb-4 sm:mb-6 text-justify">
+                    Are individuals from marginalized groups perceived as less persuasive? Does this perception
+ lead to their underrepresentation in visible, influential roles? Does it also contribute to their reluctance to share their views? These are important questions that require further investigation. Amazon
+ reviews provide a valuable and quantifiable context to explore these questions. This paper investigates
+ how the perceived identity of reviewers influences helpfulness votes, the ranking of their reviews, and
+ their willingness to post new reviews on Amazon. Utilizing a data set of over 1.8 million reviews, we
+ apply advanced natural language processing and computer vision tools to infer the gender and ethnicity
+ of reviewers based on their user aliases and avatars. Combined with experimental data, our analysis
+ shows causal evidence that reviews perceived as authored by women, non-binary individuals, or ethnic
+ minorities are rated as less helpful than those associated with men or white individuals. Furthermore,
+ we show that Amazon’s review ranking algorithm amplifies initial disparities in helpfulness recognition.
+ Because reviews from marginalized groups receive fewer votes, they are ranked lower and receive less
+ exposure, which in turn leads to even fewer votes-creating a self-reinforcing loop that perpetuates the
+ underrepresentation of marginalized voices. We also find evidence of self-censorship: reviewers are less
+ willing to continue contributing after receiving fewer helpfulness votes on their previous reviews. To
+ address these disparities, we propose two platform-level interventions-identity blind review displays
+ and affirmative action mechanisms within the review ranking algorithm. To evaluate their impact, we
+ further estimate a structural model that captures both the supply and demand sides of the review
+ ”market” to assess the welfare implications of these interventions.
+                  </p>
+                </div>
+                  </div>
+
+                 <div className="bg-white/60 backdrop-blur-lg border border-white/40 rounded-2xl p-4 sm:p-6 shadow-lg">
+                    <h3 className="text-lg sm:text-xl lg:text-2xl font-serif font-light text-gray-900 mb-3 sm:mb-4">
+                      Beyond Likes: Complementing Popularity Signals with LLM-Generated Normative Feedback
+                      [<a 
+                      href="https://arxiv.org/pdf/2505.09583" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-blue-600 underline hover:text-blue-800 hover:underline underline-offset-4 transition-colors duration-200 text-[80%]"
+                    >Paper</a>]
+                    </h3>
+                    <p className="text-sm sm:text-base text-gray-700 leading-relaxed font-light mb-4">
+                      (with John Canny and Yuchen Wu)
+                    </p>
+                    <ul className="list-disc list-inside text-gray-700 mb-4 sm:mb-6">
+                      <li>Under review</li>
+                    </ul>
+                  <div className="mb-8 sm:mb-3">
+                  <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-700 font-bold mb-2 sm:mb-6">
+                    Abstract
+                  </p>
+                  <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-700 font-light mb-4 sm:mb-6 text-justify">
+                    Many online platforms incorporate popularity signals–such as likes and upvotes–into their content ranking systems and interface design. These signals are designed to boost user engagement.
+However, they can unintentionally elevate content that is less inclusive and may not support normatively desirable behavior. This issue becomes especially concerning when toxic content correlates
+ strongly with popularity indicators such as likes and upvotes. In this study, we propose prosocial
+ feedback as a complementary signal to likes and upvotes–one that highlights content quality based on
+ normative criteria to help address the limitations of conventional engagement signals. We begin by
+ designing and implementing a machine learning feedback system powered by a large language model
+ (LLM), which evaluates user comments based on principles of positive psychology, such as individual
+ well-being, constructive social media use, and character strengths. We then conduct a an experiment
+ to examine how existing peer-based and the new expert-based feedback interact to shape users’ selection of comments in a social media setting. Results show that peer feedback increases conformity to
+ popularity cues, while expert feedback shifts preferences toward normatively higher-quality content.
+ Moreover, incorporating expert feedback alongside peer evaluations improves alignment with expert
+ assessments and contributes to a less toxic community environment. This illustrates the added value of
+ normative cues–such as expert scores generated by LLMs using psychological rubrics–and underscores
+ the potential benefits of incorporating such signals into platform feedback systems to foster healthier
+ online environments.
+                  </p>
+                </div>
+                  </div>
+
+                <div className="bg-white/60 backdrop-blur-lg border border-white/40 rounded-2xl p-4 sm:p-6 shadow-lg">
+                    <h3 className="text-lg sm:text-xl lg:text-2xl font-serif font-light text-gray-900 mb-3 sm:mb-4">
                       When the Airwaves Narrow: Radio Ownership Concentration and Local Elections
                       [<a 
                       href="https://drive.google.com/file/d/1gJgc4GR7TbRsGlcIcgbzck65z1xhMyah/view?usp=drive_link" 
@@ -962,83 +1038,6 @@ the most qualified candidates.
                 </div>
                   </div>
 
-
-                <div className="bg-white/60 backdrop-blur-lg border border-white/40 rounded-2xl p-4 sm:p-6 shadow-lg">
-                    <h3 className="text-lg sm:text-xl lg:text-2xl font-serif font-light text-gray-900 mb-3 sm:mb-4">
-                      Beyond Likes: Complementing Popularity Signals with LLM-Generated Normative Feedback
-                      [<a 
-                      href="https://arxiv.org/pdf/2505.09583" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="text-blue-600 underline hover:text-blue-800 hover:underline underline-offset-4 transition-colors duration-200 text-[80%]"
-                    >Paper</a>]
-                    </h3>
-                    <p className="text-sm sm:text-base text-gray-700 leading-relaxed font-light mb-4">
-                      (with John Canny and Yuchen Wu)
-                    </p>
-                    <ul className="list-disc list-inside text-gray-700 mb-4 sm:mb-6">
-                      <li>Under review</li>
-                    </ul>
-                  <div className="mb-8 sm:mb-3">
-                  <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-700 font-bold mb-2 sm:mb-6">
-                    Abstract
-                  </p>
-                  <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-700 font-light mb-4 sm:mb-6 text-justify">
-                    Many online platforms incorporate popularity signals–such as likes and upvotes–into their content ranking systems and interface design. These signals are designed to boost user engagement.
-However, they can unintentionally elevate content that is less inclusive and may not support normatively desirable behavior. This issue becomes especially concerning when toxic content correlates
- strongly with popularity indicators such as likes and upvotes. In this study, we propose prosocial
- feedback as a complementary signal to likes and upvotes–one that highlights content quality based on
- normative criteria to help address the limitations of conventional engagement signals. We begin by
- designing and implementing a machine learning feedback system powered by a large language model
- (LLM), which evaluates user comments based on principles of positive psychology, such as individual
- well-being, constructive social media use, and character strengths. We then conduct a an experiment
- to examine how existing peer-based and the new expert-based feedback interact to shape users’ selection of comments in a social media setting. Results show that peer feedback increases conformity to
- popularity cues, while expert feedback shifts preferences toward normatively higher-quality content.
- Moreover, incorporating expert feedback alongside peer evaluations improves alignment with expert
- assessments and contributes to a less toxic community environment. This illustrates the added value of
- normative cues–such as expert scores generated by LLMs using psychological rubrics–and underscores
- the potential benefits of incorporating such signals into platform feedback systems to foster healthier
- online environments.
-                  </p>
-                </div>
-                  </div>
-
-                <div className="bg-white/60 backdrop-blur-lg border border-white/40 rounded-2xl p-4 sm:p-6 shadow-lg">
-                    <h3 className="text-lg sm:text-xl lg:text-2xl font-serif font-light text-gray-900 mb-3 sm:mb-4">
-                      Identity-Based Bias, Algorithm Bias, and Self-Censorship in Online Reviews
-                    </h3>
-                    <p className="text-sm sm:text-base text-gray-700 leading-relaxed font-light mb-4">
-                      (sole author)
-                    </p>
-                    <ul className="list-disc list-inside text-gray-700 mb-4 sm:mb-6">
-                      <li>Available upon request</li>
-                    </ul>
-                  <div className="mb-8 sm:mb-3">
-                  <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-700 font-bold mb-2 sm:mb-6">
-                    Abstract
-                  </p>
-                  <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-700 font-light mb-4 sm:mb-6 text-justify">
-                    Are individuals from marginalized groups perceived as less persuasive? Does this perception
- lead to their underrepresentation in visible, influential roles? Does it also contribute to their reluctance to share their views? These are important questions that require further investigation. Amazon
- reviews provide a valuable and quantifiable context to explore these questions. This paper investigates
- how the perceived identity of reviewers influences helpfulness votes, the ranking of their reviews, and
- their willingness to post new reviews on Amazon. Utilizing a data set of over 1.8 million reviews, we
- apply advanced natural language processing and computer vision tools to infer the gender and ethnicity
- of reviewers based on their user aliases and avatars. Combined with experimental data, our analysis
- shows causal evidence that reviews perceived as authored by women, non-binary individuals, or ethnic
- minorities are rated as less helpful than those associated with men or white individuals. Furthermore,
- we show that Amazon’s review ranking algorithm amplifies initial disparities in helpfulness recognition.
- Because reviews from marginalized groups receive fewer votes, they are ranked lower and receive less
- exposure, which in turn leads to even fewer votes-creating a self-reinforcing loop that perpetuates the
- underrepresentation of marginalized voices. We also find evidence of self-censorship: reviewers are less
- willing to continue contributing after receiving fewer helpfulness votes on their previous reviews. To
- address these disparities, we propose two platform-level interventions-identity blind review displays
- and affirmative action mechanisms within the review ranking algorithm. To evaluate their impact, we
- further estimate a structural model that captures both the supply and demand sides of the review
- ”market” to assess the welfare implications of these interventions.
-                  </p>
-                </div>
-                  </div>
 
                 <div className="bg-white/60 backdrop-blur-lg border border-white/40 rounded-2xl p-4 sm:p-6 shadow-lg">
                     <h3 className="text-lg sm:text-xl lg:text-2xl font-serif font-light text-gray-900 mb-3 sm:mb-4">
