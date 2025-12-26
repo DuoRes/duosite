@@ -316,7 +316,7 @@ export default function Home() {
                               , with a focus on how technological advancements
                               profoundly transform society, both economically
                               and politically.*/}
-                             I am currently on the 2025–2026 academic job market and expect to graduate in May 2026.
+                             {/* I am currently on the 2025–2026 academic job market and expect to graduate in May 2026. */}
                             </p>
                           </div>
                         </div>
@@ -566,7 +566,7 @@ export default function Home() {
                               , with a focus on how technological advancements
                               profoundly transform society, both economically
                               and politically.*/}
-                  I am currently on the 2025–2026 academic job market and expect to graduate in May 2026.
+                  {/*I am currently on the 2025–2026 academic job market and expect to graduate in May 2026.*/}
                   </p>
                 </div>
 
@@ -1011,7 +1011,7 @@ the most qualified candidates.
                      (with Yunhao Huang and J. Miguel Villas-Boas)
                     </p>
                     <ul className="list-disc list-inside text-gray-700 mb-4 sm:mb-6">
-                      <li>Under review</li>
+                      <li>R&R in management science</li>
                     </ul>
                   <div className="mb-8 sm:mb-3">
                   <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-700 font-bold mb-2 sm:mb-6">
