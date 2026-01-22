@@ -419,11 +419,11 @@ export default function Home() {
                           赵鸣铎
                         </div> */}
                         <div className="text-lg text-gray-700 mb-1 font-light">
-                          <a className="font-bold">Ph.D. Candidate</a> in Economics
+                          <a className="font-bold">PhD candidate at UC Berkeley</a>
                         </div>
-                        <div className="text-sm text-gray-600 leading-relaxed mb-1">
+                        {/* <div className="text-sm text-gray-600 leading-relaxed mb-1">
                           UC Berkeley • Department of Economics
-                        </div>
+                        </div> */}
                       </div>
                     </div>
 
@@ -539,11 +539,11 @@ export default function Home() {
                   </h1>
                   {/* <div className="text-base text-gray-600 mb-1">赵鸣铎</div> */}
                   <div className="text-lg text-gray-800 mb-4">
-                    <a className="font-bold">Ph.D. Candidate</a> in Economics
+                    <a className="font-bold">PhD candidate at UC Berkeley</a>
                   </div>
-                  <div className="text-sm text-gray-600 leading-relaxed">
+                  {/* <div className="text-sm text-gray-600 leading-relaxed">
                     University of California, Berkeley
-                  </div>
+                  </div> */}
                 </div>
 
                 {/* Research description */}
