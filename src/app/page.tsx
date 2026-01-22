@@ -149,7 +149,7 @@ export default function Home() {
                     <h1 className="text-sm font-serif font-light text-gray-900 tracking-tight">
                       Mingduo Zhao
                     </h1>
-                    <div className="text-xs text-gray-600">Ph.D. Candidate</div>
+                    <div className="text-xs text-gray-600 font-bold">Ph.D. Candidate</div>
                   </div>
                 </div>
                 <div className="flex items-center space-x-2">
@@ -278,9 +278,9 @@ export default function Home() {
                                   </div> */}
                                 </div>
 
-                                <div className="space-y-3">
+                                <div className="space-y-6">
                                   <div className="text-xl text-gray-800 font-light">
-                                    Ph.D. Candidate in Economics
+                                    <a className="font-bold">Ph.D. Candidate</a> in Economics
                                   </div>
                                   <div className="text-lg text-gray-600 leading-relaxed">
                                     University of California, Berkeley
@@ -419,7 +419,7 @@ export default function Home() {
                           赵鸣铎
                         </div> */}
                         <div className="text-lg text-gray-700 mb-1 font-light">
-                          Ph.D. Candidate in Economics
+                          <a className="font-bold">Ph.D. Candidate</a> in Economics
                         </div>
                         <div className="text-sm text-gray-600 leading-relaxed mb-1">
                           UC Berkeley • Department of Economics
@@ -539,7 +539,7 @@ export default function Home() {
                   </h1>
                   {/* <div className="text-base text-gray-600 mb-1">赵鸣铎</div> */}
                   <div className="text-lg text-gray-800 mb-4">
-                    Ph.D. Candidate in Economics
+                    <a className="font-bold">Ph.D. Candidate</a> in Economics
                   </div>
                   <div className="text-sm text-gray-600 leading-relaxed">
                     University of California, Berkeley
@@ -766,7 +766,7 @@ My research focuses on how technological advancements profoundly transform platf
                     </h3>
                     <div className="w-6 sm:w-8 h-px bg-gray-300 mb-4 sm:mb-6"></div>
                     <p className="text-base sm:text-base leading-relaxed text-gray-700 font-light text-justify">
-                  I am a Ph.D. candidate in Economics at the University of California, Berkeley, where I concurrently completed an M.S. in Computer Science and an M.A. in Statistics.
+                  I am a <a className="font-bold">Ph.D. candidate</a> in Economics at the University of California, Berkeley, where I concurrently completed an M.S. in Computer Science and an M.A. in Statistics.
                    Before Berkeley, I received my B.Sc. from the University of Michigan, Ann Arbor, graduating with Highest Honors in Economics, High Honors in Mathematics, and Honors in Statistics.
                 </p>
 
