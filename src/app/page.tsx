@@ -288,6 +288,9 @@ export default function Home() {
                                   <div className="text-lg text-gray-800 leading-relaxed">
                                      My research focuses on how technological advancements profoundly transform platforms and society.
                                   </div>
+                                  <div className="text-lg text-gray-800 leading-relaxed">
+                                     I will join The University of British Columbia Sauder School of Business as an Assistant Professor in the summer of 2026.
+                                  </div>
                                 </div>
                               </div>
                             </div>
@@ -698,7 +701,7 @@ export default function Home() {
                               </em>
                               , with
  a focus on how technological advancements profoundly transform society, both economically and politically.*/}
-My research focuses on how technological advancements profoundly transform platforms and society.
+My research focuses on how technological advancements profoundly transform platforms and society.<br/> I will join The University of British Columbia Sauder School of Business as an Assistant Professor in the summer of 2026.
                 </p>
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
