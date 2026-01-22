@@ -280,11 +280,11 @@ export default function Home() {
 
                                 <div className="space-y-6">
                                   <div className="text-xl text-gray-800 font-light">
-                                    <a className="font-bold">Ph.D. Candidate</a> in Economics
+                                    <a className="font-bold">PhD candidate at UC Berkeley</a>
                                   </div>
-                                  <div className="text-lg text-gray-600 leading-relaxed">
+                                  {/* <div className="text-lg text-gray-600 leading-relaxed">
                                     University of California, Berkeley
-                                  </div>
+                                  </div> */}
                                   <div className="text-lg text-gray-800 leading-relaxed">
                                      My research focuses on how technological advancements profoundly transform platforms and society.
                                   </div>
