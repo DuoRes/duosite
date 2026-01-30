@@ -289,7 +289,7 @@ export default function Home() {
                                      My research focuses on how technological advancements profoundly transform platforms and society.
                                   </div>
                                   <div className="text-lg text-gray-800 leading-relaxed">
-                                     I will join The University of British Columbia Sauder School of Business as an Assistant Professor in the summer of 2026.
+                                     I will join the University of British Columbia Sauder School of Business as an Assistant Professor in the summer of 2026.
                                   </div>
                                 </div>
                               </div>
@@ -539,7 +539,10 @@ export default function Home() {
                   </h1>
                   {/* <div className="text-base text-gray-600 mb-1">赵鸣铎</div> */}
                   <div className="text-lg text-gray-800 mb-4">
-                    <a className="font-bold">PhD candidate at UC Berkeley</a>
+                    <a>PhD candidate at UC Berkeley</a>
+                  </div>
+                  <div className="text-lg text-gray-800 mb-4">
+                    <a>Incoming Assistant Professor at UBC</a>
                   </div>
                   {/* <div className="text-sm text-gray-600 leading-relaxed">
                     University of California, Berkeley
@@ -701,9 +704,15 @@ export default function Home() {
                               </em>
                               , with
  a focus on how technological advancements profoundly transform society, both economically and politically.*/}
-My research focuses on how technological advancements profoundly transform platforms and society.<br/> I will join The University of British Columbia Sauder School of Business as an Assistant Professor in the summer of 2026.
+My research focuses on how technological advancements profoundly transform platforms and society.
                 </p>
-
+                <p className="text-base sm:text-lg leading-relaxed text-gray-700 font-light mb-6 sm:mb-8 lg:mb-10 text-justify">
+<a className="font-bold">I will join the University of British Columbia Sauder School of Business as an Assistant Professor in the summer of 2026.</a>
+                </p>
+                <p className="text-base sm:text-lg leading-relaxed text-gray-700 font-light mb-6 sm:mb-8 lg:mb-10 text-justify">
+For those interested in the intersection of <a className="font-bold">business</a> and <a className="font-bold">machine learning</a>, I welcome collaborations in both <a className="font-bold">academia</a> (e.g., RAs, co-authors, seminars) and <a className="font-bold">industry</a> (e.g., technology, ML, business, finance).<br/>
+Please contact <a href="mailto:mzhao.collab@gmail.com">mzhao.collab@gmail.com</a> or <a href="mailto:mingduo@berkeley.edu">my school email</a>.
+                </p>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
                   <div>
                     <h3 className="text-lg sm:text-xl lg:text-2xl font-serif font-light text-gray-900 mb-4 sm:mb-6">
@@ -766,7 +775,7 @@ My research focuses on how technological advancements profoundly transform platf
                     </h3>
                     <div className="w-6 sm:w-8 h-px bg-gray-300 mb-4 sm:mb-6"></div>
                     <p className="text-base sm:text-base leading-relaxed text-gray-700 font-light text-justify">
-                  I am a <a className="font-bold">Ph.D. candidate</a> in Economics at the University of California, Berkeley, where I concurrently completed an M.S. in Computer Science and an M.A. in Statistics.
+                  I am a <a>Ph.D. candidate</a> in Economics at the University of California, Berkeley, where I concurrently completed an M.S. in Computer Science and an M.A. in Statistics.
                    Before Berkeley, I received my B.Sc. from the University of Michigan, Ann Arbor, graduating with Highest Honors in Economics, High Honors in Mathematics, and Honors in Statistics.
                 </p>
 
