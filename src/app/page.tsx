@@ -252,7 +252,7 @@ export default function Home() {
                         <div className="lg:col-span-7 flex flex-col justify-center space-y-4 sm:space-y-6 lg:space-y-8">
                           <div className="flex flex-col items-center lg:flex-row lg:items-start space-y-6 sm:space-y-8 lg:space-y-0 lg:space-x-8 xl:space-x-12">
                             {/* Profile image */}
-                            <div className="flex-shrink-0">
+                            <div className="flex-shrink-0 mt-20">
                               <div className="relative">
                                 <div className="w-64 h-64 lg:w-64 lg:h-64 xl:w-72 xl:h-72 rounded-2xl overflow-hidden shadow-xl ring-1 ring-white/30 transform hover:scale-105 transition-transform duration-500">
                                   <img
@@ -270,7 +270,7 @@ export default function Home() {
                             <div className="flex-1 text-center lg:text-left lg:pt-4">
                               <div className="space-y-6">
                                 <div>
-                                  <h1 className="text-5xl xl:text-6xl font-serif font-light text-gray-900 leading-tight tracking-tight mb-2">
+                                  <h1 className="mt-8 text-5xl xl:text-6xl font-serif font-light text-gray-900 leading-tight tracking-tight mb-2">
                                     Mingduo Zhao <br/><span className="text-2xl">(pronounced Ming-dwo Jow)</span>
                                   </h1>
                                   {/* <div className="text-xl text-gray-600 tracking-wide mb-1">
@@ -280,7 +280,7 @@ export default function Home() {
 
                                 <div className="space-y-6">
                                   <div className="text-xl text-gray-800 font-light">
-                                    <a className="font-bold">PhD candidate at UC Berkeley</a>
+                                    <a>PhD candidate at UC Berkeley</a>
                                   </div>
                                   {/* <div className="text-lg text-gray-600 leading-relaxed">
                                     University of California, Berkeley
@@ -293,8 +293,12 @@ export default function Home() {
                                   </div>
                                 </div>
                               </div>
-                            </div>
+                            </div>                           
                           </div>
+                          <div className="text-lg text-gray-800 leading-relaxed lg:text-left"> 
+                                For those interested in the intersection of <a className="font-bold">business</a> and <a className="font-bold">machine learning</a>, I welcome collaborations in both <a className="font-bold">academia</a> (e.g., RAs, co-authors, seminars) and <a className="font-bold">industry</a> (e.g., technology, ML, business, finance).
+Please contact <a href="mailto:mzhao.collab@gmail.com">mzhao.collab [at] gmail [dot] com</a> or <a href="mailto:mingduo@berkeley.edu">my school email</a>.
+                              </div>
 
                           {/* Research description */}
                           <div className="max-w-4xl text-center lg:text-left">
@@ -709,10 +713,13 @@ My research focuses on how technological advancements profoundly transform platf
                 <p className="text-base sm:text-lg leading-relaxed text-gray-700 font-light mb-6 sm:mb-8 lg:mb-10 text-justify">
 <a className="font-bold">I will join the University of British Columbia Sauder School of Business as an Assistant Professor in the summer of 2026.</a>
                 </p>
-                <p className="text-base sm:text-lg leading-relaxed text-gray-700 font-light mb-6 sm:mb-8 lg:mb-10 text-justify">
+                { 
+                isMobile &&
+                  <p className="text-base sm:text-lg leading-relaxed text-gray-700 font-light mb-6 sm:mb-8 lg:mb-10 text-justify">
 For those interested in the intersection of <a className="font-bold">business</a> and <a className="font-bold">machine learning</a>, I welcome collaborations in both <a className="font-bold">academia</a> (e.g., RAs, co-authors, seminars) and <a className="font-bold">industry</a> (e.g., technology, ML, business, finance).<br/>
-Please contact <a href="mailto:mzhao.collab@gmail.com">mzhao.collab@gmail.com</a> or <a href="mailto:mingduo@berkeley.edu">my school email</a>.
+Please contact <a href="mailto:mzhao.collab@gmail.com">mzhao.collab [at] gmail [dot] com</a> or <a href="mailto:mingduo@berkeley.edu">my school email</a>.
                 </p>
+                }
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
                   <div>
                     <h3 className="text-lg sm:text-xl lg:text-2xl font-serif font-light text-gray-900 mb-4 sm:mb-6">
