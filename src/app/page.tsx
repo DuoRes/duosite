@@ -954,7 +954,7 @@ stance weights that adjust for endogenous domain shifts, enabling firms to learn
                       (with John Canny and Yuchen Wu)
                     </p>
                     <ul className="list-disc list-inside text-gray-700 mb-4 sm:mb-6">
-                      <li>Under review</li>
+                      {/* <li>Under review</li> */}
                     </ul>
                   <div className="mb-8 sm:mb-3">
                   <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-700 font-bold mb-2 sm:mb-6">
@@ -994,7 +994,7 @@ However, they can unintentionally elevate content that is less inclusive and may
                       (with Hulya Eraslan, Przemyslaw Jeziorski, and Gizem Kosar)
                     </p>
                     <ul className="list-disc list-inside text-gray-700 mb-4 sm:mb-6">
-                      <li>Under review</li>
+                      {/* <li>Under review</li> */}
                     </ul>
                   <div className="mb-8 sm:mb-3">
                   <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-700 font-bold mb-2 sm:mb-6">
