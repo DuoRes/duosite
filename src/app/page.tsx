@@ -842,7 +842,7 @@ Please contact <a href="mailto:mzhao.collab@gmail.com">mzhao.collab [at] gmail [
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="text-blue-600 underline hover:text-blue-800 hover:underline underline-offset-4 transition-colors duration-200 text-[100%]"
-                    >Berkeley Economics</a>
+                    >Berkeley News</a>
                   </div>
                 </div>
               </div>
