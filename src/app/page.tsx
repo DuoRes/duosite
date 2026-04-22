@@ -837,7 +837,12 @@ Please contact <a href="mailto:mzhao.collab@gmail.com">mzhao.collab [at] gmail [
                 </div>
 
                 <div className="border-t border-gray-100">
-                  <div className="flex flex-wrap gap-7">
+                  <div className="flex flex-wrap gap-7"> Coverage: <a 
+                      href="https://ls.berkeley.edu/news/your-news-feed-may-be-making-polarization-worse" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-blue-600 underline hover:text-blue-800 hover:underline underline-offset-4 transition-colors duration-200 text-[100%]"
+                    >Berkeley Economics</a>
                   </div>
                 </div>
               </div>
@@ -954,7 +959,6 @@ stance weights that adjust for endogenous domain shifts, enabling firms to learn
                       (with John Canny and Yuchen Wu)
                     </p>
                     <ul className="list-disc list-inside text-gray-700 mb-4 sm:mb-6">
-                      
                       {/* <li>Under review</li> */}
                     </ul>
                   <div className="mb-8 sm:mb-3">
